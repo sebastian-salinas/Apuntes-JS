@@ -1,0 +1,26 @@
+# Node modules
+node_modules/
+
+# Logs y artefactos del sistema
+*.log
+.DS_Store
+Thumbs.db
+
+# Archivos generados
+dist/
+
+# Archivos de configuración del entorno
+.env
+.env.local
+.env.*.local
+
+# Configuración del editor/IDE
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Cache de herramientas
+.npm/
+.yarn/
+.cache/
