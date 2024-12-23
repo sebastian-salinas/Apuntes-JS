@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/styles.css" rel="stylesheet" />
+    <script type="module" src="/src/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css"
+      rel="stylesheet" />
     <title>Proyecto con Tailwind</title>
   </head>
   <body class="bg-gray-100">
@@ -145,15 +150,63 @@
           </div>
         </div>
 
-        <!-- Contenido dinámico -->
-        <main class="flex-1 bg-white p-4">
-          <!-- Aquí se cargará el contenido de cada página -->
-          <div id="content">Contenido de la página actual.</div>
+        <!-- Main -->
+        <main class="flex-1 px-8 bg-white">
+          <!-- Título principal -->
+          <h1 class="text-3xl font-bold mt-4 text-gray-800">
+            Introducción a JavaScript
+          </h1>
+          <!-- Sección 1 -->
+          <section class="space-y-4">
+            <h2 class="text-2xl font-semibold mt-4 text-gray-700">
+              ¿Qué es JavaScript?
+            </h2>
+            <p class="text-gray-600 leading-relaxed">
+              JavaScript es un lenguaje de programación versátil que se utiliza
+              principalmente para agregar interactividad a sitios web. Es uno de
+              los pilares del desarrollo web, junto con HTML y CSS.
+            </p>
+          </section>
+
+          <!-- Sección 2 -->
+          <section class="space-y-4">
+            <h2 class="text-2xl mt-4 font-semibold text-gray-700">
+              Ejemplo básico de JavaScript
+            </h2>
+            <p class="text-gray-600 leading-relaxed">
+              A continuación, se muestra un ejemplo básico que imprime "¡Hola,
+              mundo!" en la consola del navegador:
+            </p>
+            <!-- Bloque de código -->
+            <pre class="">
+        <code class="language-javascript">
+          // Este es un comentario en JavaScript
+          console.log('¡Hola, mundo!');
+        </code>
+            </pre>
+          </section>
+          <!-- Sección 3 -->
+          <section class="space-y-4">
+            <h2 class="text-2xl font-semibold text-gray-700">
+              Características principales
+            </h2>
+            <ul class="list-disc list-inside text-gray-600 leading-relaxed">
+              <li>Es ejecutado por el navegador en el lado del cliente.</li>
+              <li>
+                Soporta programación orientada a objetos, funcional y basada en
+                eventos.
+              </li>
+              <li>
+                Se utiliza tanto para desarrollo front-end como back-end (con
+                Node.js).
+              </li>
+            </ul>
+          </section>
         </main>
       </div>
 
-      <!-- Footer -->
-      <footer class="bg-gray-100">
+      <!-- Footer 
+            <footer class="bg-gray-100">
         <div
           class="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
           <div class="absolute end-4 top-4 sm:end-6 sm:top-6 lg:end-8 lg:top-8">
@@ -263,7 +316,7 @@
             Copyright &copy; 2022. All rights reserved.
           </p>
         </div>
-      </footer>
+      </footer>-->
     </div>
   </body>
 </html>

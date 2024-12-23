@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{html,js}", // Ajusta esto según tu estructura de archivos
-  ],
+  content: ["./src/**/*.{html,js}"], // Asegúrate de que Tailwind procese los archivos que contienen clases.
   theme: {
     extend: {},
   },
