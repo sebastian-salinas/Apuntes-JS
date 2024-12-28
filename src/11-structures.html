@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="content-language" content="es" />
+    <meta name="robots" content="index, follow" />
+    <!-- Descripción breve (importante para SEO y resultados de búsqueda) -->
+    <meta
+      name="description"
+      content="Aprende JavaScript con apuntes claros y prácticos. Desde conceptos básicos hasta avanzados, ideal para principiantes y desarrolladores." />
+    <!-- Autor del contenido -->
+    <meta name="author" content="Sebastian Salinas" />
+    <!-- Palabras clave relevantes -->
+    <meta
+      name="keywords"
+      content="JavaScript, tutorial, programación, apuntes, aprender JavaScript, desarrollo web, frontend, backend" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Apuntes JavaScript 🚀" />
+    <meta
+      property="og:description"
+      content="Apuntes claros y prácticos de JavaScript para todos los niveles." />
+    <meta property="og:url" content="https://tu-sitio.com" />
+    <meta
+      property="og:image"
+      content="https://tu-sitio.com/assets/js-cover.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Apuntes JavaScript 🚀" />
+    <meta
+      name="twitter:description"
+      content="Aprende JavaScript con apuntes prácticos y claros." />
+    <meta
+      name="twitter:image"
+      content="https://tu-sitio.com/assets/js-cover.png" />
+    <meta name="twitter:site" content="@tu_usuario_twitter" />
+    <!-- Canonical: evita contenido duplicado -->
+    <link rel="canonical" href="https://tu-sitio.com" />
+    <!-- Links -->
+    <link href="/dist/styles.css" rel="stylesheet" />
+    <script type="module" src="/src/script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css"
+      rel="stylesheet" />
+
+    <title>Apuntes JavaScript 🚀</title>
+  </head>
+  <body class="bg-gray-100">
+    <div class="min-h-screen flex flex-col">
+      <div class="flex flex-1">
+        <!-- Sidebar -->
+        <div class="flex h-screen w-44 flex-col border-e bg-white" id="sidebar">
+          <div class="">
+            <!-- Sidebar header -->
+            <div
+              class="fixed top-0 z-50 flex h-16 w-44 shrink-0 items-center border-b border-r border-gray-200 bg-white px-6">
+              <a href="/">
+                <div class="inline-flex gap-1.5 text-sm">
+                  <span class="font-medium text-gray-900">Apuntes JS🚀</span>
+                </div>
+              </a>
+            </div>
+
+            <!-- Sidebar body -->
+            <section class="mt-16">
+              <div class="px-2">
+                <ul class="space-y-1 pt-4">
+                  <li>
+                    <a
+                      href="/src/01-index.html"
+                      s
+                      class="group relative flex rounded px-2 py-1.5 text-gray-500 hover:bg-gray-50 hover:text-gray-700">
+                      <!-- Titulo del menu -->
+                      <h3>Introducción</h3>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/src/02-variables.html"
+                      class="group relative flex rounded px-2 py-1.5 text-gray-500 hover:bg-gray-50 hover:text-gray-700">
+                      <!-- Titulo del menu -->
+                      <h3>Variables</h3>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/src/03-strings.html"
+                      class="group relative flex rounded px-2 py-1.5 text-gray-500 hover:bg-gray-50 hover:text-gray-700">
+                      <!-- Titulo del menu -->
+                      <h3>Strings</h3>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/src/04-numbers.html"
+                      class="group relative flex rounded px-2 py-1.5 text-gray-500 hover:bg-gray-50 hover:text-gray-700">
+                      <!-- Titulo del menu -->
+                      <h3>Numbers</h3>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/src/05-operators.html"
+                      class="group relative flex rounded px-2 py-1.5 text-gray-500 hover:bg-gray-50 hover:text-gray-700">
+                      <!-- Titulo del menu -->
+                      <h3>Operadores</h3>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/src/06-booleans.html"
+                      class="group relative flex rounded px-2 py-1.5 text-gray-500 hover:bg-gray-50 hover:text-gray-700">
+                      <!-- Titulo del menu -->
+                      <h3>Booleans</h3>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/src/07-objects.html"
+                      class="group relative flex rounded px-2 py-1.5 text-gray-500 hover:bg-gray-50 hover:text-gray-700">
+                      <!-- Titulo del menu -->
+                      <h3>Objects</h3>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/src/08-arrays.html"
+                      class="group relative flex rounded px-2 py-1.5 text-gray-500 hover:bg-gray-50 hover:text-gray-700">
+                      <!-- Titulo del menu -->
+                      <h3>Arrays</h3>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/src/09-arrays-methods.html"
+                      class="group relative flex rounded px-2 py-1.5 text-gray-500 hover:bg-gray-50 hover:text-gray-700">
+                      <!-- Titulo del menu -->
+                      <h3>Arrays Methods</h3>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/src/10-iterators.html"
+                      class="group relative flex rounded px-2 py-1.5 text-gray-500 hover:bg-gray-50 hover:text-gray-700">
+                      <!-- Titulo del menu -->
+                      <h3>Iteradores</h3>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/src/11-structures.html"
+                      class="group relative flex rounded px-2 py-1.5 text-gray-500 hover:bg-gray-50 hover:text-gray-700">
+                      <!-- Titulo del menu -->
+                      <h3>Estructuras</h3>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/src/12-functions.html"
+                      class="group relative flex rounded px-2 py-1.5 text-gray-500 hover:bg-gray-50 hover:text-gray-700">
+                      <!-- Titulo del menu -->
+                      <h3>Funciones</h3>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/src/13-dom.html"
+                      class="group relative flex rounded px-2 py-1.5 text-gray-500 hover:bg-gray-50 hover:text-gray-700">
+                      <!-- Titulo del menu -->
+                      <h3>DOM</h3>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/src/14-events.html"
+                      class="group relative flex rounded px-2 py-1.5 text-gray-500 hover:bg-gray-50 hover:text-gray-700">
+                      <!-- Titulo del menu -->
+                      <h3>Events</h3>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <!-- Main -->
+        <main class="flex-1 bg-gray-50 overflow-auto">
+          <!-- Main header -->
+          <header
+            class="fixed top-0 z-50 h-16 border-b border-gray-200 bg-white px-4 sm:h-16 sm:px-6 lg:px-8 w-full">
+            <div class="flex h-16 items-center gap-4">
+              <div class="flex items-center gap-2 sm:gap-4">
+                <button
+                  class="rounded-sm border border-gray-200 p-1.5 text-gray-700"
+                  id="open-sidebar">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    data-slot="icon"
+                    class="size-5">
+                    <path
+                      fill-rule="evenodd"
+                      d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </button>
+              </div>
+              <div class="hidden flex-1 sm:block">
+                <div class="relative h-12 sm:h-auto sm:flex-1">
+                  <input
+                    type="text"
+                    class="relative z-100 w-full rounded-t border-gray-200 py-1.5 text-sm focus:ring-inset sm:max-w-sm rounded-b"
+                    placeholder="Search"
+                    value="" />
+                </div>
+              </div>
+              <div class="block sm:hidden">
+                <div class="relative sm:h-auto sm:flex-1">
+                  <input
+                    type="text"
+                    class="relative z-100 w-full rounded-t border-gray-200 py-1.5 text-sm focus:ring-inset sm:max-w-sm rounded-b"
+                    placeholder="Search"
+                    value="" />
+                </div>
+              </div>
+              <div class="fixed right-6 top-5 flex-1 items-center justify-end">
+                <a
+                  href="https://github.com/sebastian-salinas/Apuntes-JS"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-gray-900 hover:opacity-75"
+                  ><span class="sr-only"> GitHub </span
+                  ><svg
+                    aria-hidden="true"
+                    class="size-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24">
+                    <path
+                      clip-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                      fill-rule="evenodd"></path></svg
+                ></a>
+              </div>
+            </div>
+          </header>
+          <!-- Main body -->
+          <section class="px-4 mt-20 sm:h-16 sm:px-6 lg:px-8">
+            <h1 class="text-3xl font-bold mt-4 text-gray-800">
+              Introducción a JavaScript
+            </h1>
+            <!-- Sección 1 -->
+            <section class="space-y-4">
+              <h2 class="text-2xl font-semibold mt-4 text-gray-700">
+                ¿Qué es JavaScript?
+              </h2>
+              <p class="text-gray-600 leading-relaxed">
+                JavaScript es un lenguaje de programación versátil que se
+                utiliza principalmente para agregar interactividad a sitios web.
+                Es uno de los pilares del desarrollo web, junto con HTML y CSS.
+              </p>
+            </section>
+
+            <!-- Sección 2 -->
+            <section class="space-y-4">
+              <h2 class="text-2xl mt-4 font-semibold text-gray-700">
+                Ejemplo básico de JavaScript
+              </h2>
+              <p class="text-gray-600 leading-relaxed">
+                A continuación, se muestra un ejemplo básico que imprime "¡Hola,
+                mundo!" en la consola del navegador:
+              </p>
+              <!-- Bloque de código -->
+              <pre class="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2">
+        <code class="language-javascript">
+          // Este es un comentario en JavaScript
+          console.log('¡Hola, mundo!');
+        </code>
+            </pre>
+            </section>
+            <!-- Sección 3 -->
+            <section class="space-y-4">
+              <h2 class="text-2xl font-semibold text-gray-700">
+                Características principales
+              </h2>
+              <ul class="list-disc list-inside text-gray-600 leading-relaxed">
+                <li>Es ejecutado por el navegador en el lado del cliente.</li>
+                <li>
+                  Soporta programación orientada a objetos, funcional y basada
+                  en eventos.
+                </li>
+                <li>
+                  Se utiliza tanto para desarrollo front-end como back-end (con
+                  Node.js).
+                </li>
+              </ul>
+            </section>
+            <!-- Sección 4 -->
+            <section>
+              <div class="mt-10 border-t border-gray-200 pt-10">
+                <p class="mb-6 text-sm text-gray-700 lg:mt-0">
+                  Created by<!-- -->
+                  <a
+                    href="https://github.com/sebastian-salinas"
+                    rel="noreferrer"
+                    target="_blank"
+                    class="inline-block font-medium no-underline mb-6 hover:text-gray-900"
+                    >Sebastian Salinas</a
+                  >
+                </p>
+              </div>
+            </section>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
