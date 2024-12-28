@@ -3,25 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="content-language" content="es" />
+    <meta name="robots" content="index, follow" />
+    <!-- Descripción breve (importante para SEO y resultados de búsqueda) -->
+    <meta
+      name="description"
+      content="Aprende JavaScript con apuntes claros y prácticos. Desde conceptos básicos hasta avanzados, ideal para principiantes y desarrolladores." />
+    <!-- Autor del contenido -->
+    <meta name="author" content="Sebastian Salinas" />
+    <!-- Palabras clave relevantes -->
+    <meta
+      name="keywords"
+      content="JavaScript, tutorial, programación, apuntes, aprender JavaScript, desarrollo web, frontend, backend" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Apuntes JavaScript 🚀" />
+    <meta
+      property="og:description"
+      content="Apuntes claros y prácticos de JavaScript para todos los niveles." />
+    <meta property="og:url" content="https://tu-sitio.com" />
+    <meta
+      property="og:image"
+      content="https://tu-sitio.com/assets/js-cover.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Apuntes JavaScript 🚀" />
+    <meta
+      name="twitter:description"
+      content="Aprende JavaScript con apuntes prácticos y claros." />
+    <meta
+      name="twitter:image"
+      content="https://tu-sitio.com/assets/js-cover.png" />
+    <meta name="twitter:site" content="@tu_usuario_twitter" />
+    <!-- Canonical: evita contenido duplicado -->
+    <link rel="canonical" href="https://tu-sitio.com" />
+    <!-- Links -->
     <link href="/dist/styles.css" rel="stylesheet" />
     <script type="module" src="/src/script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css"
       rel="stylesheet" />
-    <title>Proyecto con Tailwind</title>
+
+    <title>Apuntes JavaScript 🚀</title>
   </head>
   <body class="bg-gray-100">
     <div class="min-h-screen flex flex-col">
-      <!-- Contenedor principal -->
       <div class="flex flex-1">
         <!-- Sidebar -->
         <div class="flex h-screen w-44 flex-col border-e bg-white" id="sidebar">
           <div class="">
+            <!-- Sidebar header -->
             <div
-              class="sticky top-0 z-50 flex h-16 shrink-0 items-center border-b border-gray-200 bg-white px-6">
+              class="fixed top-0 z-50 flex h-16 w-44 shrink-0 items-center border-b border-r border-gray-200 bg-white px-6">
               <a href="/">
                 <div class="inline-flex gap-1.5 text-sm">
                   <span class="font-medium text-gray-900">Apuntes JS🚀</span>
@@ -29,8 +65,8 @@
               </a>
             </div>
 
-            <!-- Sidebar -->
-            <section class="">
+            <!-- Sidebar body -->
+            <section class="mt-16">
               <div class="px-2">
                 <ul class="space-y-1 pt-4">
                   <li>
@@ -157,8 +193,9 @@
 
         <!-- Main -->
         <main class="flex-1 bg-gray-50 overflow-auto">
+          <!-- Main header -->
           <header
-            class="sticky top-0 z-50 h-auto border-b border-gray-200 bg-white px-4 sm:h-16 sm:px-6 lg:px-8 w-full">
+            class="fixed top-0 z-50 h-16 border-b border-gray-200 bg-white px-4 sm:h-16 sm:px-6 lg:px-8 w-full">
             <div class="flex h-16 items-center gap-4">
               <div class="flex items-center gap-2 sm:gap-4">
                 <button
@@ -216,8 +253,8 @@
               </div>
             </div>
           </header>
-          <section class="px-4 sm:h-16 sm:px-6 lg:px-8">
-            <!-- Título principal -->
+          <!-- Main body -->
+          <section class="px-4 mt-20 sm:h-16 sm:px-6 lg:px-8">
             <h1 class="text-3xl font-bold mt-4 text-gray-800">
               Introducción a JavaScript
             </h1>
@@ -243,7 +280,7 @@
                 mundo!" en la consola del navegador:
               </p>
               <!-- Bloque de código -->
-              <pre class="">
+              <pre class="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2">
         <code class="language-javascript">
           // Este es un comentario en JavaScript
           console.log('¡Hola, mundo!');
@@ -270,13 +307,13 @@
             <!-- Sección 4 -->
             <section>
               <div class="mt-10 border-t border-gray-200 pt-10">
-                <p class="mb-4 text-sm text-gray-700 lg:mt-0">
+                <p class="mb-6 text-sm text-gray-700 lg:mt-0">
                   Created by<!-- -->
                   <a
                     href="https://github.com/sebastian-salinas"
                     rel="noreferrer"
                     target="_blank"
-                    class="inline-block font-medium no-underline mb-4 hover:text-gray-900"
+                    class="inline-block font-medium no-underline mb-6 hover:text-gray-900"
                     >Sebastian Salinas</a
                   >
                 </p>
