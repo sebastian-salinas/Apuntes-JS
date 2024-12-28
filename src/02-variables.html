@@ -255,56 +255,106 @@
           </header>
           <!-- Main body -->
           <section class="px-4 mt-20 sm:h-16 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold mt-4 text-gray-800">
-              Introducción a JavaScript
-            </h1>
-            <!-- Sección 1 -->
-            <section class="space-y-4">
-              <h2 class="text-2xl font-semibold mt-4 text-gray-700">
-                ¿Qué es JavaScript?
-              </h2>
-              <p class="text-gray-600 leading-relaxed">
-                JavaScript es un lenguaje de programación versátil que se
-                utiliza principalmente para agregar interactividad a sitios web.
-                Es uno de los pilares del desarrollo web, junto con HTML y CSS.
-              </p>
-            </section>
+            <!-- Header -->
+            <h1 class="text-3xl font-bold mt-4 text-gray-800">Variables</h1>
 
-            <!-- Sección 2 -->
-            <section class="space-y-4">
-              <h2 class="text-2xl mt-4 font-semibold text-gray-700">
-                Ejemplo básico de JavaScript
-              </h2>
-              <p class="text-gray-600 leading-relaxed">
-                A continuación, se muestra un ejemplo básico que imprime "¡Hola,
-                mundo!" en la consola del navegador:
-              </p>
-              <!-- Bloque de código -->
-              <pre class="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2">
-        <code class="language-javascript">
-          // Este es un comentario en JavaScript
-          console.log('¡Hola, mundo!');
+            <!-- Main Content -->
+            <main class="flex-1 space-y-4">
+              <!-- Section 1 -->
+              <section class="space-y-4">
+                <h2 class="text-2xl font-semibold mt-4 text-gray-700">
+                  Inicialización y Reasignación
+                </h2>
+                <p class="text-gray-600 leading-relaxed">
+                  Las variables en JavaScript pueden ser inicializadas y
+                  reasignadas según sea necesario. A continuación, se muestran
+                  ejemplos:
+                </p>
+                <pre class="bg-gray-800 text-white p-1 rounded-lg">
+        <code class="language-javascript">// Inicializar una variable con un valor
+          
+        var producto = "Monitor de 55 pulgadas";
+        console.log(producto);
+        
+// Las variables se pueden reasignar
+
+        producto = "Monitor de 60 pulgadas";
+        console.log(producto);
+        
+// JavaScript es un lenguaje de tipado dinámico
+
+        var producto = 55;
+        console.log(producto);
+        
+// Declarar variables sin valor inicial
+
+        var disponible;
+        disponible = true;
+        disponible = false;
+        console.log(disponible);</code>
+                  </pre>
+              </section>
+
+              <!-- Section 2 -->
+              <section class="space-y-4">
+                <h2 class="text-2xl font-semibold text-gray-700">
+                  Uso de Scope y Let
+                </h2>
+                <p class="text-gray-600 leading-relaxed">
+                  El scope de las variables var y let es fundamental para evitar
+                  problemas con nombres repetidos:
+                </p>
+                <pre class="bg-gray-800 text-white p-1 rounded-lg">
+        <code class="language-javascript">// No se puede tener variables con el mismo nombre en el mismo scope
+
+        var nombre = "Juan";
+        var nombre = "Pedro";
+        
+// Se puede tener variables con el mismo nombre en diferentes scopes
+
+        function mostrarNombre() {
+          var nombre = "Juan";
+          console.log(nombre);
+        }
+        
+        mostrarNombre();
+        
+        function mostrarNombre() {
+          var nombre = "Pedro";
+          console.log(nombre);
+        }
+        
+        mostrarNombre();
+        
+// Let permite iniciar variables y reasignar valores
+
+        let precio;
+        
+        precio = 1450;
+        
+        console.log(precio);</code>
+                  </pre>
+              </section>
+
+              <!-- Section 3 -->
+              <section class="space-y-4">
+                <h2 class="text-2xl font-semibold text-gray-700">
+                  Uso de Const
+                </h2>
+                <p class="text-gray-600 leading-relaxed">
+                  Las constantes en JavaScript deben ser inicializadas al
+                  declararse y no pueden ser reasignadas:
+                </p>
+                <pre class="bg-gray-800 text-white p-1 rounded-lg">
+        <code class="language-javascript">// Constantes son variables que no se pueden reasignar ni tampoco se pueden iniciar sin asignar un valor
+
+        const numeroPi = 3.14;
+        
+        console.log(numeroPi);
         </code>
-            </pre>
-            </section>
-            <!-- Sección 3 -->
-            <section class="space-y-4">
-              <h2 class="text-2xl font-semibold text-gray-700">
-                Características principales
-              </h2>
-              <ul class="list-disc list-inside text-gray-600 leading-relaxed">
-                <li>Es ejecutado por el navegador en el lado del cliente.</li>
-                <li>
-                  Soporta programación orientada a objetos, funcional y basada
-                  en eventos.
-                </li>
-                <li>
-                  Se utiliza tanto para desarrollo front-end como back-end (con
-                  Node.js).
-                </li>
-              </ul>
-            </section>
-            <!-- Sección 4 -->
+                  </pre>
+              </section>
+            </main>
             <section>
               <div class="mt-10 border-t border-gray-200 pt-10">
                 <p class="mb-6 text-sm text-gray-700 lg:mt-0">
