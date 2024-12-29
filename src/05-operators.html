@@ -270,231 +270,132 @@
           </header>
           <!-- Main body -->
           <section class="px-4 mt-20 sm:h-16 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold mt-4 text-gray-800">Numbers</h1>
+            <h1 class="text-3xl font-bold mt-4 text-gray-800">Operadores</h1>
             <!-- Sección 1 -->
             <section class="space-y-4">
               <h2 class="text-2xl font-semibold mt-4 text-gray-700">
-                Declaración y uso de Strings
+                Declaración y uso de Operadores
               </h2>
               <p class="text-gray-600 leading-relaxed">
-                Strings o Cadenas de Texto son secuencias de caracteres que se
-                pueden asignar a variables
+                Los operadores son símbolos que se utilizan para realizar
+                operaciones matemáticas, lógicas o de comparación entre dos
+                valores.
               </p>
               <pre
                 class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-// Creacion de numeros
+// Valores a comparar
 
-          const numero1 = 30;
+        const numero1 = 20;
+        const numero2 = 30;
                   
-          console.log(numero1);
+// Operador mayor a
+                  
+        console.log(numero1 > numero2);
+                  
+//Operador menor a
+                  
+        console.log(numero1 < numero2);
+                  
+//Operador mayor o igual a
+                  
+        console.log(numero1 >= numero2);
+                  
+//Operador menor o igual a
+                  
+        console.log(numero1 <= numero2);
+                  
+//Operador igual a
+                  
+        console.log(numero1 == numero2);
+                  
+//Operador diferente a
+                  
+        console.log(numero1 != numero2);
             </code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Métodos de Cadenas de Texto
+                Operadores de igualdad y diferencia
               </h3>
-              <p class="mb-4">
-                Existen varios métodos útiles para trabajar con cadenas en
-                JavaScript, como obtener la longitud de un string, buscar la
-                posición de un caracter, y más.
+              <p class="text-gray-600 leading-relaxed">
+                Operadores de igualdad y diferencia se utilizan para comparar
+                valores y determinar si son iguales o diferentes.
               </p>
               <pre
                 class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-//Operadores aritméticos basicos
+//Valores a comparar
 
-        const numero1 = 30;
-        const numero2 = 20;
-                  
-        let resultado;
-                  
-//Suma
-                  
-        resultado = numero1 + numero2;
-                  
-//resta
-                  
-        resultado = numero1 - numero2;
-                  
-//multiplicación
+        const numero4 = 20;
+        const numero5 = 20;
+        const numeroText = "20";
+        const numero6 = 40;
 
-        resultado = numero1 * numero2;
-                  
-//división
+//Revisa si los valores son iguales
 
-        resultado = numero1 / numero2;
-                  
-//Modulo
+        console.log(numero4 == numero5); //true
+        console.log(numeroText == numero4); //true
 
-        resultado = numero1 % numero2;
-                  
-        console.log(resultado);
-                  
+//Revisa si los valores y el tipo son iguales
+
+        console.log(numero4 === numero6); //false
+        console.log(numeroText === numero4); //false
+
+//Revisar si los valores son diferentes
+
+        console.log(numero4 != numero5); //false
+        console.log(numero4 != numero6); //true
+
+//Revisar si los valores y el tipo son diferentes
+
+        console.log(numeroText !== numero4); //true
+        console.log(numeroText !== numero6); //true  
             </code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Concatenación de Cadenas
+                Operadores lógicos
               </h3>
-              <p class="mb-4">
+              <p class="text-gray-600 leading-relaxed">
                 Puedes concatenar cadenas de texto y variables usando plantillas
                 literales, lo que hace que tu código sea más limpio y fácil de
                 leer.
               </p>
               <pre
                 class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-//Objeto math, se accede con la palabra reservada Math y luego un punto y el nombre del método
+// AND (&&): Devuelve true solo si ambos operandos son verdaderos. Si cualquiera de los operandos es false, el resultado será false.
 
-        let resultado;
-                  
-        resultado = Math.PI;
-                  
-//Redondear hacia
-                  
-        resultado = Math.round(2.8);
-                  
-//Redondear hacia arriba
-                  
-        resultado = Math.ceil(2.78);
-                  
-//Redondear hacia abajo
-                  
-        resultado = Math.floor(2.78);
-                  
-//Raiz cuadrada
-                  
-        resultado = Math.sqrt(2.78);
-                  
-// Valor absoluto (ignora el negativo)
-                  
-        resultado = Math.abs(-200);
-                  
-//Potencia
-                  
-        resultado = Math.pow(2, 3);
-                  
-//Minimo
-                  
-        resultado = Math.min(2, 3, 4, 8, 1, 4, 6, 9);
-                  
-//Máximo
-                  
-        resultado = Math.max(2, 3, 4, 8, 1, 4, 6, 9);
-                  
-// Aleatorio
-                  
-        let random = Math.random() * 100;
-                  
-        let redondear = Math.round(random);
-                  
-        console.log(redondeear);
-                  
-//Redondear entre 1 y 50
-                  
-        resultado = Math.round(Math.random() * 50);
-                  
-        console.log(resultado);
-                  
-            </code></pre>
-            </section>
-            <section class="space-y-4">
-              <h3 class="text-xl font-semibold mt-8 mb-2">
-                Métodos para Eliminar Espacios en Blanco
-              </h3>
-              <p class="mb-4">
-                Utilizamos <code class="text-blue-600">trimStart()</code> y
-                <code class="text-blue-600">trimEnd()</code> para eliminar
-                espacios en blanco al principio y al final de una cadena.
-              </p>
-              <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-                  
+        let a = true;
+        let b = false;
 
-//Orden de ejecución de operadores
+        console.log(a && b); // false (porque uno de los valores es false)
+        console.log(true && true); // true
 
-        let resultado;
-                  
-        resultado = 2 + 3 * 4;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - 1;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - 1 / 2;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3 + 5;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3 + 5 * 6;
-                  
-        console.log(resultado);
-                  
-            </code></pre>
-            </section>
-            <section class="space-y-4">
-              <h3 class="text-xl font-semibold mt-8 mb-2">
-                Reemplazar y Extraer Parte de una Cadena
-              </h3>
-              <p class="mb-4">
-                Usamos <code class="text-blue-600">replace()</code> para
-                reemplazar texto y <code class="text-blue-600">slice()</code> o
-                <code class="text-blue-600">substring()</code> para extraer
-                porciones de una cadena.
-              </p>
-              <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-        let puntaje = 5;
+// OR (||): Devuelve true si al menos uno de los operandos es verdadero. Solo devuelve false si ambos operandos son false.
 
-        puntaje++; // ejecuta el comando y luego lo incrementa
-                  
-        ++puntaje; // incrementa el puntaje y luego ejecuta el comando
-                  
-        puntaje += 2; // suma 2 a puntaje y luego ejecuta el comando
-                  
-        console.log(puntaje);
-            </code></pre>
-            </section>
-            <section class="space-y-4">
-              <h3 class="text-xl font-semibold mt-8 mb-2">
-                Otros Métodos de Cadenas
-              </h3>
-              <p class="mb-4">
-                Aquí se encuentran otros métodos útiles como
-                <code class="text-blue-600">charAt()</code>,
-                <code class="text-blue-600">repeat()</code>,
-                <code class="text-blue-600">split()</code>, entre otros.
-              </p>
-              <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejmplos
+        let x = true;
+        let y = false;
 
-        const numero10 = "20";
-        const numero20 = "20.2";
-        const numero30 = "Veinte";
-        const numero40 = 20;
-                  
-//Convertir un número a texto
+        console.log(x || y); // true (porque al menos uno es true)
+        console.log(false || false); // false     
+        
+// NOT (!): Invierte el valor de un operando. Si el valor es true, lo convierte a false, y si es false, lo convierte a true.
 
-        console.log(numero10);
-                  
-//Convertir a numero Entero
+        let z = true;
 
-        console.log(Number.parseInt(numero10));
-                  
-//Convertir a numero FLOTANTE
+        console.log(!z); // false (porque true se convierte en false)
+        console.log(!false); // true
+        
+// Ejemplo
 
-        console.log(Number.parseFloat(numero20));
-                  
-//Revisar si es un número entero o decimal
-                  
-        console.log(Number.isInteger(numero10));
+        let edad = 25;
+        let tieneLicencia = true;
+
+        // Verificar si una persona puede conducir
+        if (edad >= 18 && tieneLicencia) {
+        console.log("La persona puede conducir.");
+        } else {
+        console.log("La persona no puede conducir.");
+        }  
             </code></pre>
             </section>
             <!-- Footer -->
