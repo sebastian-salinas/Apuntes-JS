@@ -270,231 +270,406 @@
           </header>
           <!-- Main body -->
           <section class="px-4 mt-20 sm:h-16 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold mt-4 text-gray-800">Numbers</h1>
+            <h1 class="text-3xl font-bold mt-4 text-gray-800">Objects</h1>
             <!-- Sección 1 -->
             <section class="space-y-4">
               <h2 class="text-2xl font-semibold mt-4 text-gray-700">
-                Declaración y uso de Strings
+                Declaración y uso de Objetos
               </h2>
               <p class="text-gray-600 leading-relaxed">
-                Strings o Cadenas de Texto son secuencias de caracteres que se
-                pueden asignar a variables
+                Un objeto en JavaScript es una estructura de datos que permite
+                almacenar un conjunto de propiedades y valores relacionados, que
+                pueden ser de diferentes tipos (números, cadenas, funciones,
+                etc.). Los objetos son fundamentales en JavaScript y permiten
+                modelar entidades del mundo real con sus características
+                (propiedades) y comportamientos (métodos).
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-// Creacion de numeros
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">// Los objetos son la pieza principal en JavaScript, en lugar de crear diferentes variables:
 
-          const numero1 = 30;
+        const nombreProducto = "Monitor 20 Pulgadas";
+        const precio = 30;
+        const disponible = true;
                   
-          console.log(numero1);
+//Podemos crear un objeto que agrupe toda esta información en una sola variable
+                  
+        const producto = {
+          nombre: "Monitor 20 pulgadas", /*Se utilizan ":", esta sintaxis es propia de los objetos y representa
+          el valor que tendrpropiedad o la llave del objeto, muchas veces se les dice llave valor*/
+        };
+                  
+//Si deseas agregar más propiedades puedes hacerlo de la siguiente forma
+                  
+        const producto = {
+          nombre: "Monitor 20 pulgadas", // La "," es importante, sin ella tendriamos un error
+          precio: 30,
+          disponible: true, // el último elemento puede o no tener la ","
+        };
             </code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Métodos de Cadenas de Texto
+                Acceder a las propiedades de un objeto
               </h3>
-              <p class="mb-4">
-                Existen varios métodos útiles para trabajar con cadenas en
-                JavaScript, como obtener la longitud de un string, buscar la
-                posición de un caracter, y más.
+              <p class="text-gray-600 leading-relaxed">
+                Existen dos formas de acceder a las propiedades de un objeto,
+                una es utilizando la sintaxis de punto y la otra es utilizando
+                corchetes:
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-//Operadores aritméticos basicos
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">// Veamos como acceder a las propiedades de un objeto:
 
-        const numero1 = 30;
-        const numero2 = 20;
+        const producto = {
+          nombre: "Monitor 20 pulgadas", // La , es importante, sin ella tendriamos un error
+          precio: 30,
+          disponible: true, // el último elemento puede o no tener la ,
+        };
                   
-        let resultado;
+        console.log(producto);
                   
-//Suma
+// Supongamos que deseamos acceder al nombre, en los objetos de javascript existe algo llamado la sintaxis de punto
                   
-        resultado = numero1 + numero2;
+        console.log(producto.nombre); // Monitor 20 pulgadas
+        console.log(producto.precio); // 30
+        console.log(producto.disponible); // true
                   
-//resta
-                  
-        resultado = numero1 - numero2;
-                  
-//multiplicación
+// Otra forma aunque no tan común es:
+        console.log(producto["nombre"]); // Monitor 20 pulgadas
+                            
+// Añadir propiedades nuevas a un objeto:
 
-        resultado = numero1 * numero2;
+// Para añadir nuevas propiedades se utiliza de la misma forma la sintaxis de punto
+        producto.imagen = "image.jpg";
                   
-//división
-
-        resultado = numero1 / numero2;
+// Finalmente para eliminar una propiedad se utiliza delete
                   
-//Modulo
-
-        resultado = numero1 % numero2;
+        delete producto.nombre;
                   
-        console.log(resultado);
+        console.log(producto);
                   
+// Algunas veces deseas asignar el valor de un objeto hacia una variable, veamos como hacerlo en el siguiente video  
             </code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Concatenación de Cadenas
+                Asignación de variables a un objeto
               </h3>
-              <p class="mb-4">
-                Puedes concatenar cadenas de texto y variables usando plantillas
-                literales, lo que hace que tu código sea más limpio y fácil de
-                leer.
+              <p class="text-gray-600 leading-relaxed">
+                La asignación de variables a un objeto en JavaScript permite
+                almacenar valores dentro de propiedades clave-valor para
+                organizar y estructurar datos relacionados.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-//Objeto math, se accede con la palabra reservada Math y luego un punto y el nombre del método
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">// Veamos como asignar variables hacia un objeto
 
-        let resultado;
+        const producto = {
+          nombre: "Monitor 20 pulgadas", // La , es importante, sin ella tendriamos un error
+          precio: 30,
+          disponible: true, // el último elemento puede o no tener la ,
+        };
                   
-        resultado = Math.PI;
+        const nombre = producto.nombre;
                   
-//Redondear hacia
+// Otra forma de hacerlo y que también es nueva, es con algo llamado object destructuring...
                   
-        resultado = Math.round(2.8);
+// Destructuring significa, sacar de una esctructura, puede ser complejo, no lo es tanto sobretodo cuando lo practicas
                   
-//Redondear hacia arriba
+        const { nombre } = producto;
                   
-        resultado = Math.ceil(2.78);
+// si deseas extraer más variables;
+        const { precio } = producto;
                   
-//Redondear hacia abajo
+        console.log(nombre);
+        console.log(precio);
                   
-        resultado = Math.floor(2.78);
+// O puedes hacerlo mejor con
                   
-//Raiz cuadrada
+        const { nombre, precio } = producto;      
+            </code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2">Objetos anidados</h3>
+              <p class="text-gray-600 leading-relaxed">
+                Los objetos anidados en JavaScript son estructuras donde un
+                objeto contiene otros objetos como valores de sus propiedades,
+                permitiendo organizar datos jerárquicamente.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">/* Un objeto puede contener cualquier tipo de dato dentro de el, 
+incluso puede tener otros objetos, esto se le conoce como Objetos anidados.*/
+
+        const producto = {
+          nombre: "Monitor 20 pulgadas",
+          precio: 30,
+          disponible: true,
+          informacion: {
+            peso: "1kg",
+            medida: "1m",
+          },
+        };
                   
-        resultado = Math.sqrt(2.78);
+        console.log(producto); // Puedes ver que tenemos un objeto dentro de un objeto.
                   
-// Valor absoluto (ignora el negativo)
+// De nueva cuenta para acceder a un objeto, se utiliza la sintaxis de punto
                   
-        resultado = Math.abs(-200);
-                  
-//Potencia
-                  
-        resultado = Math.pow(2, 3);
-                  
-//Minimo
-                  
-        resultado = Math.min(2, 3, 4, 8, 1, 4, 6, 9);
-                  
-//Máximo
-                  
-        resultado = Math.max(2, 3, 4, 8, 1, 4, 6, 9);
-                  
-// Aleatorio
-                  
-        let random = Math.random() * 100;
-                  
-        let redondear = Math.round(random);
-                  
-        console.log(redondeear);
-                  
-//Redondear entre 1 y 50
-                  
-        resultado = Math.round(Math.random() * 50);
-                  
-        console.log(resultado);
-                  
+        console.log(producto.informacion);
+        console.log(producto.informacion.peso);
+        console.log(producto.informacion.medida);      
             </code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Métodos para Eliminar Espacios en Blanco
+                Destructuring de Objetos dentro de otros Objetos
               </h3>
-              <p class="mb-4">
-                Utilizamos <code class="text-blue-600">trimStart()</code> y
-                <code class="text-blue-600">trimEnd()</code> para eliminar
-                espacios en blanco al principio y al final de una cadena.
+              <p class="text-gray-600 leading-relaxed">
+                El destructuring de un objeto dentro de otro permite extraer
+                propiedades anidadas de forma directa y clara en una sola línea
+                de código.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-                  
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">// Veamos como hacer destructuring de un objeto que esta dentro de otro objeto..
 
-//Orden de ejecución de operadores
-
-        let resultado;
+        const producto = {
+          nombre: "Monitor 20 pulgadas",
+          precio: 30,
+          disponible: true,
+          informacion: {
+            peso: "1kg",
+            medida: "1m",
+          },
+        };
                   
-        resultado = 2 + 3 * 4;
+        const {
+          nombre,
+          informacion,
+          informacion: { peso, medida },
+        } = producto;
                   
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - 1;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - 1 / 2;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3 + 5;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3 + 5 * 6;
-                  
-        console.log(resultado);
-                  
+        console.log(nombre);
+        console.log(informacion);
+        console.log(peso);
+        console.log(medida);  
             </code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Reemplazar y Extraer Parte de una Cadena
+                Reasignar valores de Objetos
               </h3>
-              <p class="mb-4">
-                Usamos <code class="text-blue-600">replace()</code> para
-                reemplazar texto y <code class="text-blue-600">slice()</code> o
-                <code class="text-blue-600">substring()</code> para extraer
-                porciones de una cadena.
+              <p class="text-gray-600 leading-relaxed">
+                Reasignar el valor de un objeto implica modificar sus
+                propiedades directamente o asignar un nuevo objeto a la misma
+                variable.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-        let puntaje = 5;
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">// Si recuerdas una variable con const una vez que es definida no puede reasginarse su valor.
 
-        puntaje++; // ejecuta el comando y luego lo incrementa
+        const producto = "Monitor";
+        producto = 'Tablet';
+        console.log(producto);
                   
-        ++puntaje; // incrementa el puntaje y luego ejecuta el comando
+// En el caso de los objetos veremos que tienen un comportamiento diferente, ya que sus propiedades si se pueden reescribir.
                   
-        puntaje += 2; // suma 2 a puntaje y luego ejecuta el comando
+        const producto = {
+          nombre: "Monitor 20 pulgadas",
+          precio: 30,
+          disponible: true,
+        };
                   
-        console.log(puntaje);
+        console.log(producto);
+                  
+        producto.disponible = false;
+                  
+        console.log(producto); 
+// Puedes ver que lo pudimos modificar, a pesar de ser const, en el proximo tema veremos como evitarlo.
             </code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Otros Métodos de Cadenas
+                Object Method o Métodos de objetos
               </h3>
-              <p class="mb-4">
-                Aquí se encuentran otros métodos útiles como
-                <code class="text-blue-600">charAt()</code>,
-                <code class="text-blue-600">repeat()</code>,
-                <code class="text-blue-600">split()</code>, entre otros.
+              <p class="text-gray-600 leading-relaxed">
+                Los métodos de objetos son funciones asociadas a un objeto que
+                permiten realizar acciones o cálculos utilizando sus
+                propiedades.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejmplos
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">/*Los objetos pueden modificar su valor, pero si quisieramos podriamos prevenir este comportamiento.*/
 
-        const numero10 = "20";
-        const numero20 = "20.2";
-        const numero30 = "Veinte";
-        const numero40 = 20;
+        const producto = {
+          nombre: "Monitor 20 pulgadas",
+          precio: 30,
+          disponible: true,
+        };
                   
-//Convertir un número a texto
+        console.log(producto);
+                  
+// Para ello utilizaremos un Object Method o Métodos de objetos.
 
-        console.log(numero10);
+//Para prevenir que un objeto sea modificado, utilizaremos freeze, y funciona de la siguiente forma:
                   
-//Convertir a numero Entero
+        Object.freeze(producto); // Freeze toma como argumento el objeto
+                  
+        producto.disponible = false;
+                  
+// Freeze tampoco permite agregar nuevas propiedades
 
-        console.log(Number.parseInt(numero10));
+        producto.imagen = "imagen.jpg";
                   
-//Convertir a numero FLOTANTE
+// Tampoco se pueden eliminar propiedades
+                  
+        delete producto.nombre;
+                  
+// Finalmente si quieres revisar si un objeto esta congelado puedes usar
+                  
+        console.log(Object.isFrozen(producto));
+                  
+        console.log(producto);
+            </code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2">Metodo .Seal()</h3>
+              <p class="text-gray-600 leading-relaxed">
+                El método <code class="text-blue-600">Object.seal()</code> en
+                JavaScript se utiliza para sellar un objeto, lo que impide
+                agregar o eliminar propiedades, pero permite modificar los
+                valores de las propiedades existentes.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">// A diferencia de Freeze no se pueden agregar ni eliminar propiedades pero si se pueden modificar las existentes.
 
-        console.log(Number.parseFloat(numero20));
+          const producto = {
+            nombre: "Monitor 20 pulgadas",
+            precio: 30,
+            disponible: true,
+          };
                   
-//Revisar si es un número entero o decimal
+          Object.seal(producto);
                   
-        console.log(Number.isInteger(numero10));
+// Se pueden reasignar
+
+        producto.nombre = "Tablet";
+                  
+// Pero no eliminar
+
+        delete producto.precio;
+                  
+// Tampoco se pueden añadir nuevas
+
+        producto.imagen = "imagen.jpg";
+                  
+// Verificar si un objeto esta sellado
+
+        console.log(Object.isSealed(producto));
+                  
+        console.log(producto);    
+            </code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2">
+                Asignación de propiedades y valores a un objeto
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                El método <code class="text-blue-600">Object.assign()</code> en
+                JavaScript se utiliza para copiar las propiedades y valores de
+                uno o más objetos a un objeto destino, permitiendo unir o
+                combinar varios objetos en uno solo.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">/*Veamos como unir 2 objetos, esto llega a ser muy común ya quealgunas veces en una base de datos 
+obtienes el ID del cliente y también tienes los clientes que pertenecen a ese ID y te gustaría unirlos*/
+
+        const producto = {
+          nombre: "Monitor 20 pulgadas",
+          precio: 30,
+          disponible: true,
+        };
+                  
+        const medidas = {
+          peso: "1 kg",
+          medida: "1 metro",
+        };
+                  
+// Una forma de hacerlo es con el object method llamado assign
+                  
+        const resultado = Object.assign(producto, medidas);
+                  
+        console.log(resultado);
+                  
+        const person = {
+          nombre: "Sebastian",
+          edad: 28,
+          sexo: "Masculino",
+          direccion: {
+            calle: "Calle Ramon y Cajal",
+            numero: 1,
+            piso: 1,
+          },
+        };
+                  
+        const persona2 = {
+          nombre: "Denise",
+          edad: 29,
+          sexo: "Femenino",
+          direccion: {
+            calle: "Calle Ramon y Cajal",
+            numero: 1,
+            piso: 1,
+          },
+        };
+                  
+        const resultado2 = Object.assign(person, persona2);
+                  
+        console.log(resultado2);
+                  
+        const resultado3 = { ...person, ...persona2 };
+        console.log(resultado3);
+            </code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2">
+                Spread operator y Rest operator
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                El spread operator (...) en JavaScript se utiliza para expandir
+                o desestructurar elementos de un array o propiedades de un
+                objeto, mientras que el rest operator se emplea para recolectar
+                múltiples elementos o propiedades en un solo array u objeto,
+                permitiendo una sintaxis más concisa y flexible.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">// Spread operator
+
+//Ejemplo con arrays:
+
+        const numeros = [1, 2, 3];
+        const nuevosNumeros = [...numeros, 4, 5];
+                  
+        console.log(nuevosNumeros);  // [1, 2, 3, 4, 5]
+
+//Ejemplo con objetos:
+
+        const persona = { nombre: "Juan", edad: 30 };
+        const nuevaPersona = { ...persona, ciudad: "Madrid" };
+
+        console.log(nuevaPersona);  // { nombre: "Juan", edad: 30, ciudad: "Madrid" }
+
+//Rest operator
+
+//Ejemplo con arrays:
+
+        const numeros = [1, 2, 3, 4, 5];
+        const [primero, ...resto] = numeros;
+
+        console.log(primero);  // 1
+        console.log(resto);    // [2, 3, 4, 5]
+
+//Ejemplo con objetos:
+
+        const persona = { nombre: "Juan", edad: 30, ciudad: "Madrid" };
+        const { nombre, ...resto } = persona;
+
+        console.log(nombre);   // "Juan"
+        console.log(resto);    // { edad: 30, ciudad: "Madrid" }
             </code></pre>
             </section>
             <!-- footer -->
