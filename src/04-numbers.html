@@ -46,10 +46,21 @@
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css"
       rel="stylesheet" />
-
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/icons/favicon-96x96.png"
+      sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/icons/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/icons/apple-touch-icon.png" />
     <title>Apuntes JavaScript 🚀</title>
   </head>
-  <body class="bg-gray-100">
+  <body class="">
     <div class="min-h-screen flex flex-col">
       <div class="flex flex-1">
         <!-- Sidebar -->
@@ -259,29 +270,32 @@
             <!-- Sección 1 -->
             <section class="space-y-4">
               <h2 class="text-2xl font-semibold mt-4 text-gray-700">
-                Declaración y uso de Strings
+                Declaración y uso de numbers
               </h2>
               <p class="text-gray-600 leading-relaxed">
-                Strings o Cadenas de Texto son secuencias de caracteres que se
-                pueden asignar a variables
+                JavaScript solo tiene un tipo de número. Los números pueden
+                escribirse con o sin decimales:
               </p>
               <pre
                 class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-// Creacion de numeros
+// Creacion de numero
 
           const numero1 = 30;
                   
           console.log(numero1);
+
+          const numero2 = 30.14;
+                  
+          console.log(numero2);
             </code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Métodos de Cadenas de Texto
+                Operadores aritméticos basicos
               </h3>
-              <p class="mb-4">
-                Existen varios métodos útiles para trabajar con cadenas en
-                JavaScript, como obtener la longitud de un string, buscar la
-                posición de un caracter, y más.
+              <p class="text-gray-600 leading-relaxed">
+                Los operadores aritméticos básicos en JavaScript se usan para
+                realizar cálculos matemáticos simples:
               </p>
               <pre
                 class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
@@ -317,13 +331,13 @@
             </code></pre>
             </section>
             <section class="space-y-4">
-              <h3 class="text-xl font-semibold mt-8 mb-2">
-                Concatenación de Cadenas
-              </h3>
-              <p class="mb-4">
-                Puedes concatenar cadenas de texto y variables usando plantillas
-                literales, lo que hace que tu código sea más limpio y fácil de
-                leer.
+              <h3 class="text-xl font-semibold mt-8 mb-2">Objeto Math</h3>
+              <p class="text-gray-600 leading-relaxed">
+                El objeto <code class="text-blue-600">Math.</code> proporciona
+                propiedades y métodos para realizar operaciones matemáticas
+                comunes, como redondeos, cálculos de potencias, raíces, y más.
+                Es un objeto estático, lo que significa que no necesitas
+                instanciarlo para usar sus métodos.
               </p>
               <pre
                 class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
@@ -383,17 +397,18 @@
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Métodos para Eliminar Espacios en Blanco
+                Orden de ejecución de operadores
               </h3>
-              <p class="mb-4">
-                Utilizamos <code class="text-blue-600">trimStart()</code> y
-                <code class="text-blue-600">trimEnd()</code> para eliminar
-                espacios en blanco al principio y al final de una cadena.
+              <p class="text-gray-600 leading-relaxed">
+                El orden de ejecución de las operaciones sigue las reglas de
+                precedencia de operadores, donde las operaciones dentro de
+                paréntesis se evalúan primero, seguidas por la
+                multiplicación/división, y finalmente la suma/resta. Si varios
+                operadores tienen la misma precedencia, se evalúan de izquierda
+                a derecha.
               </p>
               <pre
                 class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-                  
-
 //Orden de ejecución de operadores
 
         let resultado;
@@ -426,63 +441,84 @@
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Reemplazar y Extraer Parte de una Cadena
+                Incrementos y decrementos
               </h3>
-              <p class="mb-4">
-                Usamos <code class="text-blue-600">replace()</code> para
-                reemplazar texto y <code class="text-blue-600">slice()</code> o
-                <code class="text-blue-600">substring()</code> para extraer
-                porciones de una cadena.
+              <p class="text-gray-600 leading-relaxed">
+                Los incrementos en JavaScript permiten aumentar el valor de una
+                variable de forma sencilla, ya sea en pasos de uno (i++ o ++i) o
+                en valores personalizados (i += n).
               </p>
               <pre
                 class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-        let puntaje = 5;
+//Incremento
 
-        puntaje++; // ejecuta el comando y luego lo incrementa
+        let i = 5;
+
+// Incremento postfijo
+
+        console.log(i++); // Muestra 5, luego i se convierte en 6
+        console.log(i);   // Muestra 6
                   
-        ++puntaje; // incrementa el puntaje y luego ejecuta el comando
+// Incremento prefijo
+
+        console.log(++i); // Incrementa i primero (7), luego lo muestra
                   
-        puntaje += 2; // suma 2 a puntaje y luego ejecuta el comando
-                  
-        console.log(puntaje);
+// Incremento personalizado
+
+        i += 3;           // Suma 3 al valor actual de i (ahora 10)
+        console.log(i);   // Muestra 10
+
+//Decremento
+
+        let i = 10;
+
+// Decremento postfijo
+
+        console.log(i--); // Muestra 10, luego i se convierte en 9
+        console.log(i);   // Muestra 9
+
+// Decremento prefijo
+
+        console.log(--i); // Decrementa i primero (8), luego lo muestra
+
+// Decremento personalizado
+
+        i -= 2;           // Resta 2 al valor actual de i (ahora 6)
+        console.log(i);   // Muestra 6
             </code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Otros Métodos de Cadenas
+                Convertir strings a numbers
               </h3>
-              <p class="mb-4">
-                Aquí se encuentran otros métodos útiles como
-                <code class="text-blue-600">charAt()</code>,
-                <code class="text-blue-600">repeat()</code>,
-                <code class="text-blue-600">split()</code>, entre otros.
+              <p class="text-gray-600 leading-relaxed">
+                En JavaScript se pueden utilizar los metodos
+                <code class="text-blue-600">parseInt()</code> y
+                <code class="text-blue-600">parseFloat()</code>, para convertir
+                numeros de texto a números.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejmplos
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
+// Usando parseInt para convertir texto a entero
 
-        const numero10 = "20";
-        const numero20 = "20.2";
-        const numero30 = "Veinte";
-        const numero40 = 20;
+        let textoEntero = "42";
+        let numeroEntero = parseInt(textoEntero);
+        console.log(numeroEntero); // 42
                   
-//Convertir un número a texto
+// Usando parseFloat para convertir texto a número decimal
 
-        console.log(numero10);
+        let textoDecimal = "42.75";
+        let numeroDecimal = parseFloat(textoDecimal);
+        console.log(numeroDecimal); // 42.75
                   
-//Convertir a numero Entero
+// Intentando convertir texto no numérico
 
-        console.log(Number.parseInt(numero10));
-                  
-//Convertir a numero FLOTANTE
-
-        console.log(Number.parseFloat(numero20)); //Convertir a numero FLOTANTE
-                  
-//Revisar si es un número es decir si es un número entero o decimal
-                  
-        console.log(Number.isInteger(numero10));
+        let textoInvalido = "abc";
+        console.log(parseInt(textoInvalido)); // NaN
+        console.log(parseFloat(textoInvalido)); // NaN
             </code></pre>
             </section>
-            <!-- Sección 4 -->
+            <!-- footer -->
             <section>
               <div class="mt-10 border-t border-gray-200 pt-10">
                 <p class="mb-6 text-sm text-gray-700 lg:mt-0">

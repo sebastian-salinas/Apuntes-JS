@@ -46,7 +46,18 @@
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css"
       rel="stylesheet" />
-
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/icons/favicon-96x96.png"
+      sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/icons/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/icons/apple-touch-icon.png" />
     <title>Apuntes JavaScript 🚀</title>
   </head>
   <body class="bg-gray-100">
@@ -255,56 +266,234 @@
           </header>
           <!-- Main body -->
           <section class="px-4 mt-20 sm:h-16 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold mt-4 text-gray-800">
-              Introducción a JavaScript
-            </h1>
+            <h1 class="text-3xl font-bold mt-4 text-gray-800">Numbers</h1>
             <!-- Sección 1 -->
             <section class="space-y-4">
               <h2 class="text-2xl font-semibold mt-4 text-gray-700">
-                ¿Qué es JavaScript?
+                Declaración y uso de Strings
               </h2>
               <p class="text-gray-600 leading-relaxed">
-                JavaScript es un lenguaje de programación versátil que se
-                utiliza principalmente para agregar interactividad a sitios web.
-                Es uno de los pilares del desarrollo web, junto con HTML y CSS.
+                Strings o Cadenas de Texto son secuencias de caracteres que se
+                pueden asignar a variables
               </p>
-            </section>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
+// Creacion de numeros
 
-            <!-- Sección 2 -->
+          const numero1 = 30;
+                  
+          console.log(numero1);
+            </code></pre>
+            </section>
             <section class="space-y-4">
-              <h2 class="text-2xl mt-4 font-semibold text-gray-700">
-                Ejemplo básico de JavaScript
-              </h2>
-              <p class="text-gray-600 leading-relaxed">
-                A continuación, se muestra un ejemplo básico que imprime "¡Hola,
-                mundo!" en la consola del navegador:
+              <h3 class="text-xl font-semibold mt-8 mb-2">
+                Métodos de Cadenas de Texto
+              </h3>
+              <p class="mb-4">
+                Existen varios métodos útiles para trabajar con cadenas en
+                JavaScript, como obtener la longitud de un string, buscar la
+                posición de un caracter, y más.
               </p>
-              <!-- Bloque de código -->
-              <pre class="w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2">
-        <code class="language-javascript">
-          // Este es un comentario en JavaScript
-          console.log('¡Hola, mundo!');
-        </code>
-            </pre>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
+//Operadores aritméticos basicos
+
+        const numero1 = 30;
+        const numero2 = 20;
+                  
+        let resultado;
+                  
+//Suma
+                  
+        resultado = numero1 + numero2;
+                  
+//resta
+                  
+        resultado = numero1 - numero2;
+                  
+//multiplicación
+
+        resultado = numero1 * numero2;
+                  
+//división
+
+        resultado = numero1 / numero2;
+                  
+//Modulo
+
+        resultado = numero1 % numero2;
+                  
+        console.log(resultado);
+                  
+            </code></pre>
             </section>
-            <!-- Sección 3 -->
             <section class="space-y-4">
-              <h2 class="text-2xl font-semibold text-gray-700">
-                Características principales
-              </h2>
-              <ul class="list-disc list-inside text-gray-600 leading-relaxed">
-                <li>Es ejecutado por el navegador en el lado del cliente.</li>
-                <li>
-                  Soporta programación orientada a objetos, funcional y basada
-                  en eventos.
-                </li>
-                <li>
-                  Se utiliza tanto para desarrollo front-end como back-end (con
-                  Node.js).
-                </li>
-              </ul>
+              <h3 class="text-xl font-semibold mt-8 mb-2">
+                Concatenación de Cadenas
+              </h3>
+              <p class="mb-4">
+                Puedes concatenar cadenas de texto y variables usando plantillas
+                literales, lo que hace que tu código sea más limpio y fácil de
+                leer.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
+//Objeto math, se accede con la palabra reservada Math y luego un punto y el nombre del método
+
+        let resultado;
+                  
+        resultado = Math.PI;
+                  
+//Redondear hacia
+                  
+        resultado = Math.round(2.8);
+                  
+//Redondear hacia arriba
+                  
+        resultado = Math.ceil(2.78);
+                  
+//Redondear hacia abajo
+                  
+        resultado = Math.floor(2.78);
+                  
+//Raiz cuadrada
+                  
+        resultado = Math.sqrt(2.78);
+                  
+// Valor absoluto (ignora el negativo)
+                  
+        resultado = Math.abs(-200);
+                  
+//Potencia
+                  
+        resultado = Math.pow(2, 3);
+                  
+//Minimo
+                  
+        resultado = Math.min(2, 3, 4, 8, 1, 4, 6, 9);
+                  
+//Máximo
+                  
+        resultado = Math.max(2, 3, 4, 8, 1, 4, 6, 9);
+                  
+// Aleatorio
+                  
+        let random = Math.random() * 100;
+                  
+        let redondear = Math.round(random);
+                  
+        console.log(redondeear);
+                  
+//Redondear entre 1 y 50
+                  
+        resultado = Math.round(Math.random() * 50);
+                  
+        console.log(resultado);
+                  
+            </code></pre>
             </section>
-            <!-- Sección 4 -->
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2">
+                Métodos para Eliminar Espacios en Blanco
+              </h3>
+              <p class="mb-4">
+                Utilizamos <code class="text-blue-600">trimStart()</code> y
+                <code class="text-blue-600">trimEnd()</code> para eliminar
+                espacios en blanco al principio y al final de una cadena.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
+                  
+
+//Orden de ejecución de operadores
+
+        let resultado;
+                  
+        resultado = 2 + 3 * 4;
+                  
+        console.log(resultado);
+                  
+        resultado = 2 + 3 * 4 - 1;
+                  
+        console.log(resultado);
+                  
+        resultado = 2 + 3 * 4 - 1 / 2;
+                  
+        console.log(resultado);
+                  
+        resultado = 2 + 3 * 4 - (1 / 2) * 3;
+                  
+        console.log(resultado);
+                  
+        resultado = 2 + 3 * 4 - (1 / 2) * 3 + 5;
+                  
+        console.log(resultado);
+                  
+        resultado = 2 + 3 * 4 - (1 / 2) * 3 + 5 * 6;
+                  
+        console.log(resultado);
+                  
+            </code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2">
+                Reemplazar y Extraer Parte de una Cadena
+              </h3>
+              <p class="mb-4">
+                Usamos <code class="text-blue-600">replace()</code> para
+                reemplazar texto y <code class="text-blue-600">slice()</code> o
+                <code class="text-blue-600">substring()</code> para extraer
+                porciones de una cadena.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
+        let puntaje = 5;
+
+        puntaje++; // ejecuta el comando y luego lo incrementa
+                  
+        ++puntaje; // incrementa el puntaje y luego ejecuta el comando
+                  
+        puntaje += 2; // suma 2 a puntaje y luego ejecuta el comando
+                  
+        console.log(puntaje);
+            </code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2">
+                Otros Métodos de Cadenas
+              </h3>
+              <p class="mb-4">
+                Aquí se encuentran otros métodos útiles como
+                <code class="text-blue-600">charAt()</code>,
+                <code class="text-blue-600">repeat()</code>,
+                <code class="text-blue-600">split()</code>, entre otros.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejmplos
+
+        const numero10 = "20";
+        const numero20 = "20.2";
+        const numero30 = "Veinte";
+        const numero40 = 20;
+                  
+//Convertir un número a texto
+
+        console.log(numero10);
+                  
+//Convertir a numero Entero
+
+        console.log(Number.parseInt(numero10));
+                  
+//Convertir a numero FLOTANTE
+
+        console.log(Number.parseFloat(numero20));
+                  
+//Revisar si es un número entero o decimal
+                  
+        console.log(Number.isInteger(numero10));
+            </code></pre>
+            </section>
+            <!-- footer -->
             <section>
               <div class="mt-10 border-t border-gray-200 pt-10">
                 <p class="mb-6 text-sm text-gray-700 lg:mt-0">
