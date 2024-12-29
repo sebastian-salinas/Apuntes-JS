@@ -270,231 +270,140 @@
           </header>
           <!-- Main body -->
           <section class="px-4 mt-20 sm:h-16 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold mt-4 text-gray-800">Numbers</h1>
+            <h1 class="text-3xl font-bold mt-4 text-gray-800">Booleans</h1>
             <!-- Sección 1 -->
             <section class="space-y-4">
               <h2 class="text-2xl font-semibold mt-4 text-gray-700">
-                Declaración y uso de Strings
+                Declaración y uso de Booleans
               </h2>
               <p class="text-gray-600 leading-relaxed">
-                Strings o Cadenas de Texto son secuencias de caracteres que se
-                pueden asignar a variables
+                Los booleanos son valores lógicos que pueden ser verdaderos o
+                falsos, los booleanos se utilizan para evaluar condiciones y
+                tomar decisiones.
               </p>
               <pre
                 class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-// Creacion de numeros
+// Declaración y uso de Booleans
 
-          const numero1 = 30;
-                  
-          console.log(numero1);
+        const boolean1 = true;
+        const boolean2 = false;
+
+        console.log(boolean1); // true
+        console.log(boolean2); // false
+
+        console.log(boolean1 == boolean2); // false
+        console.log(boolean1 !== boolean2); // true
+
+//Ejemplo de uso de booleanos
+
+        const autenticado = true;
+
+        if (autenticado) {
+          console.log("Autenticado");
+        } else {
+          console.log("No autenticado");
+        }
+
             </code></pre>
             </section>
             <section class="space-y-4">
-              <h3 class="text-xl font-semibold mt-8 mb-2">
-                Métodos de Cadenas de Texto
-              </h3>
-              <p class="mb-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2">Operador ternario</h3>
+              <p class="text-gray-600 leading-relaxed">
                 Existen varios métodos útiles para trabajar con cadenas en
                 JavaScript, como obtener la longitud de un string, buscar la
                 posición de un caracter, y más.
               </p>
               <pre
                 class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-//Operadores aritméticos basicos
-
-        const numero1 = 30;
-        const numero2 = 20;
+//Operadores ternarios
                   
-        let resultado;
-                  
-//Suma
-                  
-        resultado = numero1 + numero2;
-                  
-//resta
-                  
-        resultado = numero1 - numero2;
-                  
-//multiplicación
-
-        resultado = numero1 * numero2;
-                  
-//división
-
-        resultado = numero1 / numero2;
-                  
-//Modulo
-
-        resultado = numero1 % numero2;
-                  
-        console.log(resultado);
-                  
+        console.log(autenticado ? "Autenticado" : "No autenticado");
+                            
+/*En el operador ternario, primero se evalua la condución, luego se añade "?" donde se añadira la 
+condición a evaluar si es true, y luego se añade ":" donde se añadira el valor a devolver si es false.*/
             </code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Concatenación de Cadenas
+                Buenas practicas utilizando booleanos
               </h3>
-              <p class="mb-4">
-                Puedes concatenar cadenas de texto y variables usando plantillas
-                literales, lo que hace que tu código sea más limpio y fácil de
-                leer.
+              <p class="text-gray-600 leading-relaxed">
+                Al trabajar con valores booleanos en JavaScript, seguir buenas
+                prácticas asegura que el código sea más claro, eficiente y fácil
+                de mantener. Aquí algunas recomendaciones clave:
               </p>
               <pre
                 class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-//Objeto math, se accede con la palabra reservada Math y luego un punto y el nombre del método
+//Evita comparaciones implícitas que puedan generar resultados inesperados. Realiza comparaciones explícitas.
 
-        let resultado;
-                  
-        resultado = Math.PI;
-                  
-//Redondear hacia
-                  
-        resultado = Math.round(2.8);
-                  
-//Redondear hacia arriba
-                  
-        resultado = Math.ceil(2.78);
-                  
-//Redondear hacia abajo
-                  
-        resultado = Math.floor(2.78);
-                  
-//Raiz cuadrada
-                  
-        resultado = Math.sqrt(2.78);
-                  
-// Valor absoluto (ignora el negativo)
-                  
-        resultado = Math.abs(-200);
-                  
-//Potencia
-                  
-        resultado = Math.pow(2, 3);
-                  
-//Minimo
-                  
-        resultado = Math.min(2, 3, 4, 8, 1, 4, 6, 9);
-                  
-//Máximo
-                  
-        resultado = Math.max(2, 3, 4, 8, 1, 4, 6, 9);
-                  
-// Aleatorio
-                  
-        let random = Math.random() * 100;
-                  
-        let redondear = Math.round(random);
-                  
-        console.log(redondeear);
-                  
-//Redondear entre 1 y 50
-                  
-        resultado = Math.round(Math.random() * 50);
-                  
-        console.log(resultado);
-                  
-            </code></pre>
-            </section>
-            <section class="space-y-4">
-              <h3 class="text-xl font-semibold mt-8 mb-2">
-                Métodos para Eliminar Espacios en Blanco
-              </h3>
-              <p class="mb-4">
-                Utilizamos <code class="text-blue-600">trimStart()</code> y
-                <code class="text-blue-600">trimEnd()</code> para eliminar
-                espacios en blanco al principio y al final de una cadena.
-              </p>
-              <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-                  
+      //Evitar:
+        if (i) { // Compara implícitamente si algunaVar es "truthy" o "falsy"
+        // Hacer algo
+        }
 
-//Orden de ejecución de operadores
+      //Buena práctica:
+        if (i === true) { // Comparación explícita con true
+        // Hacer algo
+        }
 
-        let resultado;
-                  
-        resultado = 2 + 3 * 4;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - 1;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - 1 / 2;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3 + 5;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3 + 5 * 6;
-                  
-        console.log(resultado);
-                  
-            </code></pre>
-            </section>
-            <section class="space-y-4">
-              <h3 class="text-xl font-semibold mt-8 mb-2">
-                Reemplazar y Extraer Parte de una Cadena
-              </h3>
-              <p class="mb-4">
-                Usamos <code class="text-blue-600">replace()</code> para
-                reemplazar texto y <code class="text-blue-600">slice()</code> o
-                <code class="text-blue-600">substring()</code> para extraer
-                porciones de una cadena.
-              </p>
-              <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-        let puntaje = 5;
+//Para evitar errores por la conversión implícita de tipos, siempre usa el operador de igualdad estricta (===).
 
-        puntaje++; // ejecuta el comando y luego lo incrementa
+      //Ejemplo:
+        const i = true;
+        if (i === true) {
+            // Hacer algo
+        }
                   
-        ++puntaje; // incrementa el puntaje y luego ejecuta el comando
-                  
-        puntaje += 2; // suma 2 a puntaje y luego ejecuta el comando
-                  
-        console.log(puntaje);
-            </code></pre>
-            </section>
-            <section class="space-y-4">
-              <h3 class="text-xl font-semibold mt-8 mb-2">
-                Otros Métodos de Cadenas
-              </h3>
-              <p class="mb-4">
-                Aquí se encuentran otros métodos útiles como
-                <code class="text-blue-600">charAt()</code>,
-                <code class="text-blue-600">repeat()</code>,
-                <code class="text-blue-600">split()</code>, entre otros.
-              </p>
-              <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejmplos
+//JavaScript puede interpretar 0 como false y cualquier valor distinto de 0 como true, pero esto puede resultar confuso.
 
-        const numero10 = "20";
-        const numero20 = "20.2";
-        const numero30 = "Veinte";
-        const numero40 = 20;
-                  
-//Convertir un número a texto
+      //Evitar:
+        let i = 1; // 1 se interpreta como true
+        if (i) {
+            // Hacer algo
+        }
 
-        console.log(numero10);
-                  
-//Convertir a numero Entero
+      //Buena práctica:
+        let i = true; // Usa un valor booleano explícito
+        if (i) {
+            // Hacer algo
+        }        
 
-        console.log(Number.parseInt(numero10));
-                  
-//Convertir a numero FLOTANTE
+//Utiliza nombres de variables que dejen claro que se trata de un valor booleano, facilitando la comprensión del código.
 
-        console.log(Number.parseFloat(numero20));
-                  
-//Revisar si es un número entero o decimal
-                  
-        console.log(Number.isInteger(numero10));
+      //Evitar:
+        const x = true;
+
+      //Buena práctica:
+        const usuarioLogueado = true;
+
+/*Aunque a veces se utiliza doble negación (!!) para convertir valores en booleanos,
+esto puede dificultar la lectura del código.*/
+
+      //Evitar:
+        const esValido = !!algunaVariable; // Conversión implícita a booleano
+
+      //Buena práctica:
+        const esValido = Boolean(algunaVariable); // Método más claro y explícito
+
+/*Aunque en JavaScript cualquier valor puede ser evaluado como verdadero o falso,
+es preferible usar los valores literales true y false para mejorar la claridad.*/
+
+      //Evitar:
+        if (i) { // Esto puede ser confuso si algunaVar no es un valor booleano
+          // Hacer algo
+        }
+
+      //Buena práctica:
+        if (i === true) { // Comparación explícita
+          // Hacer algo
+        }
+
+//Asegúrate de que las condiciones booleanas sean fáciles de entender y que expresen claramente lo que se está evaluando.
+
+      //Ejemplo:
+        if (usuarioAutenticado) {
+        // Hacer algo
+        }
             </code></pre>
             </section>
             <!-- footer -->
