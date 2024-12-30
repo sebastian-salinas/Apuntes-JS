@@ -449,46 +449,84 @@ proporcionamos, .reduce() utilizaría el primer elemento del array como valor in
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Métodos para Eliminar Espacios en Blanco
+                Método <code class="text-blue-600">.filter()</code>
               </h3>
               <p class="text-gray-600 leading-relaxed">
-                Utilizamos <code class="text-blue-600">trimStart()</code> y
-                <code class="text-blue-600">trimEnd()</code> para eliminar
-                espacios en blanco al principio y al final de una cadena.
+                El método <code class="text-blue-600">.filter()</code> en
+                JavaScript es utilizado para crear un nuevo array con todos los
+                elementos que cumplen una condición específica que se define
+                dentro de una función. A diferencia de otros métodos como
+                <code class="text-blue-600">.map()</code>, que transforman los
+                valores del array,
+                <code class="text-blue-600">.filter()</code> te permite filtrar
+                los elementos que cumplen con una condición, manteniendo los que
+                coinciden y excluyendo el resto.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-                  
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Sintaxis básica:
 
-//Orden de ejecución de operadores
+        array.filter(function(elemento) {
+          return condicion;
+        });
 
-        let resultado;
-                  
-        resultado = 2 + 3 * 4;
-                  
+/*El método .filter() toma una función de devolución de llamada (callback) que recibe un elemento de la lista 
+y devuelve true si debe mantenerse en el nuevo array, o false si debe ser excluido.*/
+
+//Ejemplo detallado
+
+/*Imagina que tienes un carrito de compras con varios productos. Si quisieras filtrar los 
+productos de acuerdo a ciertas condiciones, podrías hacerlo de la siguiente manera:*/
+
+        const carrito = [
+          { nombre: "Monitor 27 Pulgadas", precio: 500 },
+          { nombre: "Televisión", precio: 100 },
+          { nombre: "Tablet", precio: 200 },
+          { nombre: "Audífonos", precio: 300 },
+          { nombre: "Teclado", precio: 400 },
+          { nombre: "Celular", precio: 700 },
+        ];
+
+        // Filtrar productos con un precio superior a 600
+
+        let resultado = carrito.filter((producto) => producto.precio > 600);
+
+        console.log(resultado); // Resultado: [{ nombre: "Celular", precio: 700 }]
+
+/*En este ejemplo, .filter() crea un nuevo array que solo contiene los productos con un precio 
+superior a 600. Si el precio de un producto es mayor que 600, el producto se incluye en el nuevo array.*/
+
+//Mas ejemplos:
+
+        resultado = carrito.filter((producto) => producto.nombre !== "Tablet");
+
         console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - 1;
-                  
+        /* Resultado: [{ nombre: "Monitor 27 Pulgadas", precio: 500 }, { nombre: "Televisión", precio: 100 }, 
+        { nombre: "Audífonos", precio: 300 }, { nombre: "Teclado", precio: 400 }, { nombre: "Celular", precio: 700 }]*/
+
+        resultado = carrito.filter((producto) => producto.nombre === "Tablet");
+
         console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - 1 / 2;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3 + 5;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3 + 5 * 6;
-                  
-        console.log(resultado);
-                  
-            </code></pre>
+        // Resultado: [{ nombre: "Tablet", precio: 200 }]
+
+/*Resumen:
+
+.filter() te permite crear un nuevo array con los elementos que cumplen una condición.
+
+Retorna un array nuevo, dejando intacto el array original.
+
+Filtra los elementos según la condición que se le proporcione y excluye los que no cumplen dicha condición.
+
+Es útil cuando necesitas obtener subconjuntos de un array basados en ciertos criterios, como filtrar productos
+por precio, nombre, categoría, etc.*/
+
+//Comparativa con otros métodos:
+
+        .filter() vs .map():
+
+        .map():// Crea un nuevo array con los resultados de aplicar una función a cada elemento.
+
+        .filter(): /*Crea un nuevo array con los elementos que cumplen una condición, no transformando 
+        los elementos, sino seleccionando solo aquellos que coinciden con la condición.*/</code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
