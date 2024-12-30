@@ -270,232 +270,514 @@
           </header>
           <!-- Main body -->
           <section class="px-4 mt-20 sm:h-16 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold mt-4 text-gray-800">Numbers</h1>
+            <h1 class="text-3xl font-bold mt-4 text-gray-800">Arrays</h1>
             <!-- Sección 1 -->
             <section class="space-y-4">
               <h2 class="text-2xl font-semibold mt-4 text-gray-700">
-                Declaración y uso de Strings
+                Declaración y uso de Arrays
               </h2>
               <p class="text-gray-600 leading-relaxed">
-                Strings o Cadenas de Texto son secuencias de caracteres que se
-                pueden asignar a variables
+                Los Arrays son una estructura de datos que almacenan una
+                secuencia de valores ordenados. En JavaScript, los arrays pueden
+                contener valores de diferentes tipos, como números, cadenas de
+                texto, objetos, entre otros.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-// Creacion de numeros
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">// Los Arrays son un tipo de dato primitivo que almacena una colección de valores de un mismo tipo.
 
-          const numero1 = 30;
+        const numeros = [10, 20, 30, 40, 50];
                   
-          console.log(numero1);
+        const meses = new Array(
+          "Enero",
+          "Febrero",
+          "Marzo",
+          "Abril",
+          "Mayo",
+          "Junio",
+          "Julio",
+          "Agosto",
+          "Septiembre",
+          "Octubre",
+          "Noviembre",
+          "Diciembre"
+        );
+                  
+        console.log(numeros); // [10,20,30,40,50]
+        console.log(meses); /* ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto",
+        "Septiembre","Octubre","Noviembre","Diciembre"] */
+                  
+//Recordar!!!  los Arrays siempre inician en la posición 0 y terminan en la posición (longitud-1)
+                  
+//No es necesario que los arreglos esten relacionados, pueden almacener multiples cantidades de informacion no relacionada entre si
+                  
+        const deTodo = [
+        "Hola",
+        10,
+        true,
+        { nombre: "Sebastian", trabajo: "Frontend Developer" },
+        [4872344],
+        ];
+
+        console.log(deTodo);  
             </code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Métodos de Cadenas de Texto
+                Acceder a los valores de un array
               </h3>
-              <p class="mb-4">
-                Existen varios métodos útiles para trabajar con cadenas en
-                JavaScript, como obtener la longitud de un string, buscar la
-                posición de un caracter, y más.
+              <p class="text-gray-600 leading-relaxed">
+                Para acceder a los valores de un array en JavaScript, se utiliza
+                su índice, comenzando desde 0 para el primer elemento.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-//Operadores aritméticos basicos
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Acceder a los valores de un array
 
-        const numero1 = 30;
-        const numero2 = 20;
+        const numeros = [10, 20, 30, 40, 50, [1, 2, 3, 4]];
+
+//Se esta manera se accede a la posicion del array
+
+        console.log(numeros[0]); // 10
+        console.log(numeros[1]); // 20
+        console.log(numeros[2]); // 30
+        console.log(numeros[3]); // 40
+        console.log(numeros[4]); // 50
+        console.log(numeros[5][0]); // 1
                   
+//Acceder a un elemento del array que no existe devuelve undefined 
+            </code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2">
+                Acceder a todos los elementos de un array
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                Para acceder a todos los elementos de un array en JavaScript, se
+                puede utilizar bucles como
+                <code class="text-blue-600">for</code> ,<code
+                  class="text-blue-600"
+                  >for...of</code
+                >
+                , o métodos como
+                <code class="text-blue-600">.forEach()</code>. Veamos un ejemplo
+                utilizando el bucle for:
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Como acceder a todos los elementos de un array
+
+        const meses = [
+          "Enero",
+          "Febrero",
+          "Marzo",
+          "Abril",
+          "Mayo",
+          "Junio",
+          "Julio",
+          "Agosto",
+          "Septiembre",
+          "Octubre",
+          "Noviembre",
+          "Diciembre",
+        ];
+                  
+        console.log(meses.length); //12
+                  
+        for (let i = 0; i < meses.length; i++) {
+          console.log(`El mes de ${meses[i]}`);
+        }
+        /*  
+        El mes de Enero
+        El mes de Febrero
+        El mes de Marzo
+        El mes de Abril
+        El mes de Mayo
+        El mes de Junio
+        El mes de Julio
+        El mes de Agosto
+        El mes de Septiembre
+        El mes de Octubre
+        El mes de Noviembre
+        El mes de Diciembre
+        */  
+            </code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2">
+                Añadir nuevos valores a un array
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                Para añadir nuevos valores a un array en JavaScript, se puede
+                usar el método
+                <code class="text-blue-600">.push()</code> para agregarlos al
+                final o <code class="text-blue-600">.unshift()</code> para
+                agregarlos al inicio.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Añadir nuevos elementos a un array
+
+        const carrito = [];
+                  
+//Definir un producto
+                  
+        const producto = {
+          nombre: "Monitor 20 pulgadas",
+          precio: 400,
+        };
+                  
+        const movil = {
+          nombre: "iPhone 12 Pro",
+          precio: 1000,
+        };
+                  
+        const teclado = {
+          nombre: "Teclado Macbook Pro",
+          precio: 150,
+        };
+                  
+        carrito.push(producto); //Añadir al final del array
+        carrito.push(movil); //Añadir al final del array
+        carrito.unshift(teclado); //Añadir al principio del array
+                  
+        console.table(carrito);
+                  
+        ┌─────────┬───────────────────────┬────────┐
+        │ (index) │ nombre                │ precio │
+        ├─────────┼───────────────────────┼────────┤
+        │ 0       │ 'Teclado Macbook Pro' │ 150    │
+        │ 1       │ 'Monitor 20 pulgadas' │ 400    │
+        │ 2       │ 'iPhone 12 Pro'       │ 1000   │
+        └─────────┴───────────────────────┴────────┘
+            </code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2">
+                Añadir elementos con spread operator
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                En JavaScript, para añadir nuevos elementos a un array sin
+                modificar el original, puedes usar el spread operator
+                <code class="text-blue-600">(...)</code>. Esto permite crear una
+                nueva copia del array existente y añadirle los nuevos elementos,
+                manteniendo la inmutabilidad. Es especialmente útil cuando
+                trabajas con estados en aplicaciones modernas.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">// Crear un array vacío
+
+        const carrito = [];
+                  
+// Definir productos como objetos
+
+        const producto = { nombre: "Monitor 20 pulgadas", precio: 400 };
+        const movil = { nombre: "iPhone 12 Pro", precio: 1000 };
+        const teclado = { nombre: "Teclado Macbook Pro", precio: 150 };
+                  
+// Añadir productos al array utilizando el spread operator
+
         let resultado;
                   
-//Suma
-                  
-        resultado = numero1 + numero2;
-                  
-//resta
-                  
-        resultado = numero1 - numero2;
-                  
-//multiplicación
+// Añadir el primer producto
 
-        resultado = numero1 * numero2;
+        resultado = [...carrito, producto]; 
                   
-//división
+// Añadir otro producto al final
 
-        resultado = numero1 / numero2;
+        resultado = [...resultado, movil];
                   
-//Modulo
+// Añadir un producto al inicio
 
-        resultado = numero1 % numero2;
+        resultado = [teclado, ...resultado];
                   
-        console.log(resultado);
-                  
+// Mostrar el resultado final
+
+        console.table(resultado);
+
+        ┌─────────┬───────────────────────┬────────┐
+        │ (index) │ nombre                │ precio │
+        ├─────────┼───────────────────────┼────────┤
+        │ 0       │ 'Teclado Macbook Pro' │ 150    │
+        │ 1       │ 'Monitor 20 pulgadas' │ 400    │
+        │ 2       │ 'iPhone 12 Pro'       │ 1000   │
+        └─────────┴───────────────────────┴────────┘
             </code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Concatenación de Cadenas
+                Añadir, eliminar o modificar elementos de un array
               </h3>
-              <p class="mb-4">
-                Puedes concatenar cadenas de texto y variables usando plantillas
-                literales, lo que hace que tu código sea más limpio y fácil de
-                leer.
+              <p class="text-gray-600 leading-relaxed">
+                Los arrays en JavaScript permiten manipular sus elementos
+                mediante métodos integrados como
+                <code class="text-blue-600">push()</code>,
+                <code class="text-blue-600">splice()</code>,
+                <code class="text-blue-600">pop()</code> y
+                <code class="text-blue-600">shift()</code>
+                Estos métodos son útiles para añadir, eliminar o modificar
+                elementos de forma flexible.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-//Objeto math, se accede con la palabra reservada Math y luego un punto y el nombre del método
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">// Crear un array vacío
 
-        let resultado;
+        const carrito = [];
                   
-        resultado = Math.PI;
+// Definir productos como objetos
+
+        const monitor = { nombre: "Monitor 20 pulgadas", precio: 400 };
+        const movil = { nombre: "iPhone 12 Pro", precio: 1000 };
+        const teclado = { nombre: "Teclado Macbook Pro", precio: 150 };
+        const notebook = { nombre: "Acer Nitro 5", precio: 1100 };
+        const mouse = { nombre: "Logitech", precio: 80 };
                   
-//Redondear hacia
+// Agregar productos al array usando el método push (añade al final)
+
+        carrito.push(teclado); 
+        carrito.push(monitor);
+        carrito.push(movil);
+        carrito.push(notebook);
+        carrito.push(mouse);
                   
-        resultado = Math.round(2.8);
+// Mostrar el array con todos los elementos
+
+        console.table(carrito);
+
+        | (index) | nombre               | precio |
+        |---------|----------------------|--------|
+        | 0       | "Teclado Macbook Pro"| 150    |
+        | 1       | "Monitor 20 pulgadas"| 400    |
+        | 2       | "iPhone 12 Pro"      | 1000   |
+        | 3       | "Acer Nitro 5"       | 1100   |
+        | 4       | "Logitech"           | 80     |
+
                   
-//Redondear hacia arriba
+// Eliminar un elemento en una posición específica usando splice
+// En este caso, eliminamos el primer elemento (índice 0)
+
+        carrito.splice(0, 1); // Elimina 1 elemento desde la posición 0
+        console.table(carrito); // Mostrar el array actualizado
+
+      | (index) | nombre               | precio |
+      |---------|----------------------|--------|
+      | 0       | "Monitor 20 pulgadas"| 400    |
+      | 1       | "iPhone 12 Pro"      | 1000   |
+      | 2       | "Acer Nitro 5"       | 1100   |
+      | 3       | "Logitech"           | 80     |
                   
-        resultado = Math.ceil(2.78);
+// Eliminar el último elemento usando pop
+
+        carrito.pop(); // Elimina el último elemento del array
+        console.table(carrito); // Mostrar el array sin el último elemento
+
+      | (index) | nombre               | precio |
+      |---------|----------------------|--------|
+      | 0       | "Monitor 20 pulgadas"| 400    |
+      | 1       | "iPhone 12 Pro"      | 1000   |
+      | 2       | "Acer Nitro 5"       | 1100   |
                   
-//Redondear hacia abajo
-                  
-        resultado = Math.floor(2.78);
-                  
-//Raiz cuadrada
-                  
-        resultado = Math.sqrt(2.78);
-                  
-// Valor absoluto (ignora el negativo)
-                  
-        resultado = Math.abs(-200);
-                  
-//Potencia
-                  
-        resultado = Math.pow(2, 3);
-                  
-//Minimo
-                  
-        resultado = Math.min(2, 3, 4, 8, 1, 4, 6, 9);
-                  
-//Máximo
-                  
-        resultado = Math.max(2, 3, 4, 8, 1, 4, 6, 9);
-                  
-// Aleatorio
-                  
-        let random = Math.random() * 100;
-                  
-        let redondear = Math.round(random);
-                  
-        console.log(redondeear);
-                  
-//Redondear entre 1 y 50
-                  
-        resultado = Math.round(Math.random() * 50);
-                  
-        console.log(resultado);
-                  
+// Eliminar el primer elemento usando shift
+
+        carrito.shift(); // Elimina el primer elemento del array
+        console.table(carrito); // Mostrar el array sin el primer elemento
+
+      | (index) | nombre               | precio |
+      |---------|----------------------|--------|
+      | 0       | "iPhone 12 Pro"      | 1000   |
+      | 1       | "Acer Nitro 5"       | 1100   |
             </code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Métodos para Eliminar Espacios en Blanco
+                Destructuring de Arrays
               </h3>
-              <p class="mb-4">
-                Utilizamos <code class="text-blue-600">trimStart()</code> y
-                <code class="text-blue-600">trimEnd()</code> para eliminar
-                espacios en blanco al principio y al final de una cadena.
+              <p class="text-gray-600 leading-relaxed">
+                En JavaScript, el destructuring permite extraer valores de
+                objetos o arrays de forma más sencilla y directa. Esto es
+                especialmente útil cuando trabajas con estructuras de datos
+                complejas o necesitas trabajar con valores específicos.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-                  
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">// Definición de un objeto con propiedades simples y anidadas
 
-//Orden de ejecución de operadores
+        const producto = {
+          nombre: "Monitor 20 pulgadas",
+          precio: 30,
+          disponible: true,
+          informacion: {
+            peso: "1kg",
+            medida: "1m",
+          },
+        };
+                  
+// Uso de destructuring para extraer propiedades del objeto
+        const { nombre } = producto;
+                  
+        console.log(nombre); // Salida: "Monitor 20 pulgadas"
+                  
+// Definición de un array con valores
+        const numeros = [10, 20, 30, 40, 50];
 
-        let resultado;
-                  
-        resultado = 2 + 3 * 4;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - 1;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - 1 / 2;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3 + 5;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3 + 5 * 6;
-                  
-        console.log(resultado);
-                  
+// Destructuring simple: Extraer el primer valor y agrupar el resto con spread
+const [primero, ...restantes] = numeros;
+
+        console.log(primero); // Salida: 10
+        console.log(restantes); // Salida: [20, 30, 40, 50]
             </code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Reemplazar y Extraer Parte de una Cadena
+                Iterar sobre un array de objetos
               </h3>
-              <p class="mb-4">
-                Usamos <code class="text-blue-600">replace()</code> para
-                reemplazar texto y <code class="text-blue-600">slice()</code> o
-                <code class="text-blue-600">substring()</code> para extraer
-                porciones de una cadena.
+              <p class="text-gray-600 leading-relaxed">
+                Cuando trabajamos con arrays de objetos en JavaScript, como un
+                carrito de compras, es común necesitar iterar sobre los
+                elementos para acceder o manipular sus propiedades. Aquí
+                exploraremos distintas formas de realizar esta tarea.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-        let puntaje = 5;
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">// Array de objetos
 
-        puntaje++; // ejecuta el comando y luego lo incrementa
-                  
-        ++puntaje; // incrementa el puntaje y luego ejecuta el comando
-                  
-        puntaje += 2; // suma 2 a puntaje y luego ejecuta el comando
-                  
-        console.log(puntaje);
-            </code></pre>
+//Este array contiene varios objetos, cada uno representando un producto con las propiedades nombre y precio.
+
+        const carrito = [
+        { nombre: "Monitor Samsung 24 pulgadas", precio: 110 },
+        { nombre: "Notebook Acer Nitro 5", precio: 1100 },
+        { nombre: "Teclado Logitech", precio: 15 },
+        { nombre: "Mouse Logitech", precio: 80 },
+        { nombre: "Poco X3 Pro", precio: 250 },
+        { nombre: "Play Station 4", precio: 150 },
+        ];
+
+//Iterar usando un bucle for
+
+        for (let i = 0; i < carrito.length; i++) {
+          console.log(`${carrito[i].nombre} - Precio: ${carrito[i].precio}`);
+        }
+
+/*El bucle recorre cada índice del array usando i. En cada iteración, accedemos al objeto en carrito[i]
+y mostramos sus propiedades nombre y precio con una plantilla de texto.*/
+
+//Iterar usando forEach
+
+        //Funcion tradicional
+        carrito.forEach(function (producto) {
+          console.log(`${producto.nombre} - Precio: ${producto.precio}`);
+        });
+
+        //Arrow function
+        carrito.forEach((producto) => {
+          console.log(`${producto.nombre}`);
+        });
+      
+//Función tradicional y flecha: Ambas formas recorren el array, ejecutando el código para cada elemento.
+//Parámetro del callback: En este caso, el parámetro producto representa cada objeto del array durante la iteración.
+//Plantilla de texto: Usamos plantillas de texto (${}) para mostrar las propiedades del objeto de forma clara.
+
+//Con ambos métodos obtenemos el mismo resultado
+
+        Monitor Samsung 24 pulgadas - Precio: 110
+        Notebook Acer Nitro 5 - Precio: 1100
+        Teclado Logitech - Precio: 15
+        Mouse Logitech - Precio: 80
+        Poco X3 Pro - Precio: 250
+        Play Station 4 - Precio: 150
+        
+//Ventajas de for: El bucle for te permite un control más detallado sobre el proceso de iteración.
+//Ventajas de forEach: Es más conciso y enfocado en recorrer elementos</code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Otros Métodos de Cadenas
+                Metodo <code class="text-blue-600">.map()</code>
               </h3>
-              <p class="mb-4">
-                Aquí se encuentran otros métodos útiles como
-                <code class="text-blue-600">charAt()</code>,
-                <code class="text-blue-600">repeat()</code>,
-                <code class="text-blue-600">split()</code>, entre otros.
+              <p class="text-gray-600 leading-relaxed">
+                El método <code class="text-blue-600">.map()</code> es una de
+                las funciones más poderosas en JavaScript para trabajar con
+                arrays. Permite recorrer todos los elementos de un array,
+                aplicar una transformación a cada uno de ellos, y devolver un
+                nuevo array con los resultados de esa transformación. A
+                diferencia de otros métodos como
+                <code class="text-blue-600">.forEach()</code>,
+                <code class="text-blue-600">.map()</code> no modifica el array
+                original, sino que crea uno nuevo con los valores procesados.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejmplos
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Array de productos en el carrito
 
-        const numero10 = "20";
-        const numero20 = "20.2";
-        const numero30 = "Veinte";
-        const numero40 = 20;
-                  
-//Convertir un número a texto
+        const carrito = [
+        { nombre: "Monitor Samsung 24 pulgadas", precio: 110 },
+        { nombre: "Notebook Acer Nitro 5", precio: 1100 },
+        { nombre: "Teclado Logitech", precio: 15 },
+        { nombre: "Mouse Logitech", precio: 80 },
+        { nombre: "Poco X3 Pro", precio: 250 },
+        { nombre: "Play Station 4", precio: 150 },
+        ];
+                
+/*El método map recorre cada elemento del array y ejecuta una función en cada uno de ellos.
+Devuelve un nuevo array con los valores resultantes de esa función.*/
 
-        console.log(numero10);
-                  
-//Convertir a numero Entero
+        const resultado = carrito.map(function (producto) {
+          return `${producto.nombre} - Precio: ${producto.precio}`;
+        });
+                
+        console.log(resultado);
 
-        console.log(Number.parseInt(numero10));
-                  
-//Convertir a numero FLOTANTE
+        [
+        "Monitor Samsung 24 pulgadas - Precio: 110",
+        "Notebook Acer Nitro 5 - Precio: 1100",
+        "Teclado Logitech - Precio: 15",
+        "Mouse Logitech - Precio: 80",
+        "Poco X3 Pro - Precio: 250",
+        "Play Station 4 - Precio: 150"
+        ]
+              
+//Filtrar elementos con map
 
-        console.log(Number.parseFloat(numero20));
-                  
-//Revisar si es un número entero o decimal
-                  
-        console.log(Number.isInteger(numero10));
-            </code></pre>
+/*Aunque map no está diseñado específicamente para filtrar elementos, se puede usar junto con condiciones para lograr un efecto similar. 
+Sin embargo, filter es un método más adecuado si el objetivo principal es filtrar datos.*/
+
+        const resultado2 = carrito.map(function (producto) {
+          if (producto.precio > 100) {
+            return `${producto.nombre} - Precio: ${producto.precio}`;
+          }
+        }).filter(item => item !== undefined); // Eliminar valores undefined
+
+        console.log(resultado2);
+
+        [
+          "Notebook Acer Nitro 5 - Precio: 1100",
+          "Poco X3 Pro - Precio: 250"
+        ]
+
+//Uso de map con valores adicionales (Spread operator)
+
+/*Si necesitas extraer o combinar datos adicionales de los objetos mientras los mapeas, el uso del spread operator (...) es muy útil.*/
+
+        const resultado3 = carrito.map(function (producto) {
+          return { ...producto, descuento: producto.precio * 0.1 }; // Añadiendo un descuento al producto
+        });
+
+        console.table(resultado3);
+
+        [
+          { nombre: "Monitor Samsung 24 pulgadas", precio: 110, descuento: 11 },
+          { nombre: "Notebook Acer Nitro 5", precio: 1100, descuento: 110 },
+          { nombre: "Teclado Logitech", precio: 15, descuento: 1.5 },
+          { nombre: "Mouse Logitech", precio: 80, descuento: 8 },
+          { nombre: "Poco X3 Pro", precio: 250, descuento: 25 },
+          { nombre: "Play Station 4", precio: 150, descuento: 15 }
+        ]
+
+/*map:
+
+Devuelve un nuevo array con los resultados de la transformación de cada elemento.
+Ideal para transformar o modificar los elementos de un array.
+No afecta el array original.
+
+forEach:
+
+No devuelve nada, solo ejecuta una función en cada elemento del array.
+Se usa para realizar acciones sobre los elementos, como mostrar información o modificar el estado de elementos en el array original.*/
+
+/*El método map es útil cuando necesitas transformar un array y obtener un nuevo array 
+con los resultados de esa transformación. Es muy versátil y puede ser utilizado tanto 
+para formatear los datos como para agregar propiedades nuevas a los objetos dentro de un array.*/</code></pre>
             </section>
             <!-- footer -->
             <section>
