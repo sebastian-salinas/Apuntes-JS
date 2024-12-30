@@ -17,7 +17,7 @@
       content="JavaScript, tutorial, programación, apuntes, aprender JavaScript, desarrollo web, frontend, backend" />
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Apuntes JavaScript 🚀" />
+    <meta property="og:title" content="Apuntes JavaScript" />
     <meta
       property="og:description"
       content="Apuntes claros y prácticos de JavaScript para todos los niveles." />
@@ -28,7 +28,7 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Apuntes JavaScript 🚀" />
+    <meta name="twitter:title" content="Apuntes JavaScript" />
     <meta
       name="twitter:description"
       content="Aprende JavaScript con apuntes prácticos y claros." />
@@ -58,7 +58,7 @@
       rel="apple-touch-icon"
       sizes="180x180"
       href="/assets/icons/apple-touch-icon.png" />
-    <title>Apuntes JavaScript 🚀</title>
+    <title>Apuntes JavaScript</title>
   </head>
   <body class="bg-gray-100">
     <div class="min-h-screen flex flex-col">
@@ -270,137 +270,188 @@
           </header>
           <!-- Main body -->
           <section class="px-4 mt-20 sm:h-16 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold mt-4 text-gray-800">Numbers</h1>
+            <h1 class="text-3xl font-bold mt-4 text-gray-800">
+              Arrays Methods
+            </h1>
             <!-- Sección 1 -->
             <section class="space-y-4">
               <h2 class="text-2xl font-semibold mt-4 text-gray-700">
-                Declaración y uso de Strings
+                Declaración y uso de Arrays Methods
               </h2>
               <p class="text-gray-600 leading-relaxed">
-                Strings o Cadenas de Texto son secuencias de caracteres que se
-                pueden asignar a variables
+                Los métodos de arrays en JavaScript son funciones predefinidas
+                que permiten realizar diversas operaciones sobre los elementos
+                de un array, como agregar, eliminar, modificar, ordenar o iterar
+                a través de sus valores.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-// Creacion de numeros
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">// Método includes()
 
-          const numero1 = 30;
-                  
-          console.log(numero1);
-            </code></pre>
+/*El método includes() verifica si un valor existe dentro de un array.
+En el caso de un array de simples valores (por ejemplo, meses), podemos comprobar si un elemento está presente:*/
+
+        const meses = ["Enero", "Febrero", "Marzo", "Abril"];
+        const resultado = meses.includes("Enero"); // Retorna true si "Enero" está en el array
+        console.log(resultado);  // true
+
+// Método some() para arrays de objetos
+
+/*El método some() se utiliza para verificar si al menos un elemento dentro de un array cumple con una condición dada. 
+Esto es útil especialmente cuando trabajamos con arrays de objetos. 
+Por ejemplo, podemos comprobar si existe un producto específico en un carrito de compras:*/
+
+        const carrito = [
+          { nombre: "Monitor 27 Pulgadas", precio: 500 },
+          { nombre: "Televisión", precio: 100 },
+          { nombre: "Tablet", precio: 200 },
+          { nombre: "Audífonos", precio: 300 },
+        ];
+
+const existe = carrito.some((producto) => producto.nombre === "Teclado");
+console.log(existe);  // false, porque no existe un "Teclado" en el carrito
+
+//includes() es más útil para arrays simples, donde estamos buscando un valor directo dentro del array.
+
+/*some() es más adecuado cuando se trabaja con arrays de objetos y queremos verificar si alguno de los 
+elementos cumple con una condición específica, como si el nombre de un producto en un carrito es igual a "Teclado".*/</code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Métodos de Cadenas de Texto
+                Metodo <code class="text-blue-600">.findIndex()</code>
               </h3>
-              <p class="mb-4">
-                Existen varios métodos útiles para trabajar con cadenas en
-                JavaScript, como obtener la longitud de un string, buscar la
-                posición de un caracter, y más.
+              <p class="text-gray-600 leading-relaxed">
+                El método <code class="text-blue-600">.findIndex()</code> es una
+                función de los arrays en JavaScript que permite encontrar la
+                posición (índice) de un elemento que cumple con una condición
+                especificada dentro de un array. Este método es especialmente
+                útil cuando necesitas localizar la posición de un valor en un
+                array sin tener que recorrerlo manualmente.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-//Operadores aritméticos basicos
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">/*En un array de valores simples, puedes usar .findIndex() para encontrar el índice de un valor específico. 
+En el siguiente ejemplo, buscamos el índice de "Abril" en el array meses*/
 
-        const numero1 = 30;
-        const numero2 = 20;
-                  
-        let resultado;
-                  
-//Suma
-                  
-        resultado = numero1 + numero2;
-                  
-//resta
-                  
-        resultado = numero1 - numero2;
-                  
-//multiplicación
+        const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio"];
 
-        resultado = numero1 * numero2;
-                  
-//división
+        const posicion = meses.findIndex((mes) => {
+          return mes === "Abril";
+        });
 
-        resultado = numero1 / numero2;
-                  
-//Modulo
+        console.log(posicion);  // 3
 
-        resultado = numero1 % numero2;
-                  
-        console.log(resultado);
-                  
-            </code></pre>
+/*El método .findIndex() devuelve el índice del primer elemento que cumple con la condición (en este caso, el mes "Abril").
+Si no se encuentra ningún elemento que cumpla la condición, devuelve -1.*/
+
+//Usando .findIndex() en un array de objetos
+
+/*El método .findIndex() también puede usarse en arrays de objetos. Supongamos que tienes un array de productos y
+deseas encontrar el índice del producto con el nombre "Tablet":*/
+
+        const carrito = [
+          { nombre: "Monitor 27 Pulgadas", precio: 500 },
+          { nombre: "Televisión", precio: 100 },
+          { nombre: "Tablet", precio: 200 },
+          { nombre: "Audífonos", precio: 300 },
+          { nombre: "Teclado", precio: 400 },
+          { nombre: "Celular", precio: 700 },
+        ];
+
+        const valoresCarrito = carrito.findIndex((elemento) => {
+          return elemento.nombre === "Tablet";
+        });
+
+        console.log(valoresCarrito);  // 2
+
+/*En este caso, findIndex() devuelve el índice del primer objeto que tiene un nombre igual a "Tablet" (el valor 2),
+lo que nos indica que "Tablet" se encuentra en la tercera posición del array.*/
+
+//Como funciona .findIndex()
+
+/*Retorno: .findIndex() devuelve el índice del primer elemento que cumple con la condición que le pases.
+Si ningún elemento satisface la condición, devuelve -1.*/
+
+/*Útil para arrays de objetos: Es especialmente útil cuando trabajas con arrays de objetos y quieres 
+encontrar la posición de un objeto específico basándote en una propiedad.*/</code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Concatenación de Cadenas
+                Metodo <code class="text-blue-600">.reduce()</code>
               </h3>
-              <p class="mb-4">
-                Puedes concatenar cadenas de texto y variables usando plantillas
-                literales, lo que hace que tu código sea más limpio y fácil de
-                leer.
+              <p class="text-gray-600 leading-relaxed">
+                El método <code class="text-blue-600">.reduce()</code> en
+                JavaScript es una herramienta muy poderosa que permite reducir
+                un array a un único valor. A diferencia de otros métodos como
+                .map() o .filter(), que generan un nuevo array basado en el
+                original, <code class="text-blue-600">.reduce()</code> acumula o
+                "reduce" los valores de un array según una operación que
+                definas.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-//Objeto math, se accede con la palabra reservada Math y luego un punto y el nombre del método
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Funcionamiento de .reduce()
 
-        let resultado;
-                  
-        resultado = Math.PI;
-                  
-//Redondear hacia
-                  
-        resultado = Math.round(2.8);
-                  
-//Redondear hacia arriba
-                  
-        resultado = Math.ceil(2.78);
-                  
-//Redondear hacia abajo
-                  
-        resultado = Math.floor(2.78);
-                  
-//Raiz cuadrada
-                  
-        resultado = Math.sqrt(2.78);
-                  
-// Valor absoluto (ignora el negativo)
-                  
-        resultado = Math.abs(-200);
-                  
-//Potencia
-                  
-        resultado = Math.pow(2, 3);
-                  
-//Minimo
-                  
-        resultado = Math.min(2, 3, 4, 8, 1, 4, 6, 9);
-                  
-//Máximo
-                  
-        resultado = Math.max(2, 3, 4, 8, 1, 4, 6, 9);
-                  
-// Aleatorio
-                  
-        let random = Math.random() * 100;
-                  
-        let redondear = Math.round(random);
-                  
-        console.log(redondeear);
-                  
-//Redondear entre 1 y 50
-                  
-        resultado = Math.round(Math.random() * 50);
-                  
-        console.log(resultado);
-                  
-            </code></pre>
+//El método .reduce() toma dos argumentos:
+
+/* 1 - Una función callback que recibe dos parámetros:
+* Acumulador (total): es el valor que se va acumulando a medida que se recorren los elementos del array.
+* Elemento actual (producto): es el valor del elemento actual del array sobre el que se está iterando.
+
+/* 2 - Un valor inicial (opcional) que establece el valor inicial para el acumulador. Si no se proporciona, 
+el primer valor del array se usará como el valor inicial.*/
+
+//Ejemplo utilizando forEach():
+
+        const carrito = [
+          { nombre: "Monitor 27 Pulgadas", precio: 500 },
+          { nombre: "Televisión", precio: 100 },
+          { nombre: "Tablet", precio: 200 },
+          { nombre: "Audífonos", precio: 300 },
+          { nombre: "Teclado", precio: 400 },
+          { nombre: "Celular", precio: 700 },
+        ];
+
+// Calcular el total con forEach (sin reduce)
+
+        let total = 0;
+
+        carrito.forEach((producto) => {
+          total += producto.precio;
+        });
+
+        const formatear = total.toLocaleString("es-Es", {
+          minimumFractionDigits: 2, // Mínimo número de decimales
+          maximumFractionDigits: 2, // Máximo número de decimales
+        });
+
+        console.log(
+          `En tu carrito de compras tienes objetos por un valor de : ${formatear} €`
+        );
+
+//Ejemplo utilizando reduce() para simplificar el cálculo:
+
+        let resultado = carrito.reduce((total, producto) => {
+          return total + producto.precio;
+        }, 0);
+
+        console.log(resultado); // 2200
+
+//Explicación de .reduce():
+
+/*Primer argumento de .reduce(): La función callback recibe dos parámetros: total (el acumulador que guarda el valor acumulado)
+y producto (el elemento actual del array).*/
+
+/*En cada iteración, el total va acumulando el valor de producto.precio hasta que recorra todos los elementos del array.*/
+
+/*Segundo argumento de .reduce(): El valor 0 es el valor inicial del acumulador (total). Si no lo 
+proporcionamos, .reduce() utilizaría el primer elemento del array como valor inicial.*/
+
+/*reduce(): Es más eficiente para operaciones de acumulación o transformación, ya que devuelve un valor 
+único que representa la "reducción" de todos los elementos del array, como la suma en este caso.*/</code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
                 Métodos para Eliminar Espacios en Blanco
               </h3>
-              <p class="mb-4">
+              <p class="text-gray-600 leading-relaxed">
                 Utilizamos <code class="text-blue-600">trimStart()</code> y
                 <code class="text-blue-600">trimEnd()</code> para eliminar
                 espacios en blanco al principio y al final de una cadena.
@@ -443,7 +494,7 @@
               <h3 class="text-xl font-semibold mt-8 mb-2">
                 Reemplazar y Extraer Parte de una Cadena
               </h3>
-              <p class="mb-4">
+              <p class="text-gray-600 leading-relaxed">
                 Usamos <code class="text-blue-600">replace()</code> para
                 reemplazar texto y <code class="text-blue-600">slice()</code> o
                 <code class="text-blue-600">substring()</code> para extraer
@@ -466,7 +517,77 @@
               <h3 class="text-xl font-semibold mt-8 mb-2">
                 Otros Métodos de Cadenas
               </h3>
-              <p class="mb-4">
+              <p class="text-gray-600 leading-relaxed">
+                Aquí se encuentran otros métodos útiles como
+                <code class="text-blue-600">charAt()</code>,
+                <code class="text-blue-600">repeat()</code>,
+                <code class="text-blue-600">split()</code>, entre otros.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejmplos
+
+        const numero10 = "20";
+        const numero20 = "20.2";
+        const numero30 = "Veinte";
+        const numero40 = 20;
+                  
+//Convertir un número a texto
+
+        console.log(numero10);
+                  
+//Convertir a numero Entero
+
+        console.log(Number.parseInt(numero10));
+                  
+//Convertir a numero FLOTANTE
+
+        console.log(Number.parseFloat(numero20));
+                  
+//Revisar si es un número entero o decimal
+                  
+        console.log(Number.isInteger(numero10));
+            </code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2">
+                Otros Métodos de Cadenas
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                Aquí se encuentran otros métodos útiles como
+                <code class="text-blue-600">charAt()</code>,
+                <code class="text-blue-600">repeat()</code>,
+                <code class="text-blue-600">split()</code>, entre otros.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejmplos
+
+        const numero10 = "20";
+        const numero20 = "20.2";
+        const numero30 = "Veinte";
+        const numero40 = 20;
+                  
+//Convertir un número a texto
+
+        console.log(numero10);
+                  
+//Convertir a numero Entero
+
+        console.log(Number.parseInt(numero10));
+                  
+//Convertir a numero FLOTANTE
+
+        console.log(Number.parseFloat(numero20));
+                  
+//Revisar si es un número entero o decimal
+                  
+        console.log(Number.isInteger(numero10));
+            </code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2">
+                Otros Métodos de Cadenas
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
                 Aquí se encuentran otros métodos útiles como
                 <code class="text-blue-600">charAt()</code>,
                 <code class="text-blue-600">repeat()</code>,
