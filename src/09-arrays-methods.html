@@ -590,108 +590,114 @@ elemento que coincida con una condición.*/</code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Otros Métodos de Cadenas
+                Método <code class="text-blue-600">.every()</code>
               </h3>
               <p class="text-gray-600 leading-relaxed">
-                Aquí se encuentran otros métodos útiles como
-                <code class="text-blue-600">charAt()</code>,
-                <code class="text-blue-600">repeat()</code>,
-                <code class="text-blue-600">split()</code>, entre otros.
+                El método <code class="text-blue-600">.every()</code> en
+                JavaScript evalúa si todos los elementos de un array cumplen con
+                una condición específica. Si todos los elementos cumplen la
+                condición, el método retorna true; de lo contrario, retorna
+                false. Este método es particularmente útil cuando necesitas
+                asegurarte de que cada elemento de un array cumpla con un
+                criterio determinado.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejmplos
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo detallado con .every():
 
-        const numero10 = "20";
-        const numero20 = "20.2";
-        const numero30 = "Veinte";
-        const numero40 = 20;
-                  
-//Convertir un número a texto
+        const carrito = [
+        { nombre: "Monitor 27 Pulgadas", precio: 500 },
+        { nombre: "Televisión", precio: 100 },
+        { nombre: "Tablet", precio: 200 },
+        { nombre: "Audifonos", precio: 300 },
+        { nombre: "Teclado", precio: 400 },
+        { nombre: "Celular", precio: 700 },
+        ];
+                
+        const resultado = carrito.every((producto) => producto.precio < 500);
+                
+        console.log(resultado);// Resultado: false (porque "Monitor 27 Pulgadas" y "Celular" tienen un precio mayor o igual a 500)
 
-        console.log(numero10);
-                  
-//Convertir a numero Entero
+/*Explicación:
 
-        console.log(Number.parseInt(numero10));
-                  
-//Convertir a numero FLOTANTE
+Condición evaluada: En este caso, la condición es*/ producto.precio < 500 /*. Esto significa que todos los productos del carrito 
+tener un precio menor a 500 para que el método devuelva true.*/
+        
+/*Resultado: El método retorna false porque no todos los productos cumplen con la condición; específicamente, el "Monitor 27 Pulgadas" 
+el "Celular" tienen precios mayores o iguales a 500.*/
 
-        console.log(Number.parseFloat(numero20));
-                  
-//Revisar si es un número entero o decimal
-                  
-        console.log(Number.isInteger(numero10));
+//Usa .every() cuando quieras asegurarte de que todos los elementos de un array cumplan con una condición.
             </code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Otros Métodos de Cadenas
+                Método <code class="text-blue-600">.concat()</code>
               </h3>
               <p class="text-gray-600 leading-relaxed">
-                Aquí se encuentran otros métodos útiles como
-                <code class="text-blue-600">charAt()</code>,
-                <code class="text-blue-600">repeat()</code>,
-                <code class="text-blue-600">split()</code>, entre otros.
+                Unir arreglos en JavaScript es una tarea común que se puede
+                realizar utilizando diferentes métodos como
+                <code class="text-blue-600">.concat()</code> o el operador
+                spread (...). Ambos permiten combinar múltiples arrays en uno
+                solo, pero ofrecen diferencias en flexibilidad y sintaxis.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejmplos
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">/*El método .concat() se utiliza para combinar dos o más arrays. También puedes añadir elementos individuales además de los arrays.*/
 
-        const numero10 = "20";
-        const numero20 = "20.2";
-        const numero30 = "Veinte";
-        const numero40 = 20;
+        const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio"];
+        const meses2 = ["Agosto", "Septiembre"];
+        const meses3 = ["Octubre", "Noviembre", "Diciembre"];
                   
-//Convertir un número a texto
+        const resultado = meses.concat(meses2, meses3, "otro mes");
+                  
+        console.log(resultado); /*Resultado: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+        "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre", "otro mes"]*/
 
-        console.log(numero10);
-                  
-//Convertir a numero Entero
+/*Explicación:
 
-        console.log(Number.parseInt(numero10));
-                  
-//Convertir a numero FLOTANTE
+/*Combina arrays: */ meses.concat(meses2, meses3) /*une los tres arrays en el orden en que se pasan como argumentos.*/
 
-        console.log(Number.parseFloat(numero20));
-                  
-//Revisar si es un número entero o decimal
-                  
-        console.log(Number.isInteger(numero10));
+//Añade elementos: También puedes incluir valores adicionales, como "otro mes".
+
+/*El operador spread (...) es una alternativa más moderna y flexible para combinar arrays.
+Permite "expandir" el contenido de un array dentro de otro, lo que lo hace más legible y dinámico.*/
+
+        const resultado2 = [...meses, ...meses2, ...meses3, "otros meses"];
+
+        console.log(resultado2);/*Resultado: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+        "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre", "otros meses"]*/
+
+/*Conclusión:
+
+Usa .concat() si prefieres una opción más tradicional o estás trabajando en entornos que no soportan ES6.
+Opta por spread operator (...) para un código más limpio y moderno, especialmente si ya utilizas otras características de ES6+.*/
             </code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Otros Métodos de Cadenas
+                Método <code class="text-blue-600">.reverse()</code>
               </h3>
               <p class="text-gray-600 leading-relaxed">
-                Aquí se encuentran otros métodos útiles como
-                <code class="text-blue-600">charAt()</code>,
-                <code class="text-blue-600">repeat()</code>,
-                <code class="text-blue-600">split()</code>, entre otros.
+                El método <code class="text-blue-600">.reverse()</code> en
+                JavaScript invierte el orden de los elementos de un array,
+                modificando el array original. El primer elemento pasa a ser el
+                último y viceversa.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejmplos
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo:
 
-        const numero10 = "20";
-        const numero20 = "20.2";
-        const numero30 = "Veinte";
-        const numero40 = 20;
-                  
-//Convertir un número a texto
+        const numeros = [1, 2, 3, 4, 5];
 
-        console.log(numero10);
+        console.log("Array original:", numeros); //Array original: [1, 2, 3, 4, 5]
                   
-//Convertir a numero Entero
+        numeros.reverse();
+                  
+        console.log("Array invertido:", numeros); // Array invertido: [5, 4, 3, 2, 1]
 
-        console.log(Number.parseInt(numero10));
-                  
-//Convertir a numero FLOTANTE
+/*Si necesitas conservar el array original y también tener una versión invertida, puedes combinar
+.reverse() con el operador spread (...) para crear una copia antes de invertir:*/
 
-        console.log(Number.parseFloat(numero20));
-                  
-//Revisar si es un número entero o decimal
-                  
-        console.log(Number.isInteger(numero10));
-            </code></pre>
+        const copiaInvertida = [...numeros].reverse();
+        console.log(copiaInvertida); // [5, 4, 3, 2, 1]
+        console.log(numeros); // [1, 2, 3, 4, 5]</code></pre>
             </section>
             <!-- footer -->
             <section>
