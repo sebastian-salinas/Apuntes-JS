@@ -17,7 +17,7 @@
       content="JavaScript, tutorial, programación, apuntes, aprender JavaScript, desarrollo web, frontend, backend" />
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Apuntes JavaScript 🚀" />
+    <meta property="og:title" content="Apuntes JavaScript" />
     <meta
       property="og:description"
       content="Apuntes claros y prácticos de JavaScript para todos los niveles." />
@@ -28,7 +28,7 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Apuntes JavaScript 🚀" />
+    <meta name="twitter:title" content="Apuntes JavaScript" />
     <meta
       name="twitter:description"
       content="Aprende JavaScript con apuntes prácticos y claros." />
@@ -58,7 +58,7 @@
       rel="apple-touch-icon"
       sizes="180x180"
       href="/assets/icons/apple-touch-icon.png" />
-    <title>Apuntes JavaScript 🚀</title>
+    <title>Apuntes JavaScript</title>
   </head>
   <body class="bg-gray-100">
     <div class="min-h-screen flex flex-col">
@@ -270,72 +270,98 @@
           </header>
           <!-- Main body -->
           <section class="px-4 mt-20 sm:h-16 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold mt-4 text-gray-800">Numbers</h1>
+            <h1 class="text-3xl font-bold mt-4 text-gray-800">Iteradores</h1>
             <!-- Sección 1 -->
             <section class="space-y-4">
               <h2 class="text-2xl font-semibold mt-4 text-gray-700">
-                Declaración y uso de Strings
+                Declaración y uso de iteradores (bucles)
               </h2>
               <p class="text-gray-600 leading-relaxed">
-                Strings o Cadenas de Texto son secuencias de caracteres que se
-                pueden asignar a variables
+                El bucle <code class="text-blue-600">for()</code> es uno de los
+                métodos más comunes en JavaScript para iterar sobre colecciones,
+                como arrays. Funciona repitiendo un bloque de código mientras se
+                cumpla una condición específica.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-// Creacion de numeros
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo 1: Iterar sobre un array de números
 
-          const numero1 = 30;
-                  
-          console.log(numero1);
-            </code></pre>
+        const articulos = [1, 2, 3, 4, 5];
+
+        for (let i = 0; i < articulos.length; i++) {
+          console.log(`Es el artículo Nº ${articulos[i]}`);
+        }
+
+//Ejemplo 2: Determinar si un número es par o impar
+
+        for (let i = 1; i <= 20; i++) {
+          if (i % 2 === 0) {
+            console.log(`${i} es número par`);
+          } else {
+            console.log(`${i} es número impar`);
+          }
+        }
+
+//Ejemplo 3: Iterar sobre un array de objetos
+
+        const carrito = [
+          { nombre: "Monitor Samsung 24 pulgadas", precio: 110 },
+          { nombre: "Notebook Acer Nitro 5", precio: 1100 },
+          { nombre: "Teclado Logitech", precio: 15 },
+          { nombre: "Mouse Logitech", precio: 80 },
+          { nombre: "Poco X3 Pro", precio: 250 },
+          { nombre: "Play Station 4", precio: 150 },
+        ];
+
+        for (let i = 0; i < carrito.length; i++) {
+          console.log(`${carrito[i].nombre} - Precio: ${carrito[i].precio}`);
+        }
+
+/*Es ideal cuando se necesita control total sobre la iteración, como acceder al índice actual o 
+realizar operaciones en base a la posición en el array.*/</code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Métodos de Cadenas de Texto
+                Uso de <code class="text-blue-600">continue</code> y
+                <code class="text-blue-600">break</code> en Bucles for
               </h3>
-              <p class="mb-4">
-                Existen varios métodos útiles para trabajar con cadenas en
-                JavaScript, como obtener la longitud de un string, buscar la
-                posición de un caracter, y más.
+              <p class="text-gray-600 leading-relaxed">
+                En el bucle for, tanto
+                <code class="text-blue-600">continue</code> como
+                <code class="text-blue-600">break</code> son controladores que
+                permiten manipular el flujo de ejecución de las iteraciones.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-//Operadores aritméticos basicos
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo continue
 
-        const numero1 = 30;
-        const numero2 = 20;
-                  
-        let resultado;
-                  
-//Suma
-                  
-        resultado = numero1 + numero2;
-                  
-//resta
-                  
-        resultado = numero1 - numero2;
-                  
-//multiplicación
+        for (let i = 1; i <= 10; i++) {
+          if (i === 5) {
+            console.log(`El numero seleccionado es ${i}`);
+            continue; // Salta la iteración cuando i es 5, y pasa a la siguiente
+          }
+          console.log(`Numero ${i}`);
+        }
 
-        resultado = numero1 * numero2;
-                  
-//división
+/*Cuando se encuentra la instrucción continue, se salta la iteración actual del bucle y se pasa directamente
+a la siguiente. Esto es útil cuando deseas omitir ciertas iteraciones sin detener el bucle por completo.*/
 
-        resultado = numero1 / numero2;
-                  
-//Modulo
+//Ejemplo break
 
-        resultado = numero1 % numero2;
-                  
-        console.log(resultado);
-                  
-            </code></pre>
+        for (let i = 1; i <= 10; i++) {
+          if (i === 5) {
+            console.log(`El numero seleccionado es ${i}`);
+            break; // Sale del bucle completamente cuando i es 5
+          }
+          console.log(`Numero ${i}`);
+        }
+
+/*En comparación, break termina completamente el bucle, independientemente de cuántas iteraciones le quedaban.
+Se utiliza cuando necesitas detener el ciclo bajo una condición específica.*/</code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
                 Concatenación de Cadenas
               </h3>
-              <p class="mb-4">
+              <p class="text-gray-600 leading-relaxed">
                 Puedes concatenar cadenas de texto y variables usando plantillas
                 literales, lo que hace que tu código sea más limpio y fácil de
                 leer.
@@ -400,7 +426,7 @@
               <h3 class="text-xl font-semibold mt-8 mb-2">
                 Métodos para Eliminar Espacios en Blanco
               </h3>
-              <p class="mb-4">
+              <p class="text-gray-600 leading-relaxed">
                 Utilizamos <code class="text-blue-600">trimStart()</code> y
                 <code class="text-blue-600">trimEnd()</code> para eliminar
                 espacios en blanco al principio y al final de una cadena.
@@ -443,7 +469,7 @@
               <h3 class="text-xl font-semibold mt-8 mb-2">
                 Reemplazar y Extraer Parte de una Cadena
               </h3>
-              <p class="mb-4">
+              <p class="text-gray-600 leading-relaxed">
                 Usamos <code class="text-blue-600">replace()</code> para
                 reemplazar texto y <code class="text-blue-600">slice()</code> o
                 <code class="text-blue-600">substring()</code> para extraer
@@ -466,7 +492,7 @@
               <h3 class="text-xl font-semibold mt-8 mb-2">
                 Otros Métodos de Cadenas
               </h3>
-              <p class="mb-4">
+              <p class="text-gray-600 leading-relaxed">
                 Aquí se encuentran otros métodos útiles como
                 <code class="text-blue-600">charAt()</code>,
                 <code class="text-blue-600">repeat()</code>,
