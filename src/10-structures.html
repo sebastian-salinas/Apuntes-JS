@@ -270,180 +270,304 @@
           </header>
           <!-- Main body -->
           <section class="px-4 mt-20 sm:h-16 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold mt-4 text-gray-800">Numbers</h1>
+            <h1 class="text-3xl font-bold mt-4 text-gray-800">
+              Estructuras de control
+            </h1>
             <!-- Sección 1 -->
             <section class="space-y-4">
               <h2 class="text-2xl font-semibold mt-4 text-gray-700">
-                Declaración y uso de Strings
+                Declaración y uso de Estructuras de Control
               </h2>
               <p class="text-gray-600 leading-relaxed">
-                Strings o Cadenas de Texto son secuencias de caracteres que se
-                pueden asignar a variables
+                La estructura de control
+                <code class="text-blue-600">if</code> solo si se cumple una
+                condición especificada. Si la condición no es verdadera, se
+                puede definir un bloque de código alternativo con
+                <code class="text-blue-600">else</code>. Esta es una forma
+                básica de toma de decisiones en programación.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-// Creacion de numeros
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo:
 
-          const numero1 = 30;
-                  
-          console.log(numero1);
-            </code></pre>
+        const puntaje = 1000;  // Definimos una variable "puntaje" con valor 1000
+
+        if (puntaje < 1000) {  // Si "puntaje" es menor que 1000
+          console.log("Tu no llega a el minimo requerido");  // Este bloque se ejecuta si la condición es verdadera
+        } else {  // Si "puntaje" NO es menor que 1000 (es decir, si es 1000 o más)
+          console.log("¡Felicidades! Has superado el puntaje");  // Este bloque se ejecuta si la condición es falsa
+        }
+
+/*¿Cuándo usar if?
+
+Usamos if cuando necesitamos tomar una decisión y ejecutar un bloque de código dependiendo de si una condición es verdadera o falsa.
+        
+if: Ejecuta el bloque de código si la condición es verdadera.
+
+else: Ejecuta el bloque de código si la condición es falsa.
+
+Este tipo de estructura es fundamental cuando necesitas realizar diferentes acciones en función de ciertos criterios o valores.*/</code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Métodos de Cadenas de Texto
+                Estructura de control <code class="text-blue-600">else if</code>
               </h3>
-              <p class="mb-4">
-                Existen varios métodos útiles para trabajar con cadenas en
-                JavaScript, como obtener la longitud de un string, buscar la
-                posición de un caracter, y más.
+              <p class="text-gray-600 leading-relaxed">
+                La estructura de control
+                <code class="text-blue-600">else if</code> permite realizar
+                múltiples verificaciones de condiciones en secuencia. Es útil
+                cuando necesitamos comprobar varias condiciones y ejecutar
+                diferentes bloques de código en función de cuál de ellas sea
+                verdadera.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-//Operadores aritméticos basicos
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo:
 
-        const numero1 = 30;
-        const numero2 = 20;
+          const efectivo = 100;  // Definimos la cantidad de dinero en efectivo
+          const totalAPagar = 300;  // Definimos el monto total que debe pagarse
+          const tarjeta = true;  // Definimos si la persona tiene una tarjeta de débito
+          const tarjetaCredito = true;  // Definimos si la persona tiene una tarjeta de crédito
                   
-        let resultado;
-                  
-//Suma
-                  
-        resultado = numero1 + numero2;
-                  
-//resta
-                  
-        resultado = numero1 - numero2;
-                  
-//multiplicación
+          if (efectivo >= totalAPagar) {  // Verificamos si el efectivo es suficiente
+            console.log("Podemos realizar el pago");
+          } else if (tarjeta || tarjetaCredito) {  // Si no hay suficiente efectivo, verificamos si hay tarjeta de débito o crédito
+            console.log("Podemos realizar el pago");
+          } else {  // Si no hay efectivo y no hay tarjetas disponibles
+            console.log("No podemos realizar el pago");
+          }
 
-        resultado = numero1 * numero2;
-                  
-//división
+/*
+¿Cuándo usar else if?
 
-        resultado = numero1 / numero2;
-                  
-//Modulo
+Usamos else if cuando tenemos varias condiciones mutuamente excluyentes y necesitamos ejecutar diferentes 
+bloques de código en función de cuál de esas condiciones se cumpla.
 
-        resultado = numero1 % numero2;
-                  
-        console.log(resultado);
-                  
-            </code></pre>
+if: Verifica la primera condición.
+
+else if: Si la primera condición no se cumple, se evalúa esta segunda condición (y puede haber más).
+
+else: Si ninguna de las condiciones anteriores es verdadera, se ejecuta el bloque de código dentro del else.
+
+El uso de else if es útil cuando tenemos varias condiciones alternativas y solo necesitamos ejecutar un 
+bloque de código según la primera condición verdadera.*/</code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Concatenación de Cadenas
+                Estructura de control <code class="text-blue-600">switch</code>
               </h3>
-              <p class="mb-4">
-                Puedes concatenar cadenas de texto y variables usando plantillas
-                literales, lo que hace que tu código sea más limpio y fácil de
-                leer.
+              <p class="text-gray-600 leading-relaxed">
+                El <code class="text-blue-600">switch</code> es una estructura
+                de control que nos permite realizar una evaluación sobre una
+                variable o expresión y ejecutar diferentes bloques de código
+                dependiendo de su valor. Es especialmente útil cuando tenemos
+                múltiples opciones y queremos manejar diferentes casos de forma
+                más clara y ordenada, evitando anidaciones complejas de
+                <code class="text-blue-600">if</code> y
+                <code class="text-blue-600">else if</code>.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-//Objeto math, se accede con la palabra reservada Math y luego un punto y el nombre del método
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo:
 
-        let resultado;
-                  
-        resultado = Math.PI;
-                  
-//Redondear hacia
-                  
-        resultado = Math.round(2.8);
-                  
-//Redondear hacia arriba
-                  
-        resultado = Math.ceil(2.78);
-                  
-//Redondear hacia abajo
-                  
-        resultado = Math.floor(2.78);
-                  
-//Raiz cuadrada
-                  
-        resultado = Math.sqrt(2.78);
-                  
-// Valor absoluto (ignora el negativo)
-                  
-        resultado = Math.abs(-200);
-                  
-//Potencia
-                  
-        resultado = Math.pow(2, 3);
-                  
-//Minimo
-                  
-        resultado = Math.min(2, 3, 4, 8, 1, 4, 6, 9);
-                  
-//Máximo
-                  
-        resultado = Math.max(2, 3, 4, 8, 1, 4, 6, 9);
-                  
-// Aleatorio
-                  
-        let random = Math.random() * 100;
-                  
-        let redondear = Math.round(random);
-                  
-        console.log(redondeear);
-                  
-//Redondear entre 1 y 50
-                  
-        resultado = Math.round(Math.random() * 50);
-                  
-        console.log(resultado);
-                  
-            </code></pre>
+        const tipoDeUsuario = "admin";  // Definimos el tipo de usuario
+
+        switch (tipoDeUsuario) {  // Evaluamos la variable tipoDeUsuario
+          case "admin":  // Si tipoDeUsuario es "admin"
+            console.log("¡Bienvenido admin");
+            break;  // Salimos del switch
+                    case "usuario":  // Si tipoDeUsuario es "usuario"
+            console.log("Bienvenido usuario");
+            break;  // Salimos del switch
+          default:  // Si tipoDeUsuario no es ni "admin" ni "usuario"
+            console.log("Bienvenido sin usuario");
+        }
+
+/*Nota:
+
+El break se utiliza para salir de la estructura switch una vez que se haya ejecutado el 
+bloque de código correspondiente. Si omites el break, el flujo de ejecución continuará y 
+ejecutará todos los casos siguientes (lo que se conoce como "fall-through").*/
+
+/*Cuándo usar switch?
+
+El switch es ideal cuando tenemos una variable o expresión con múltiples posibles valores y
+queremos manejar cada valor con una acción diferente. Es más eficiente y legible que usar 
+múltiples if y else if, especialmente cuando tenemos muchas opciones.*/</code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Métodos para Eliminar Espacios en Blanco
+                Buenas prácticas al trabajar con estructuras de control
               </h3>
-              <p class="mb-4">
-                Utilizamos <code class="text-blue-600">trimStart()</code> y
-                <code class="text-blue-600">trimEnd()</code> para eliminar
-                espacios en blanco al principio y al final de una cadena.
+              <p class="text-gray-600 leading-relaxed">
+                Al trabajar con estructuras de control como
+                <code class="text-blue-600">if</code>,
+                <code class="text-blue-600">else if</code>,
+                <code class="text-blue-600">else</code> y
+                <code class="text-blue-600">switch</code>, es importante seguir
+                buenas prácticas para mejorar la legibilidad y mantenibilidad
+                del código. Aquí te dejo algunas recomendaciones y un ejemplo de
+                cómo usarlas:
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-                  
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">1. //Evitar anidar múltiples niveles de if innecesarios:
 
-//Orden de ejecución de operadores
+/*En lugar de tener varias declaraciones if anidadas, es preferible usar un return temprano dentro de una función
+cuando se cumple una condición. Esto hace que el código sea más limpio y evita una lectura compleja.*/
 
-        let resultado;
-                  
-        resultado = 2 + 3 * 4;
-                  
+2. //Utilizar return para salir de la función temprano:
+
+/*En las funciones, usar return cuando ya no es necesario seguir ejecutando el código ayuda a evitar
+procesamiento innecesario. Esto mejora la eficiencia y mantiene el código organizado.*/
+
+        const autenticado = true;
+
+        if (autenticado) {  // Verifica si la variable 'autenticado' es verdadera
+          console.log("autenticado");  // Si es true, muestra "autenticado"
+        }
+
+        const puntaje = 500;
+
+        function revisarPuntaje() {
+          if (puntaje > 400) {  // Verifica si el puntaje es mayor que 400
+            console.log("¡Excelente puntaje!");  // Si es mayor, muestra el mensaje
+            return;  // Sale de la función para evitar más evaluaciones innecesarias
+          } else if (puntaje > 300) {  // Si no, verifica si el puntaje es mayor que 300
+            console.log("Buen puntaje");  // Si es mayor, muestra el mensaje
+            return;  // Sale de la función
+          }
+        }
+
+// Al llamar la función, esta evalúa el puntaje y muestra el mensaje correspondiente
+
+        revisarPuntaje();  // Imprimirá "¡Excelente puntaje!" porque el puntaje es 500
+
+/*¿Por qué es una buena práctica usar return temprano?
+
+- Evita código innecesario: Si ya se cumplió una condición, no es necesario continuar evaluando las demás.
+
+- Hace el código más legible: El flujo de ejecución es más claro, ya que no hay múltiples anidamientos de if.
+
+- Mejora la eficiencia: El código deja de ejecutarse una vez que se cumple la condición, lo que puede 
+ser beneficioso si las funciones contienen operaciones costosas.*/
+
+3.// Usar condiciones claras y concisas:
+
+// Mala práctica (condición complicada)
+
+        if (a > 10 && b < 20 || c === 5) {
+          console.log('Condición compleja');
+        }
+
+// Buena práctica (condición clara)
+
+        const condicionesCumplidas = a > 10 && b < 20 || c === 5;
+        if (condicionesCumplidas) {
+          console.log('Condición cumplida');
+        }
+
+4.// Evitar el uso excesivo de else:
+
+// Mala práctica (uso innecesario de else)
+
+        if (edad > 18) {
+          console.log('Mayor de edad');
+        } else {
+          console.log('Menor de edad');
+        }
+
+// Buena práctica (sin uso de else)
+
+        const resultado = edad > 18 ? 'Mayor de edad' : 'Menor de edad';
         console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - 1;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - 1 / 2;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3 + 5;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3 + 5 * 6;
-                  
-        console.log(resultado);
-                  
+
+5.// Evitar los "nested if" innecesarios (anidar if demasiado profundo):
+
+// Mala práctica (anidamiento innecesario)
+
+        if (usuarioActivo) {
+          if (usuarioLogueado) {
+            if (usuarioVerificado) {
+              console.log("Acceso permitido");
+            }
+          }
+        }
+
+// Buena práctica (simplificar la lógica)
+
+        if (usuarioActivo && usuarioLogueado && usuarioVerificado) {
+          console.log("Acceso permitido");
+        }
+
+6.// Usar operadores ternarios para condiciones simples:
+
+/*El operador ternario condición ? valor_si_true : valor_si_false es útil cuando tienes una simple condición con dos opciones.*/
+
+// Mala práctica (if-else innecesario)
+
+        if (edad >= 18) {
+          mensaje = 'Mayor de edad';
+        } else {
+          mensaje = 'Menor de edad';
+        }
+
+// Buena práctica (uso del operador ternario)
+
+        const mensaje = edad >= 18 ? 'Mayor de edad' : 'Menor de edad';
+
+7.// Utilizar switch cuando tienes múltiples condiciones que verifican el mismo valor:
+
+/*Si tienes múltiples if-else que verifican diferentes valores de una misma variable, 
+el uso de switch mejora la legibilidad y el rendimiento.*/
+
+// Mala práctica (múltiples if-else)
+
+        if (rol === 'admin') {
+          console.log('Acceso completo');
+        } else if (rol === 'editor') {
+          console.log('Acceso parcial');
+        } else if (rol === 'viewer') {
+          console.log('Acceso solo lectura');
+        }
+
+// Buena práctica (usando switch)
+
+        switch (rol) {
+          case 'admin':
+            console.log('Acceso completo');
+            break;
+          case 'editor':
+            console.log('Acceso parcial');
+            break;
+          case 'viewer':
+            console.log('Acceso solo lectura');
+            break;
+          default:
+            console.log('Rol desconocido');
+        }
+
+8. //No usar == o !=, usar siempre === o !==
+
+/*El uso de == y != realiza una conversión de tipo implícita, lo que puede producir resultados inesperados.
+Usa siempre === y !== para comparar valores y tipos exactos.*/
+
+// Mala práctica (usando ==)
+
+        if (a == '10') {
+          console.log('A es igual a 10');
+        }
+
+// Buena práctica (usando ===)
+
+        if (a === 10) {
+          console.log('A es igual a 10');
+        }
+
+9. //No usar == o !=, usar siempre === o !==
             </code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
                 Reemplazar y Extraer Parte de una Cadena
               </h3>
-              <p class="mb-4">
+              <p class="text-gray-600 leading-relaxed">
                 Usamos <code class="text-blue-600">replace()</code> para
                 reemplazar texto y <code class="text-blue-600">slice()</code> o
                 <code class="text-blue-600">substring()</code> para extraer
