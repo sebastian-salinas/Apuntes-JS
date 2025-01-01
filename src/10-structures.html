@@ -17,7 +17,7 @@
       content="JavaScript, tutorial, programación, apuntes, aprender JavaScript, desarrollo web, frontend, backend" />
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Apuntes JavaScript 🚀" />
+    <meta property="og:title" content="Apuntes JavaScript" />
     <meta
       property="og:description"
       content="Apuntes claros y prácticos de JavaScript para todos los niveles." />
@@ -28,7 +28,7 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Apuntes JavaScript 🚀" />
+    <meta name="twitter:title" content="Apuntes JavaScript" />
     <meta
       name="twitter:description"
       content="Aprende JavaScript con apuntes prácticos y claros." />
@@ -58,7 +58,7 @@
       rel="apple-touch-icon"
       sizes="180x180"
       href="/assets/icons/apple-touch-icon.png" />
-    <title>Apuntes JavaScript 🚀</title>
+    <title>Apuntes JavaScript</title>
   </head>
   <body class="bg-gray-100">
     <div class="min-h-screen flex flex-col">
@@ -393,6 +393,40 @@ queremos manejar cada valor con una acción diferente. Es más eficiente y legib
 múltiples if y else if, especialmente cuando tenemos muchas opciones.*/</code></pre>
             </section>
             <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2">Operador ternario</h3>
+              <p class="text-gray-600 leading-relaxed">
+                El operador ternario es una forma concisa de realizar
+                operaciones condicionales en JavaScript.Es útil para condiciones
+                simples, donde se evalúa si una expresión es verdadera o falsa,
+                y se ejecuta una de dos opciones.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Sintaxis:
+
+        condición ? expresión_si_verdadero : expresión_si_falso;
+
+//Ejemplo:
+
+        const autenticado = true;
+        const puedePagar = true;
+                  
+        autenticado && puedePagar ? console.log("El usuario está autenticado"): console.log("El usuario no está autenticado");
+
+/*Cuándo usar el operador ternario
+
+- Condiciones simples que no requieren lógica compleja.
+- Mantener el código más conciso y limpio.
+
+No es recomendable usarlo cuando:
+
+- Las condiciones son complejas o difíciles de leer.
+- Hay múltiples condiciones anidadas, ya que puede afectar la claridad del código.*/
+
+/*Conclusión: Aunque el operador ternario puede ser práctico para expresiones simples, no es la mejor opción
+para condiciones complejas. En esos casos, es preferible utilizar estructuras como if-else para mantener
+el código más legible y fácil de mantener.*/</code></pre>
+            </section>
+            <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
                 Buenas prácticas al trabajar con estructuras de control
               </h3>
@@ -560,66 +594,35 @@ Usa siempre === y !== para comparar valores y tipos exactos.*/
           console.log('A es igual a 10');
         }
 
-9. //No usar == o !=, usar siempre === o !==
-            </code></pre>
-            </section>
-            <section class="space-y-4">
-              <h3 class="text-xl font-semibold mt-8 mb-2">
-                Reemplazar y Extraer Parte de una Cadena
-              </h3>
-              <p class="text-gray-600 leading-relaxed">
-                Usamos <code class="text-blue-600">replace()</code> para
-                reemplazar texto y <code class="text-blue-600">slice()</code> o
-                <code class="text-blue-600">substring()</code> para extraer
-                porciones de una cadena.
-              </p>
-              <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-        let puntaje = 5;
+9. //Evitar condiciones complejas con muchos operadores lógicos
 
-        puntaje++; // ejecuta el comando y luego lo incrementa
-                  
-        ++puntaje; // incrementa el puntaje y luego ejecuta el comando
-                  
-        puntaje += 2; // suma 2 a puntaje y luego ejecuta el comando
-                  
-        console.log(puntaje);
-            </code></pre>
-            </section>
-            <section class="space-y-4">
-              <h3 class="text-xl font-semibold mt-8 mb-2">
-                Otros Métodos de Cadenas
-              </h3>
-              <p class="mb-4">
-                Aquí se encuentran otros métodos útiles como
-                <code class="text-blue-600">charAt()</code>,
-                <code class="text-blue-600">repeat()</code>,
-                <code class="text-blue-600">split()</code>, entre otros.
-              </p>
-              <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejmplos
+/*Si tienes una condición compleja con múltiples operadores && o ||, es recomendable dividirla
+en varias condiciones más sencillas o usar funciones auxiliares para mejorar la claridad.*/
 
-        const numero10 = "20";
-        const numero20 = "20.2";
-        const numero30 = "Veinte";
-        const numero40 = 20;
-                  
-//Convertir un número a texto
+// Mala práctica (condición compleja)
 
-        console.log(numero10);
-                  
-//Convertir a numero Entero
+        if (a > 10 && b < 5 || c === 10 && d !== 3) {
+          console.log('Condición compleja');
+        }
 
-        console.log(Number.parseInt(numero10));
-                  
-//Convertir a numero FLOTANTE
+// Buena práctica (dividir en condiciones más sencillas)
 
-        console.log(Number.parseFloat(numero20));
-                  
-//Revisar si es un número entero o decimal
-                  
-        console.log(Number.isInteger(numero10));
-            </code></pre>
+        const condicion1 = a > 10 && b < 5;
+        const condicion2 = c === 10 && d !== 3;
+
+        if (condicion1 || condicion2) {
+          console.log('Condición cumplida');
+        }
+
+10. // Utilizar objetos para condiciones múltiples
+
+/*Cuando tienes que evaluar varias condiciones relacionadas con la misma entidad, usar un objeto para
+almacenar esos valores puede ser más eficiente y organizado.*/
+
+/*Seguir estas buenas prácticas ayuda a hacer el código más limpio, legible y fácil de mantener.
+Además, contribuye a mejorar la eficiencia, evitando el uso innecesario de recursos y facilitando 
+la depuración del código. Siempre recuerda que escribir código claro y conciso es clave para 
+proyectos colaborativos y escalables.*/</code></pre>
             </section>
             <!-- footer -->
             <section>
