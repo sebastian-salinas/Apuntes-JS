@@ -369,19 +369,18 @@ Se utiliza cuando necesitas detener el ciclo bajo una condición específica.*/<
                 múltiplos de 3 y 5 se cambian por FizzBuzz.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Objeto math, se accede con la palabra reservada Math y luego un punto y el nombre del método
-
-for (let i = 1; i <= 100; i++) {
-  if (i % 3 === 0 && i % 5 === 0) {
-    console.log("FizzBuzz");
-  } else if (i % 3 === 0) {
-    console.log("Fizz");
-  } else if (i % 5 === 0) {
-    console.log("Buzz");
-  } else {
-    console.log(i);
-  }
-}
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
+        for (let i = 1; i <= 100; i++) {
+          if (i % 3 === 0 && i % 5 === 0) {
+            console.log("FizzBuzz");
+          } else if (i % 3 === 0) {
+            console.log("Fizz");
+          } else if (i % 5 === 0) {
+            console.log("Buzz");
+          } else {
+            console.log(i);
+          }
+        }
 
 //Explicación paso a paso:
 
@@ -401,24 +400,24 @@ Cada condición se evalúa de manera secuencial, asegurando que solo una acción
 
 //3. Bloques de control if-else:
 
-if (i % 3 === 0 && i % 5 === 0) {
-  console.log("FizzBuzz");
-}
+        if (i % 3 === 0 && i % 5 === 0) {
+          console.log("FizzBuzz");
+        }
 //Este bloque verifica si el número es divisible entre 3 y 5 utilizando el operador lógico && (AND). Si es cierto, se imprime "FizzBuzz".
 
-else if (i % 3 === 0) {
-  console.log("Fizz");
-}
+        else if (i % 3 === 0) {
+          console.log("Fizz");
+        }
 //Aquí verificamos si el número es divisible solo entre 3. Si es cierto, se imprime "Fizz".
 
-else if (i % 5 === 0) {
-  console.log("Buzz");
-}
+        else if (i % 5 === 0) {
+          console.log("Buzz");
+        }
 //Este bloque evalúa si el número es divisible únicamente entre 5, e imprime "Buzz".
 
-else {
-  console.log(i);
-}
+        else {
+          console.log(i);
+        }
 /*Si ninguna de las condiciones anteriores se cumple, significa que el número no es múltiplo de 3 ni de 5, 
 por lo que se imprime el número tal cual.*/
 
@@ -437,104 +436,247 @@ Estructuras de control if-else: Ejecutar diferentes acciones basadas en condicio
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Métodos para Eliminar Espacios en Blanco
+                Bucle <code class="text-blue-600">while()</code>
               </h3>
               <p class="text-gray-600 leading-relaxed">
-                Utilizamos <code class="text-blue-600">trimStart()</code> y
-                <code class="text-blue-600">trimEnd()</code> para eliminar
-                espacios en blanco al principio y al final de una cadena.
+                El bucle <code class="text-blue-600">while()</code> es una
+                estructura de control de flujo que repite un bloque de código
+                mientras una condición especificada evalúe como
+                <code class="text-blue-600">true</code>. Una vez que la
+                condición evalúa como <code class="text-blue-600">false</code>,
+                el bucle deja de ejecutarse.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-                  
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo:
 
-//Orden de ejecución de operadores
+        let i = 0; // Inicialización de la variable iteradora
 
-        let resultado;
-                  
-        resultado = 2 + 3 * 4;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - 1;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - 1 / 2;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3 + 5;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3 + 5 * 6;
-                  
-        console.log(resultado);
-                  
+        while (i < 10) { // Mientras i sea menor que 10, el bucle continuará ejecutándose
+          console.log(`Numero ${i}`); // Muestra el valor actual de i
+          i++; // Incrementa i en 1 en cada iteración para evitar un bucle infinito
+        }
+
+/*¿Cuándo usar while?
+
+El bucle while es ideal cuando:
+
+1. No sabemos cuántas veces necesitamos iterar de antemano.
+
+2. Queremos que el ciclo continúe basado en una condición dinámica.*/
             </code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Reemplazar y Extraer Parte de una Cadena
+                Bucle <code class="text-blue-600">do...while()</code>
               </h3>
               <p class="text-gray-600 leading-relaxed">
-                Usamos <code class="text-blue-600">replace()</code> para
-                reemplazar texto y <code class="text-blue-600">slice()</code> o
-                <code class="text-blue-600">substring()</code> para extraer
-                porciones de una cadena.
+                El bucle <code class="text-blue-600">do...while()</code> ejecuta
+                su bloque de código al menos una vez, independientemente de si
+                la condición es verdadera o no, y luego verifica la condición
+                para decidir si debe continuar.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-        let puntaje = 5;
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Explicación con ejercicio de FizzBuzz:
 
-        puntaje++; // ejecuta el comando y luego lo incrementa
+        let i = 1; // Inicialización de la variable de iteración.
+
+        do {
+          // Condición para los números divisibles por 3 y 5.
+          if (i % 3 === 0 && i % 5 === 0) {
+            console.log(`FizzBuzz`);
+          } 
+          // Condición para los números divisibles solo por 3.
+          else if (i % 3 === 0) {
+            console.log(`Fizz`);
+          } 
+          // Condición para los números divisibles solo por 5.
+          else if (i % 5 === 0) {
+            console.log(`Buzz`);
+          } 
+          // Para cualquier otro número.
+          else {
+            console.log(i);
+          }
                   
-        ++puntaje; // incrementa el puntaje y luego ejecuta el comando
+          i++; // Incremento del contador.
+        } while (i < 100); // El bucle se ejecuta mientras esta condición sea verdadera.
+
+/*¿Cuándo usar do while?
+
+1. Cuando necesitamos asegurarnos de que el bloque de código se ejecute al menos una vez, sin importar si la condición inicial es verdadera.
+Por ejemplo: Validar entradas de usuario o ejecutar configuraciones iniciales.
+
+2. Cuando trabajamos con tareas repetitivas en las que la condición puede cambiar solo después de la primera ejecución.
+Por ejemplo: Un menú interactivo que debe mostrarse al menos una vez antes de que el usuario pueda salir.*/
+
+//Ejemplo practico:
+
+        let input;
+
+        do {
+          input = prompt("Introduce un número mayor que 10:");
+        } while (parseInt(input) <= 10); // Continúa mientras el número sea menor o igual a 10
+
+        console.log("¡Número válido ingresado!");
+
+/*En este caso:
+
+1. El mensaje se muestra al menos una vez.
+
+2. El bucle continúa solicitando una entrada hasta que el usuario introduce un número mayor que 10.*/</code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2">
+                Iterar sobre un Array con
+                <code class="text-blue-600">.forEach()</code>
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                Como vimos anteriormente, el método
+                <code class="text-blue-600">.forEach()</code> es utilizado para
+                iterar sobre los elementos de un arreglo y ejecutar una función
+                para cada uno de ellos. No devuelve un nuevo arreglo ni modifica
+                el arreglo original. Este método es ideal cuando solo
+                necesitamos realizar una acción sobre cada elemento y no
+                necesitamos almacenar el resultado de esas acciones.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo:
+
+        let newArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        newArray.forEach((elementos, indice) => {
+          console.log(`${indice} : ${elementos}`);
+        });
                   
-        puntaje += 2; // suma 2 a puntaje y luego ejecuta el comando
+        const carritos = [
+          { nombre: "Monitor Samsung 24 pulgadas", precio: 110 },
+          { nombre: "Notebook Acer Nitro 5", precio: 1100 },
+          { nombre: "Teclado Logitech", precio: 15 },
+          { nombre: "Mouse Logitech", precio: 80 },
+          { nombre: "Poco X3 Pro", precio: 250 },
+          { nombre: "Play Station 4", precio: 150 },
+        ];
                   
-        console.log(puntaje);
+        newArray.forEach((elementos) => {
+          console.log(elementos);
+        });
+
+/*Explicación del código:
+
+1. En el primer bloque, usamos .forEach para recorrer newArray, que contiene los números del 1 al 10. En cada iteración,
+se imprimen el índice y el valor de cada elemento en la consola.
+
+2. En el segundo bloque, aplicamos .forEach a carritos, un arreglo de objetos. Para cada objeto, imprimimos su nombre y su precio.*/
+
+/*¿Cuándo usar .forEach?
+
+Usamos .forEach cuando solo necesitamos ejecutar una acción en cada elemento del arreglo y no necesitamos devolver
+un valor o crear un nuevo arreglo.
+
+Ejemplo: Imprimir datos, realizar cálculos o actualizaciones externas, como modificar variables o realizar efectos secundarios.*/</code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2">
+                Iterar sobre un Array con
+                <code class="text-blue-600">for...of</code>
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                El bucle <code class="text-blue-600">for...of</code> es una
+                forma de iterar directamente sobre los valores de un arreglo,
+                sin necesidad de acceder al índice. Es una manera sencilla y
+                concisa de recorrer los elementos de un arreglo o cualquier otro
+                objeto iterable (como strings, arrays, maps, sets, etc.).
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo:
+
+        let pendientes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        const carritos = [
+          { nombre: "Monitor Samsung 24 pulgadas", precio: 110 },
+          { nombre: "Notebook Acer Nitro 5", precio: 1100 },
+          { nombre: "Teclado Logitech", precio: 15 },
+          { nombre: "Mouse Logitech", precio: 80 },
+          { nombre: "Poco X3 Pro", precio: 250 },
+          { nombre: "Play Station 4", precio: 150 },
+        ];
+                  
+        for (const pendiente of pendientes) {
+          // Itera sobre cada tarea pendiente en el arreglo 'pendientes' y muestra su valor
+          console.log(pendiente);
+        }
+                  
+        for (const element of carritos) {
+          // Itera sobre cada objeto en el arreglo 'carritos' y muestra el nombre de cada producto
+          console.log(element.nombre);
+        }
+
+/*Explicación del código:
+
+1. En el primer bloque de código, for (const pendiente of pendientes) recorre todos los elementos del arreglo pendientes,
+que contiene los números del 1 al 10. Por cada iteración, se accede al valor de la tarea pendiente y se imprime en la consola.
+        
+2. En el segundo bloque, for (const element of carritos) recorre cada objeto del arreglo carritos, que contiene información
+sobre productos. Dentro de cada iteración, se accede a la propiedad nombre del objeto, que representa el nombre 
+del producto, y se muestra en la consola.*/
+
+/*¿Cuándo usar .for...of?
+
+1. Usamos for...of cuando queremos iterar directamente sobre los valores de un arreglo u objeto iterable, 
+sin necesidad de gestionar el índice manualmente.
+
+2. Es útil cuando necesitamos realizar una operación en cada elemento del arreglo y no nos interesa la 
+posición (índice) del elemento en ese momento.*/
             </code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Otros Métodos de Cadenas
+                Iterar sobre un Object con
+                <code class="text-blue-600">for...in</code>
               </h3>
               <p class="text-gray-600 leading-relaxed">
-                Aquí se encuentran otros métodos útiles como
-                <code class="text-blue-600">charAt()</code>,
-                <code class="text-blue-600">repeat()</code>,
-                <code class="text-blue-600">split()</code>, entre otros.
+                El bucle <code class="text-blue-600">for...in</code> se usa para
+                iterar sobre las propiedades de un objeto y tambien permite
+                acceder a las claves o propiedades.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejmplos
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo:
 
-        const numero10 = "20";
-        const numero20 = "20.2";
-        const numero30 = "Veinte";
-        const numero40 = 20;
+        const automovil = {
+          modelo: "Honda Civic",
+          año: 2018,
+          motor: "6.0",
+        };
                   
-//Convertir un número a texto
+        // Usando for...in para iterar sobre un objeto
+        for (let propiedad in automovil) {
+          console.log(`${automovil[propiedad]}`); // Muestra el valor de cada propiedad del objeto
+        }
+                  
+        // Usando Object.entries para obtener clave-valor
+        for (let [llave, valor] of Object.entries(automovil)) {
+          console.log(llave, valor); // Muestra las claves y los valores del objeto
+        }
 
-        console.log(numero10);
-                  
-//Convertir a numero Entero
+// Explicación del código:
 
-        console.log(Number.parseInt(numero10));
-                  
-//Convertir a numero FLOTANTE
+/*1. El ciclo for...in se usa para iterar sobre las propiedades de un objeto. En el caso del objeto automovil, 
+accedemos a sus propiedades (como modelo, año, y motor) y luego mostramos sus valores correspondientes.
 
-        console.log(Number.parseFloat(numero20));
-                  
-//Revisar si es un número entero o decimal
-                  
-        console.log(Number.isInteger(numero10));
-            </code></pre>
+2. for...in itera sobre las claves del objeto, no sobre los valores directamente. Para acceder al valor, se usa 
+la sintaxis automovil[propiedad].
+
+3. Object.entries: Se utiliza Object.entries() junto con for...of para obtener un par clave-valor. Esto es útil cuando
+queremos acceder tanto a la clave (nombre de la propiedad) como a su valor en un objeto.
+
+4. Object.entries() convierte un objeto en un arreglo de pares [clave, valor] que luego podemos recorrer usando for...of. */
+
+/*¿Cuándo usar for...in?
+
+Usa for...in cuando quieras iterar sobre las propiedades de un objeto (o sus claves).
+
+Ejemplo: Cuando tienes un objeto con diferentes propiedades (como el objeto automovil) y 
+necesitas recorrer esas propiedades.*/</code></pre>
             </section>
             <!-- footer -->
             <section>
