@@ -359,68 +359,81 @@ Se utiliza cuando necesitas detener el ciclo bajo una condición específica.*/<
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Concatenación de Cadenas
+                Ejercicio FizzBuzz
               </h3>
               <p class="text-gray-600 leading-relaxed">
-                Puedes concatenar cadenas de texto y variables usando plantillas
-                literales, lo que hace que tu código sea más limpio y fácil de
-                leer.
+                A continuacion, resolveremos un ejercicio que consiste en crear
+                una serie de números con los siguientes criterios: Los números
+                que sean múltiplos de 3 se cambian por Fizz. Los números que
+                sean múltiplos de 5 se cambian por Buzz. Los números que sean
+                múltiplos de 3 y 5 se cambian por FizzBuzz.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-//Objeto math, se accede con la palabra reservada Math y luego un punto y el nombre del método
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Objeto math, se accede con la palabra reservada Math y luego un punto y el nombre del método
 
-        let resultado;
-                  
-        resultado = Math.PI;
-                  
-//Redondear hacia
-                  
-        resultado = Math.round(2.8);
-                  
-//Redondear hacia arriba
-                  
-        resultado = Math.ceil(2.78);
-                  
-//Redondear hacia abajo
-                  
-        resultado = Math.floor(2.78);
-                  
-//Raiz cuadrada
-                  
-        resultado = Math.sqrt(2.78);
-                  
-// Valor absoluto (ignora el negativo)
-                  
-        resultado = Math.abs(-200);
-                  
-//Potencia
-                  
-        resultado = Math.pow(2, 3);
-                  
-//Minimo
-                  
-        resultado = Math.min(2, 3, 4, 8, 1, 4, 6, 9);
-                  
-//Máximo
-                  
-        resultado = Math.max(2, 3, 4, 8, 1, 4, 6, 9);
-                  
-// Aleatorio
-                  
-        let random = Math.random() * 100;
-                  
-        let redondear = Math.round(random);
-                  
-        console.log(redondeear);
-                  
-//Redondear entre 1 y 50
-                  
-        resultado = Math.round(Math.random() * 50);
-                  
-        console.log(resultado);
-                  
-            </code></pre>
+for (let i = 1; i <= 100; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log("FizzBuzz");
+  } else if (i % 3 === 0) {
+    console.log("Fizz");
+  } else if (i % 5 === 0) {
+    console.log("Buzz");
+  } else {
+    console.log(i);
+  }
+}
+
+//Explicación paso a paso:
+
+//1. Inicialización del bucle:
+
+        for (let i = 1; i <= 100; i++) {
+
+//Se utiliza un bucle for para iterar desde el número 1 hasta el número 100 (incluido). La variable i actúa como contador.
+
+/*2. Condiciones del problema:
+
+Si el número es múltiplo de 3 y 5 (es divisible entre ambos), imprime "FizzBuzz".
+Si es múltiplo de 3, pero no de 5, imprime "Fizz".
+Si es múltiplo de 5, pero no de 3, imprime "Buzz".
+Si no cumple ninguna de las condiciones anteriores, simplemente imprime el número.
+Cada condición se evalúa de manera secuencial, asegurando que solo una acción se ejecute por cada iteración.*/
+
+//3. Bloques de control if-else:
+
+if (i % 3 === 0 && i % 5 === 0) {
+  console.log("FizzBuzz");
+}
+//Este bloque verifica si el número es divisible entre 3 y 5 utilizando el operador lógico && (AND). Si es cierto, se imprime "FizzBuzz".
+
+else if (i % 3 === 0) {
+  console.log("Fizz");
+}
+//Aquí verificamos si el número es divisible solo entre 3. Si es cierto, se imprime "Fizz".
+
+else if (i % 5 === 0) {
+  console.log("Buzz");
+}
+//Este bloque evalúa si el número es divisible únicamente entre 5, e imprime "Buzz".
+
+else {
+  console.log(i);
+}
+/*Si ninguna de las condiciones anteriores se cumple, significa que el número no es múltiplo de 3 ni de 5, 
+por lo que se imprime el número tal cual.*/
+
+/*4.Orden de las condiciones: 
+
+Es crucial que la primera condición sea para números divisibles entre 3 y 5. Esto asegura que no se 
+impriman solo "Fizz" o "Buzz" para estos números.*/
+
+/*Este ejemplo es una excelente introducción para aprender a trabajar con:
+
+Bucles for: Iterar sobre un rango de valores.
+
+Operadores de comparación y lógicos: Usar && y % para evaluar condiciones.
+
+Estructuras de control if-else: Ejecutar diferentes acciones basadas en condiciones específicas.*/</code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
