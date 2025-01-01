@@ -270,203 +270,243 @@
           </header>
           <!-- Main body -->
           <section class="px-4 mt-20 sm:h-16 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold mt-4 text-gray-800">Numbers</h1>
+            <h1 class="text-3xl font-bold mt-4 text-gray-800">Funciones</h1>
             <!-- Sección 1 -->
             <section class="space-y-4">
               <h2 class="text-2xl font-semibold mt-4 text-gray-700">
-                Declaración y uso de Strings
+                Declaración y uso de Funciones.
               </h2>
               <p class="text-gray-600 leading-relaxed">
-                Strings o Cadenas de Texto son secuencias de caracteres que se
-                pueden asignar a variables
+                Las funciones son bloques de código reutilizables que pueden
+                ejecutarse en cualquier momento al ser llamadas. Son una
+                herramienta fundamental en JavaScript, ya que permiten
+                estructurar y modularizar el código.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-// Creacion de numeros
-
-          const numero1 = 30;
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo:
+        function sumar() {
+          console.log(2 + 2);
+        }
                   
-          console.log(numero1);
-            </code></pre>
+        sumar(); // Resultado: 4
+
+//Expresiones de funciones (function expressions)
+
+/*Una expresión de función consiste en asignar una función anónima (sin nombre) a una variable o constante.
+Luego, podemos invocar la función a través de esa variable o constante.*/
+
+        const sumar2 = function () {
+          console.log(3 + 3);
+        };
+
+        sumar2(); // Resultado: 6
+
+/*Las funciones son esenciales para reutilizar y organizar el código. Utiliza declaraciones de función
+para bloques de código generales y expresiones de función cuando necesites más flexibilidad, como asignarlas
+a variables o utilizarlas en contexto dinámico.*/</code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Métodos de Cadenas de Texto
+                Llamar una función antes de declararla
               </h3>
-              <p class="mb-4">
-                Existen varios métodos útiles para trabajar con cadenas en
-                JavaScript, como obtener la longitud de un string, buscar la
-                posición de un caracter, y más.
+              <p class="text-gray-600 leading-relaxed">
+                En JavaScript, el hoisting (elevación) es un comportamiento del
+                lenguaje en el cual las declaraciones de variables y funciones
+                se mueven a la parte superior de su contexto durante la fase de
+                compilación, antes de que el código se ejecute. Esto afecta cómo
+                y cuándo puedes llamar a las funciones.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-//Operadores aritméticos basicos
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">/*Las funciones declaradas con el formato function nombreFunción() { ... } son completamente hoisted, lo que significa 
+que puedes llamarlas antes de declararlas en el código.*/
 
-        const numero1 = 30;
-        const numero2 = 20;
-                  
-        let resultado;
-                  
-//Suma
-                  
-        resultado = numero1 + numero2;
-                  
-//resta
-                  
-        resultado = numero1 - numero2;
-                  
-//multiplicación
+        sumar(); // Esto funciona debido al hoisting.
 
-        resultado = numero1 * numero2;
-                  
-//división
+        function sumar() {
+          console.log(2 + 2);
+        }
 
-        resultado = numero1 / numero2;
-                  
-//Modulo
+/*Explicación:
 
-        resultado = numero1 % numero2;
-                  
-        console.log(resultado);
-                  
-            </code></pre>
+Durante la fase de compilación, el motor de JavaScript eleva la declaración de la función sumar al inicio del archivo
+o del contexto en el que fue definida. Por lo tanto, puedes llamar a la función incluso antes de que aparezca en el código.*/
+
+//Expresiones de funciones (function expressions)
+
+/*Las expresiones de funciones asignadas a variables, como const o let, no son hoisted de la misma manera. 
+Aunque el identificador de la variable es elevado, no se asigna el valor de la función hasta que la línea
+de asignación se ejecuta. Por lo tanto, intentar llamar a la función antes de su definición genera un error.*/
+
+        sumar2(); // Error: Cannot access 'sumar2' before initialization.
+
+        const sumar2 = function () {
+          console.log(3 + 3);
+        };
+
+/*Conclusión
+
+- Usa declaraciones de funciones cuando necesites llamarlas en cualquier lugar del código, incluso antes de que aparezcan.
+
+- Usa expresiones de funciones cuando desees un comportamiento más controlado y asignarlas a variables o usarlas de forma dinámica.*/</code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Concatenación de Cadenas
+                Diferencia entre metodo y función
               </h3>
-              <p class="mb-4">
-                Puedes concatenar cadenas de texto y variables usando plantillas
-                literales, lo que hace que tu código sea más limpio y fácil de
-                leer.
+              <p class="text-gray-600 leading-relaxed">
+                En JavaScript, funciones y métodos son bloques de código
+                reutilizables, pero tienen diferencias clave en cómo y dónde se
+                usan, así como en el contexto en el que se invocan.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-//Objeto math, se accede con la palabra reservada Math y luego un punto y el nombre del método
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//La diferencia entre funciones y metodos es principalmente el contexto en el que son utilizadas
 
-        let resultado;
-                  
-        resultado = Math.PI;
-                  
-//Redondear hacia
-                  
-        resultado = Math.round(2.8);
-                  
-//Redondear hacia arriba
-                  
-        resultado = Math.ceil(2.78);
-                  
-//Redondear hacia abajo
-                  
-        resultado = Math.floor(2.78);
-                  
-//Raiz cuadrada
-                  
-        resultado = Math.sqrt(2.78);
-                  
-// Valor absoluto (ignora el negativo)
-                  
-        resultado = Math.abs(-200);
-                  
-//Potencia
-                  
-        resultado = Math.pow(2, 3);
-                  
-//Minimo
-                  
-        resultado = Math.min(2, 3, 4, 8, 1, 4, 6, 9);
-                  
-//Máximo
-                  
-        resultado = Math.max(2, 3, 4, 8, 1, 4, 6, 9);
-                  
-// Aleatorio
-                  
-        let random = Math.random() * 100;
-                  
-        let redondear = Math.round(random);
-                  
-        console.log(redondeear);
-                  
-//Redondear entre 1 y 50
-                  
-        resultado = Math.round(Math.random() * 50);
-                  
-        console.log(resultado);
-                  
-            </code></pre>
+const numero1 = 20;
+const numero2 = "20";
+
+console.log(numero1.toString()); //Metodo
+console.log(parseInt(numero2)); //Funcion
+
+//El metodo se lo llama de manera directa, pero la funcion se lo llama de manera indirecta
+
+function sumar() {
+  console.log(2 + 2);
+}
+
+sumar();
+
+/*Conclusión:
+
+Usa funciones cuando el bloque de código no dependa de un objeto específico.
+
+Usa métodos cuando el bloque de código sea específico a un objeto o se aproveche del contexto (this) del objeto al que pertenece.*/</code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Métodos para Eliminar Espacios en Blanco
+                Parametros y argumentos de las funciones
               </h3>
-              <p class="mb-4">
-                Utilizamos <code class="text-blue-600">trimStart()</code> y
-                <code class="text-blue-600">trimEnd()</code> para eliminar
-                espacios en blanco al principio y al final de una cadena.
+              <p class="text-gray-600 leading-relaxed">
+                Al trabajar con funciones en JavaScript, es importante entender
+                la diferencia entre parámetros y argumentos, ya que son
+                conceptos clave para el funcionamiento de las funciones.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-                  
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Parametros:
 
-//Orden de ejecución de operadores
+/*Los parámetros son los nombres de las variables que se definen entre los paréntesis al declarar una función.
+Actúan como "contenedores" que recibirán los valores que se pasen a la función al llamarla.*/
 
-        let resultado;
-                  
-        resultado = 2 + 3 * 4;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - 1;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - 1 / 2;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3 + 5;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3 + 5 * 6;
-                  
-        console.log(resultado);
-                  
-            </code></pre>
+        function sumar(a, b) {
+          // `a` y `b` son parámetros
+          console.log(a + b);
+        }
+
+// En este caso, a y b son los parámetros de la función sumar.
+// No tienen un valor fijo; su valor dependerá de los argumentos que se les pasen al llamar la función.
+
+//Argumentos:
+
+/*Los argumentos son los valores reales que se pasan a una función cuando esta es invocada.
+Estos valores son asignados a los parámetros definidos en la función.*/
+
+        sumar(2, 3); // `2` y `3` son argumentos
+
+//Codigo completo y explicación:
+
+        function sumar(a, b) {
+          // `a` y `b` son parámetros
+          console.log(a + b);
+        }
+
+        sumar(2, 3); // `2` y `3` son argumentos
+        sumar(500, 150); // Aquí los argumentos son `500` y `150`
+
+//Ejemplo 2:
+
+        function saludar(nombre, apellido) {
+          // `nombre` y `apellido` son parámetros
+          console.log(`Hola ${nombre} ${apellido}`);
+        }
+
+        saludar("Sebastián", "Salinas"); // Los argumentos son "Sebastián" y "Salinas"
+
+/*Resumen:
+
+- Parámetros: Variables definidas en la declaración de la función; actúan como "marcadores de posición".
+
+- Argumentos: Valores reales que se pasan a la función cuando es invocada.
+
+Esto permite que las funciones sean reutilizables y dinámicas, ya que los valores de entrada (argumentos) pueden variar según el caso.*/</code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Reemplazar y Extraer Parte de una Cadena
+                Comunicación entre funciones
               </h3>
-              <p class="mb-4">
-                Usamos <code class="text-blue-600">replace()</code> para
-                reemplazar texto y <code class="text-blue-600">slice()</code> o
-                <code class="text-blue-600">substring()</code> para extraer
-                porciones de una cadena.
+              <p class="text-gray-600 leading-relaxed">
+                En JavaScript, las funciones pueden interactuar y comunicarse
+                entre sí. Esto se logra llamando a una función desde otra
+                función. Este enfoque es fundamental para estructurar código
+                modular, reutilizable y más fácil de mantener.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-        let puntaje = 5;
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ventajas de dividir el código en funciones:
 
-        puntaje++; // ejecuta el comando y luego lo incrementa
-                  
-        ++puntaje; // incrementa el puntaje y luego ejecuta el comando
-                  
-        puntaje += 2; // suma 2 a puntaje y luego ejecuta el comando
-                  
-        console.log(puntaje);
-            </code></pre>
+1.// Modularidad: El código se divide en bloques pequeños y manejables.
+2.// Reutilización: Las funciones pueden ser llamadas en múltiples lugares sin duplicar el código.
+3.// Legibilidad: Es más fácil entender el flujo de un programa cuando se organiza en funciones.
+
+        iniciarApp();
+
+        function iniciarApp() {
+          console.log("Iniciando App");
+
+          segundaFuncion(); // Llamada a la segunda función
+        }
+
+        function segundaFuncion() {
+          console.log("Desde la segunda función");
+
+          usuarioAutenticado("Sebastián Salinas"); // Llamada a la tercera función con un argumento
+        }
+
+        function usuarioAutenticado(usuario) {
+          console.log("Autenticando usuario...espere");
+          console.log(`Usuario autenticado exitosamente: ${usuario}`);
+        }
+
+//Explicación paso a paso:
+
+1.// Llamada inicial:
+
+        iniciarApp();
+
+2.// Función iniciarApp:
+
+  // - Muestra el mensaje "Iniciando App".
+  // - Llama a la función segundaFuncion desde dentro de su bloque.
+
+3.// Función segundaFuncion:
+
+  // - Muestra el mensaje "Desde la segunda función".
+  // - Llama a la función usuarioAutenticado, pasándole un argumento: "Sebastián Salinas".
+
+4.// Función usuarioAutenticado:
+
+  // - Recibe el argumento "Sebastián Salinas" y lo asigna al parámetro usuario.
+  // - Imprime los mensajes "Autenticando usuario...espere" y "Usuario autenticado exitosamente: Sebastián Salinas".
+
+//Resultado en consola:
+
+        /*Iniciando App
+        Desde la segunda función
+        Autenticando usuario...espere
+        Usuario autenticado exitosamente: Sebastián Salinas*/</code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Otros Métodos de Cadenas
+                Funciones que retornan valores
               </h3>
-              <p class="mb-4">
+              <p class="text-gray-600 leading-relaxed">
                 Aquí se encuentran otros métodos útiles como
                 <code class="text-blue-600">charAt()</code>,
                 <code class="text-blue-600">repeat()</code>,
