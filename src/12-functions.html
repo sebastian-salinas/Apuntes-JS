@@ -734,6 +734,25 @@ y debemos incluir explícitamente return para devolver un valor.*/
           return area;
         };
 
+/*Ejemplos de arrow functions con .forEach() y .map():*/
+
+        const carrito = [
+          { nombre: "Monitor Sammsung 24 pulgadas", precio: 110 },
+          { nombre: "Notebook Acer Nitro 5", precio: 1100 },
+          { nombre: "Teclado Logitech", precio: 15 },
+          { nombre: "Mouse Logitech", precio: 80 },
+          { nombre: "Poco X3 Pro", precio: 250 },
+          { nombre: "Play Station 4", precio: 150 },
+        ];
+
+        carrito.forEach((producto) =>
+        console.log(`${producto.nombre} - Precio: ${producto.precio}`)
+        );
+
+        const resultados = carrito.map((producto) =>
+          console.log(`${producto.nombre} - Precio: ${producto.precio}`)
+        );
+
 /*Cuándo usar Arrow Functions:
 
 - Funciones cortas: Ideales para callbacks, funciones simples y operaciones pequeñas.
@@ -743,7 +762,101 @@ y debemos incluir explícitamente return para devolver un valor.*/
 - Evitar problemas de this: En métodos que necesitan preservar el contexto de this del objeto padre.
 
 Sin embargo, para métodos en objetos o en clases que requieren manipular this, es mejor usar
-funciones normales, ya que las arrow functions no tienen su propio this.*/
+funciones normales, ya que las arrow functions no tienen su propio this.*/</code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2">
+                Objetos con funciones y métodos avanzados
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                El siguiente ejemplo define un objeto llamado reproductor, que
+                incluye métodos, propiedades, y utiliza características
+                avanzadas como set y get.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo:
+
+        const reproductor = {
+          cancion: "", // Propiedad inicial
+        
+// Métodos del objeto
+
+          reproducir: (id) => console.log(`Reproduciendo canción con el id ${id}`),
+          pausar: () => console.log("Pausando"),
+          borrar: (id) => console.log(`Borrando canción con el id ${id}`),
+          crearPlaylist: (nombre) =>
+            console.log(`Creando una playlist del género ${nombre}`),
+          reproducirPlaylist: (nombre) =>
+            console.log(`Reproduciendo la playlist de ${nombre}`),
+        
+// Setter: define o actualiza una propiedad del objeto
+
+          set nuevaCancion(cancion) {
+            this.cancion = cancion; // `this` hace referencia al objeto actual
+            console.log(`Añadiendo canción: ${cancion}`);
+          },
+        
+// Getter: accede al valor de una propiedad del objeto
+
+          get obtenerCancion() {
+            console.log(`${this.cancion} ya se encuentra añadida al reproductor`);
+          },
+        };
+        
+// Uso del setter para agregar una nueva canción
+
+        reproductor.nuevaCancion = "Seminare";
+        
+// Uso del getter para acceder a la canción actual
+
+        reproductor.obtenerCancion;
+        
+// Llamada a métodos del objeto
+
+        reproductor.reproducir(30);
+        reproductor.reproducir(10);
+        reproductor.pausar();
+        reproductor.borrar(30);
+        reproductor.crearPlaylist("Rock nacional");
+        reproductor.crearPlaylist("Cumbia");
+        reproductor.reproducirPlaylist("Rock nacional");
+
+//Puntos clave:
+
+  1. /*Propiedad inicial:
+        cancion es una propiedad que se puede modificar usando un setter y consultar usando un getter.*/
+
+  2. /*Métodos del objeto:
+        Son funciones asociadas al objeto reproductor, como reproducir o crearPlaylist, que ejecutan acciones
+        relacionadas con el reproductor.*/
+
+  3. /*Uso de set:
+        Permite asignar un valor a la propiedad cancion.
+        Cuando usamos reproductor.nuevaCancion = "Seminare", internamente se ejecuta el código dentro de set nuevaCancion.*/
+
+  4. /*Uso de get:
+        Proporciona una forma de acceder al valor de la propiedad cancion de manera controlada.
+        Al llamar a reproductor.obtenerCancion, ejecutamos el código dentro de get.*/
+
+  5. /*Uso de this:
+        Dentro de los métodos, this se refiere al objeto actual (reproductor), asegurando que las operaciones
+        se realicen sobre sus propiedades y métodos.*/
+
+  6. /*Arrow functions:
+        Todos los métodos están definidos con sintaxis de arrow function, que es más concisa, pero set y get 
+        usan la función tradicional porque necesitan el contexto de this.*/
+
+/*Resumen:
+
+- set: Útil para controlar cómo se actualizan las propiedades de un objeto.
+
+- get: Ideal para personalizar cómo se accede a los valores de las propiedades.
+
+- this: Referencia al objeto actual.
+
+- Métodos: Realizan acciones específicas relacionadas con el objeto.
+
+- Arrow functions: Simplifican la sintaxis de los métodos.*/
 </code></pre>
             </section>
             <!-- footer -->
