@@ -507,35 +507,163 @@ Esto permite que las funciones sean reutilizables y dinámicas, ya que los valor
                 Funciones que retornan valores
               </h3>
               <p class="text-gray-600 leading-relaxed">
-                Aquí se encuentran otros métodos útiles como
-                <code class="text-blue-600">charAt()</code>,
-                <code class="text-blue-600">repeat()</code>,
-                <code class="text-blue-600">split()</code>, entre otros.
+                Las funciones pueden devolver un resultado utilizando la palabra
+                clave <code class="text-blue-600">return</code>. Esto permite
+                almacenar el valor devuelto en una variable o utilizarlo
+                directamente en otras operaciones. Este enfoque es fundamental
+                para crear programas más dinámicos y reutilizables.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejmplos
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo:
+        function sumar(a, b) {
+          return a + b; // Devuelve la suma de los parámetros a y b
+        }
+        
+// Guardamos el valor retornado en una variable
 
-        const numero10 = "20";
-        const numero20 = "20.2";
-        const numero30 = "Veinte";
-        const numero40 = 20;
-                  
-//Convertir un número a texto
+        const resultado = sumar(2, 3);
+  
+// Mostramos el resultado 
 
-        console.log(numero10);
-                  
-//Convertir a numero Entero
+        console.log(resultado); // 5
 
-        console.log(Number.parseInt(numero10));
-                  
-//Convertir a numero FLOTANTE
+/*Explicación:
 
-        console.log(Number.parseFloat(numero20));
-                  
-//Revisar si es un número entero o decimal
-                  
-        console.log(Number.isInteger(numero10));
-            </code></pre>
+1. La función sumar recibe dos parámetros (a y b).
+2. Utiliza la palabra clave return para devolver la suma de a y b.
+3. Al llamar la función, el valor retornado (5) se asigna a la variable resultado.
+4. Imprimimos el contenido de resultado en la consola.*/
+
+//Ejemplo carrito de compras:
+
+        let total = 0;
+
+        function agregarCarrito(precio) {
+          return (total += precio); // Suma el precio al total y lo devuelve
+        }
+
+        function añadirImpuesto(total) {
+          return total * 1.15; // Calcula el total con un impuesto del 15%
+        }
+
+// Agregamos productos al carrito
+        total = agregarCarrito(100);
+        total = agregarCarrito(200);
+        total = agregarCarrito(300);
+
+// Calculamos el total con impuestos
+        const totalConImpuestos = añadirImpuesto(total);
+
+// Mostramos el total con y sin impuestos
+        console.log(`El total a pagar es de ${totalConImpuestos}€`); // 690€
+
+/*Explicación:
+
+1. Función agregarCarrito:
+    Suma el precio al valor acumulado de total y devuelve el nuevo total.
+
+2. Función añadirImpuesto:
+    Multiplica el total por 1.15 para calcular un 15% de impuesto y devuelve el resultado.
+
+3. Proceso:
+    Se agregan tres productos al carrito con precios de 100, 200 y 300.
+    Se calcula el total con impuestos, asignándolo a totalConImpuestos.
+    Se imprime el total final en la consola.*/
+
+/*Conclusión:
+
+Las funciones que retornan valores permiten encadenar cálculos y reutilizar lógica. Este enfoque es ideal para manejar operaciones
+como cálculos matemáticos, acumulaciones de datos y generación dinámica de valores. Dividir el código en funciones específicas y 
+bien definidas mejora la claridad y la flexibilidad del programa.*/</code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2">
+                Funciones dentro de un objeto
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                En JavaScript, un objeto puede contener métodos (funciones
+                asociadas a ese objeto) que permiten realizar acciones
+                relacionadas con sus propiedades o su contexto. Esto es útil
+                para organizar el código y agrupar funcionalidades relacionadas
+                bajo un mismo objeto.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo Reproductor de música:
+
+        const reproductor = {
+          reproducir: function (id) {
+            console.log(`Reproduciendo canción con el ID ${id}`);
+          },
+          pausar: function () {
+            console.log("Pausando");
+          },
+          borrar: function (id) {
+            console.log(`Borrando canción con el ID ${id}`);
+          },
+          crearPlaylist: function (nombre) {
+            console.log(`Creando una playlist del género ${nombre}`);
+          },
+          reproducirPlaylist: function (nombre) {
+            console.log(`Reproduciendo la playlist de ${nombre}`);
+          },
+        };
+        
+// Llamadas a los métodos
+
+        reproductor.reproducir(30);
+        reproductor.reproducir(10);
+        reproductor.pausar();
+        reproductor.borrar(30);
+        reproductor.crearPlaylist("Rock nacional");
+        reproductor.crearPlaylist("Cumbia");
+        reproductor.reproducirPlaylist("Rock nacional");
+
+//Explicación del código:
+
+1. //Objeto reproductor:
+
+      /*Representa un reproductor de música que puede realizar acciones como reproducir, pausar, borrar canciones, y gestionar playlists.
+
+      Cada acción se define como un método del objeto.*/
+
+2. /*Métodos del objeto:
+
+      - reproducir(id)
+          Recibe un id como argumento e imprime un mensaje indicando que se está reproduciendo la canción con ese ID.
+
+      - pausar()
+          Imprime "Pausando", simulando la pausa de una canción.
+
+      - borrar(id)
+          Recibe un id como argumento y muestra un mensaje indicando que la canción con ese ID se ha borrado.
+
+      - crearPlaylist(nombre)
+          Recibe el nombre de un género y crea una playlist asociada, mostrando un mensaje con el género.
+
+      - reproducirPlaylist(nombre)
+          Recibe el nombre de una playlist y muestra un mensaje indicando que se está reproduciendo esa playlist.*/
+
+3. /*Llamadas a los métodos:
+
+      - reproducir(30) y reproducir(10)
+          Llaman al método reproducir con los IDs 30 y 10, mostrando mensajes específicos para cada canción.
+
+      - pausar()
+          Llama al método pausar, que imprime "Pausando".
+
+      - borrar(30)
+          Llama al método borrar con el ID 30, indicando que la canción con ese ID se eliminó.
+
+      - crearPlaylist("Rock nacional") y crearPlaylist("Cumbia")
+          Crea dos playlists con los nombres "Rock nacional" y "Cumbia".
+
+      - reproducirPlaylist("Rock nacional")
+          Reproduce la playlist "Rock nacional".*/
+
+/*Conclusión:
+
+Definir funciones dentro de un objeto es una práctica poderosa para estructurar y encapsular lógica relacionada.
+Esto mejora la legibilidad, facilita el mantenimiento y permite una mayor modularidad del código.*/</code></pre>
             </section>
             <!-- footer -->
             <section>
