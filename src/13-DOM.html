@@ -270,30 +270,62 @@
           </header>
           <!-- Main body -->
           <section class="px-4 mt-20 sm:h-16 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold mt-4 text-gray-800">Numbers</h1>
+            <h1 class="text-3xl font-bold mt-4 text-gray-800">DOM</h1>
             <!-- Sección 1 -->
             <section class="space-y-4">
               <h2 class="text-2xl font-semibold mt-4 text-gray-700">
-                Declaración y uso de Strings
+                Acceso a Elementos del DOM
               </h2>
               <p class="text-gray-600 leading-relaxed">
-                Strings o Cadenas de Texto son secuencias de caracteres que se
-                pueden asignar a variables
+                El DOM (Document Object Model) es una representación
+                estructurada de un documento HTML que permite a los lenguajes de
+                programación, acceder y manipular el contenido, estructura y
+                estilo de una página web. Es como un puente entre el código HTML
+                y el navegador, donde cada elemento del documento (etiquetas,
+                atributos, texto) se convierte en un objeto que puede ser
+                modificado dinámicamente.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-// Creacion de numeros
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">/*En este código, se muestran formas de acceder a distintas partes del DOM (Document Object Model)
+mediante propiedades del objeto global document:*/
 
-          const numero1 = 30;
-                  
-          console.log(numero1);
+1. /*document: 
+      Devuelve todo el contenido del documento HTML, es decir, el DOM completo. Esto incluye las etiquetas,
+      elementos, y nodos del documento cargado.*/
+
+        elemento = document;
+        console.log(elemento); // Muestra el DOM completo en la consola
+
+2. /*document.head: 
+      Devuelve el contenido del head del documento HTML. El head suele contener metadatos como el título 
+      del documento, enlaces a estilos CSS y scripts.*/
+
+        elemento = document.head;
+        console.log(elemento); // Muestra el contenido del head
+      
+3. /*document.body: 
+      Devuelve el contenido del body del documento HTML. Aquí se encuentra la mayor parte del 
+      contenido visible de la página web.*/
+
+        elemento = document.body;
+        console.log(elemento); // Muestra el contenido del body
+
+4. /*document.classList: 
+      Accede a las clases asociadas a un elemento del DOM, generalmente usadas para manipular
+      estilos y comportamientos dinámicos.
+      Nota: document.classList no es válido directamente en document ya que document no tiene clases, pero 
+      sí lo es para elementos individuales. Podría usarse en un elemento específico como:
+      document.querySelector("div").classList.*/
+
+  elemento = document.body;
+  console.log(elemento); // Muestra el contenido del body
             </code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
                 Métodos de Cadenas de Texto
               </h3>
-              <p class="mb-4">
+              <p class="text-gray-600 leading-relaxed">
                 Existen varios métodos útiles para trabajar con cadenas en
                 JavaScript, como obtener la longitud de un string, buscar la
                 posición de un caracter, y más.
@@ -335,7 +367,7 @@
               <h3 class="text-xl font-semibold mt-8 mb-2">
                 Concatenación de Cadenas
               </h3>
-              <p class="mb-4">
+              <p class="text-gray-600 leading-relaxed">
                 Puedes concatenar cadenas de texto y variables usando plantillas
                 literales, lo que hace que tu código sea más limpio y fácil de
                 leer.
@@ -400,7 +432,7 @@
               <h3 class="text-xl font-semibold mt-8 mb-2">
                 Métodos para Eliminar Espacios en Blanco
               </h3>
-              <p class="mb-4">
+              <p class="text-gray-600 leading-relaxed">
                 Utilizamos <code class="text-blue-600">trimStart()</code> y
                 <code class="text-blue-600">trimEnd()</code> para eliminar
                 espacios en blanco al principio y al final de una cadena.
@@ -443,7 +475,7 @@
               <h3 class="text-xl font-semibold mt-8 mb-2">
                 Reemplazar y Extraer Parte de una Cadena
               </h3>
-              <p class="mb-4">
+              <p class="text-gray-600 leading-relaxed">
                 Usamos <code class="text-blue-600">replace()</code> para
                 reemplazar texto y <code class="text-blue-600">slice()</code> o
                 <code class="text-blue-600">substring()</code> para extraer
@@ -466,7 +498,7 @@
               <h3 class="text-xl font-semibold mt-8 mb-2">
                 Otros Métodos de Cadenas
               </h3>
-              <p class="mb-4">
+              <p class="text-gray-600 leading-relaxed">
                 Aquí se encuentran otros métodos útiles como
                 <code class="text-blue-600">charAt()</code>,
                 <code class="text-blue-600">repeat()</code>,
