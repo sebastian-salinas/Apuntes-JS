@@ -313,22 +313,30 @@ mediante propiedades del objeto global document:*/
 4. /*document.classList: 
       Accede a las clases asociadas a un elemento del DOM, generalmente usadas para manipular
       estilos y comportamientos dinámicos.
+
       Nota: document.classList no es válido directamente en document ya que document no tiene clases, pero 
       sí lo es para elementos individuales. Podría usarse en un elemento específico como:
       document.querySelector("div").classList.*/
 
-  elemento = document.body;
-  console.log(elemento); // Muestra el contenido del body
-            </code></pre>
+        elemento = document.querySelector("div").classList;
+        console.log(elemento); // Lista de clases del primer div
+
+/*Conclusión
+
+Estas propiedades son fundamentales para interactuar y manipular el DOM de una página web.
+Permiten acceder a elementos clave del documento HTML para modificar su estructura, contenido, o estilos dinámicamente.*/</code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Métodos de Cadenas de Texto
+                Uso de
+                <code class="text-blue-600">getElementsByClassName()</code>
               </h3>
               <p class="text-gray-600 leading-relaxed">
-                Existen varios métodos útiles para trabajar con cadenas en
-                JavaScript, como obtener la longitud de un string, buscar la
-                posición de un caracter, y más.
+                El método getElementsByClassName permite seleccionar elementos
+                del DOM que tienen una clase específica. Este método devuelve
+                una colección en vivo de todos los elementos que coinciden con
+                la clase proporcionada. A continuación, explicamos algunos casos
+                de uso:
               </p>
               <pre
                 class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
