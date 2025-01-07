@@ -332,152 +332,120 @@ Permiten acceder a elementos clave del documento HTML para modificar su estructu
                 <code class="text-blue-600">getElementsByClassName()</code>
               </h3>
               <p class="text-gray-600 leading-relaxed">
-                El método getElementsByClassName permite seleccionar elementos
-                del DOM que tienen una clase específica. Este método devuelve
-                una colección en vivo de todos los elementos que coinciden con
-                la clase proporcionada. A continuación, explicamos algunos casos
-                de uso:
+                El método
+                <code class="text-blue-600">getElementsByClassName()</code>
+                permite seleccionar elementos del DOM que tienen una clase
+                específica. Este método devuelve una colección en vivo de todos
+                los elementos que coinciden con la clase proporcionada.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-//Operadores aritméticos basicos
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo:
+        const header = document.getElementsByClassName("header");
+        console.log(header);
+        
+/*Se selecciona y muestra en la consola todos los elementos con la clase header. Si existe solo un 
+elemento con esta clase, estará como único en la colección.*/
 
-        const numero1 = 30;
-        const numero2 = 20;
-                  
-        let resultado;
-                  
-//Suma
-                  
-        resultado = numero1 + numero2;
-                  
-//resta
-                  
-        resultado = numero1 - numero2;
-                  
-//multiplicación
+//Seleccionar múltiples elementos:
 
-        resultado = numero1 * numero2;
-                  
-//división
+        const hero = document.getElementsByClassName("hero");
+        console.log(hero);
 
-        resultado = numero1 / numero2;
-                  
-//Modulo
+/*Explicación: Si hay varios elementos con la clase hero, todos se incluirán en una colección. 
+Puedes acceder a ellos por su índice como si fuera un array.*/
 
-        resultado = numero1 % numero2;
-                  
-        console.log(resultado);
-                  
-            </code></pre>
+//Puntos importantes:
+
+1. /*El resultado no es un array, sino una colección HTML. Aunque se parece a un array, no tiene 
+métodos como .map o .filter.*/
+
+2. /*Es una colección en vivo, lo que significa que si se agrega o elimina un elemento con la clase
+seleccionada después de ejecutar el código, la colección se actualiza automáticamente.*/
+
+3. /*Este método solo funciona para clases. Si necesitas seleccionar por ID, usa getElementById,
+y si necesitas más flexibilidad, usa querySelector o querySelectorAll.*/</code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Concatenación de Cadenas
+                Uso de
+                <code class="text-blue-600">getElementsById()</code>
               </h3>
               <p class="text-gray-600 leading-relaxed">
-                Puedes concatenar cadenas de texto y variables usando plantillas
-                literales, lo que hace que tu código sea más limpio y fácil de
-                leer.
+                El método
+                <code class="text-blue-600">getElementsById()</code> permite
+                seleccionar un elemento único del DOM utilizando su atributo
+                <code class="text-blue-600">id</code>. Es una de las formas más
+                comunes y rápidas para acceder a elementos específicos, ya que
+                el atributo <code class="text-blue-600">id</code> debe ser único
+                en el documento.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-//Objeto math, se accede con la palabra reservada Math y luego un punto y el nombre del método
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo:
+        const formulario = document.getElementById("formulario");
+        console.log(formulario);
 
-        let resultado;
-                  
-        resultado = Math.PI;
-                  
-//Redondear hacia
-                  
-        resultado = Math.round(2.8);
-                  
-//Redondear hacia arriba
-                  
-        resultado = Math.ceil(2.78);
-                  
-//Redondear hacia abajo
-                  
-        resultado = Math.floor(2.78);
-                  
-//Raiz cuadrada
-                  
-        resultado = Math.sqrt(2.78);
-                  
-// Valor absoluto (ignora el negativo)
-                  
-        resultado = Math.abs(-200);
-                  
-//Potencia
-                  
-        resultado = Math.pow(2, 3);
-                  
-//Minimo
-                  
-        resultado = Math.min(2, 3, 4, 8, 1, 4, 6, 9);
-                  
-//Máximo
-                  
-        resultado = Math.max(2, 3, 4, 8, 1, 4, 6, 9);
-                  
-// Aleatorio
-                  
-        let random = Math.random() * 100;
-                  
-        let redondear = Math.round(random);
-                  
-        console.log(redondeear);
-                  
-//Redondear entre 1 y 50
-                  
-        resultado = Math.round(Math.random() * 50);
-                  
-        console.log(resultado);
-                  
-            </code></pre>
+/*Aquí seleccionamos el elemento que tiene el atributo id="formulario".
+
+El método devuelve el elemento completo, incluyendo todos sus atributos, contenido y nodos hijos.
+
+Si el elemento existe, se muestra en la consola. Si no, devuelve null.*/
+
+//Características principales de getElementById:
+
+1. //Acceso directo y rápido: Este método es uno de los más eficientes para acceder a elementos en el DOM.
+
+2. //Unicidad del ID: Dado que los id deben ser únicos en el documento, siempre devuelve un único elemento (o null si no lo encuentra).
+
+3. //Compatibilidad: Funciona en todos los navegadores modernos y es ampliamente utilizado.
+
+/*Consejo práctico:
+
+Si necesitas seleccionar elementos con más flexibilidad (por clase, atributo, o combinaciones),
+considera usar querySelector o querySelectorAll. Sin embargo, para elementos con ID únicos, 
+getElementById sigue siendo una excelente opción.*/</code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Métodos para Eliminar Espacios en Blanco
+                Uso de
+                <code class="text-blue-600">querySelector()</code>
               </h3>
               <p class="text-gray-600 leading-relaxed">
-                Utilizamos <code class="text-blue-600">trimStart()</code> y
-                <code class="text-blue-600">trimEnd()</code> para eliminar
-                espacios en blanco al principio y al final de una cadena.
+                El método
+                <code class="text-blue-600">querySelector()</code> selecciona el
+                primer elemento del DOM que coincide con un selector CSS
+                especificado. Es una herramienta versátil y poderosa para
+                trabajar con el DOM, ya que permite aplicar los mismos
+                selectores que en CSS.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo:
+        const card = document.querySelector(".card");
+        console.log(card);
+        
+// Cambiar el estilo del primer elemento con la clase "card"
+        card.style.backgroundColor = "red";
                   
+//Selectores específicos como en CSS:
 
-//Orden de ejecución de operadores
+const info = document.querySelector(".premium .info");  
+console.log(info);
 
-        let resultado;
-                  
-        resultado = 2 + 3 * 4;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - 1;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - 1 / 2;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3 + 5;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3 + 5 * 6;
-                  
-        console.log(resultado);
-                  
-            </code></pre>
+/*Este código selecciona el primer elemento con la clase info que está dentro de un contenedor con la clase premium.*/
+
+//Seleccionar elementos específicos:
+
+const segundoCard = document.querySelector("section.hospedaje .card:nth-child(2)");
+console.log(segundoCard);
+
+/*Se selecciona el segundo hijo (nth-child(2)) con la clase card, dentro de un section con la clase hospedaje.*/
+
+//Ventajas de querySelector:
+
+1. //Flexibilidad: Permite usar cualquier selector CSS (clases, ID, pseudo-clases, combinadores, etc.).
+
+2. //Versatilidad: Funciona para cualquier tipo de elemento y selector válido en CSS.
+
+3. //Conveniencia: Ideal para seleccionar elementos específicos o realizar selecciones complejas.</code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
