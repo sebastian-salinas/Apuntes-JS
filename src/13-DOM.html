@@ -449,60 +449,192 @@ getElementById sigue siendo una excelente opción.*/</code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Reemplazar y Extraer Parte de una Cadena
+                Uso de
+                <code class="text-blue-600">querySelectorAll()</code>
               </h3>
               <p class="text-gray-600 leading-relaxed">
-                Usamos <code class="text-blue-600">replace()</code> para
-                reemplazar texto y <code class="text-blue-600">slice()</code> o
-                <code class="text-blue-600">substring()</code> para extraer
-                porciones de una cadena.
+                El método
+                <code class="text-blue-600">querySelectorAll()</code> permite
+                seleccionar todos los elementos que coincidan con un selector
+                CSS y devuelve una lista de nodos. Esto es útil para aplicar
+                cambios a varios elementos a la vez.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-        let puntaje = 5;
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo:
+// Agrega un evento de clic a todo el documento
+        document.addEventListener("click", cambiarColor);
 
-        puntaje++; // ejecuta el comando y luego lo incrementa
+        function cambiarColor() {
+// Selecciona todos los elementos con la clase "card"
+        const cardsTotales = document.querySelectorAll(".card");
+
+// Recorre cada tarjeta y cambia su color de fondo
+        cardsTotales.forEach((card) => {
+          if (card.style.backgroundColor === "blue") {
+            card.style.backgroundColor = "white"; // Vuelve al color original
+          } else {
+            card.style.backgroundColor = "blue"; // Cambia a azul
+          }
+        });
+      }</code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2">
+                Uso de <code class="text-blue-600">innerHTML</code>
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                El método <code class="text-blue-600">innerHTML</code> permite
+                acceder o modificar el contenido HTML de un elemento en el DOM.
+                Es útil cuando queremos cambiar dinámicamente textos o agregar
+                elementos dentro de un contenedor sin recargar la página.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo:
+        const mensajeDiv = document.querySelector("#mensaje");
+
+// Cambiar el contenido del div con HTML dinámico
+        mensajeDiv.innerHTML = "<h2>¡Bienvenido!</h2><p>Gracias por visitar nuestro sitio.</p>";
                   
-        ++puntaje; // incrementa el puntaje y luego ejecuta el comando
-                  
-        puntaje += 2; // suma 2 a puntaje y luego ejecuta el comando
-                  
-        console.log(puntaje);
+//Conclusión:
+
+1.// innerHTML es util para insertar contenido con formato
+2.//Si el contenido proviene de un usuario, debería ser validado para evitar ataques de inyección de código.
+3.//Si solo se necesita cambiar texto sin etiquetas HTML, es mejor usar .textContent para evitar interpretaciones inesperadas.</code></pre>
             </code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Otros Métodos de Cadenas
+                Uso de classList.<code class="text-blue-600">add()</code>
               </h3>
               <p class="text-gray-600 leading-relaxed">
-                Aquí se encuentran otros métodos útiles como
-                <code class="text-blue-600">charAt()</code>,
-                <code class="text-blue-600">repeat()</code>,
-                <code class="text-blue-600">split()</code>, entre otros.
+                El método classList.<code class="text-blue-600">add()</code> permite agregar una o varias clases CSS a un elemento. Es una forma sencilla de modificar la apariencia de un elemento de manera dinámica sin tener que manipular directamente la propiedad class.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejmplos
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo: Añadir una clase a un botón al hacer clic
 
-        const numero10 = "20";
-        const numero20 = "20.2";
-        const numero30 = "Veinte";
-        const numero40 = 20;
-                  
-//Convertir un número a texto
+        const boton = document.querySelector("button");
 
-        console.log(numero10);
-                  
-//Convertir a numero Entero
+        boton.addEventListener("click", () => {
+          boton.classList.add("activo");
+        });
 
-        console.log(Number.parseInt(numero10));
-                  
-//Convertir a numero FLOTANTE
+//Explicación:
 
-        console.log(Number.parseFloat(numero20));
+1.//document.querySelector("button") → Selecciona el primer botón en el documento.
+2.//boton.addEventListener("click", () => {...}) → Escucha el evento de clic en el botón.
+3./*boton.classList.add("activo") → Al hacer clic, agrega la clase "activo" al botón,
+    lo que puede cambiar su estilo según esté definido en CSS.*/
+
+//Ejemplo con múltiples clases:
+
+        boton.classList.add("activo", "destacado");
+
+//Esto agregará tanto la clase "activo" como la clase "destacado" al elemento.
+            </code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2">
+                Traversing de DOM en JavaScript
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                El traversing de DOM (recorrido del DOM) hace referencia a la forma en que puedes acceder a los elementos y nodos dentro del árbol del DOM. En JavaScript, todos los elementos HTML están conectados al objeto global document, y a través de diferentes métodos y propiedades, puedes navegar y manipular estos elementos.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo: Accediendo y modificando elementos en el DOM
+
+// Seleccionar la primera tarjeta con la clase 'card'
+        const card3 = document.querySelector(".card");
                   
-//Revisar si es un número entero o decimal
-                  
-        console.log(Number.isInteger(numero10));
+// Cambiar el texto de un hijo específico dentro de la tarjeta
+        console.log(
+          (card3.children[1].children[1].textContent = "Nuevo heading desde traversing")
+        );
+
+//Explicación:
+
+1.//document.querySelector(".card") → Selecciona el primer elemento con la clase card.
+2.//card3.children[1] → Accede al segundo hijo de la tarjeta (porque el índice comienza en 0).
+3.//card3.children[1].children[1] → Dentro de ese segundo hijo, selecciona el segundo elemento.
+4.//.textContent → Cambia el texto de este segundo elemento a "Nuevo heading desde traversing".
+
+// Cambiar la fuente de la imagen dentro de la tarjeta
+        card3.children[0].src = "img/hacer4.jpg";
+
+//Explicación:
+
+1.//card3.children[0] → Accede al primer hijo de la tarjeta (probablemente una imagen).
+2.//.src → Modifica la fuente de la imagen, cambiándola a "img/hacer4.jpg".
+
+/*Puntos clave del traversing de DOM:
+
+  children: Accede a los hijos directos de un elemento, devolviendo una colección de nodos (como un arreglo).
+  textContent: Cambia o obtiene el texto dentro de un nodo.
+  src: Modifica la fuente de una imagen o un recurso dentro del DOM.
+
+¿Por qué es útil el traversing de DOM?
+
+  El traversing te permite navegar por la estructura jerárquica de un documento HTML, 
+  accediendo y manipulando los elementos según su posición o relación con otros elementos en el árbol del DOM.*/
+            </code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2">
+                Uso de classList.<code class="text-blue-600">add()</code>
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                El método classList.<code class="text-blue-600">add()</code> permite agregar una o varias clases CSS a un elemento. Es una forma sencilla de modificar la apariencia de un elemento de manera dinámica sin tener que manipular directamente la propiedad class.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo: Añadir una clase a un botón al hacer clic
+
+        const boton = document.querySelector("button");
+
+        boton.addEventListener("click", () => {
+          boton.classList.add("activo");
+        });
+
+//Explicación:
+
+1.//document.querySelector("button") → Selecciona el primer botón en el documento.
+2.//boton.addEventListener("click", () => {...}) → Escucha el evento de clic en el botón.
+3./*boton.classList.add("activo") → Al hacer clic, agrega la clase "activo" al botón,
+    lo que puede cambiar su estilo según esté definido en CSS.*/
+
+//Ejemplo con múltiples clases:
+
+        boton.classList.add("activo", "destacado");
+
+//Esto agregará tanto la clase "activo" como la clase "destacado" al elemento.
+            </code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2">
+                Uso de classList.<code class="text-blue-600">add()</code>
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                El método classList.<code class="text-blue-600">add()</code> permite agregar una o varias clases CSS a un elemento. Es una forma sencilla de modificar la apariencia de un elemento de manera dinámica sin tener que manipular directamente la propiedad class.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo: Añadir una clase a un botón al hacer clic
+
+        const boton = document.querySelector("button");
+
+        boton.addEventListener("click", () => {
+          boton.classList.add("activo");
+        });
+
+//Explicación:
+
+1.//document.querySelector("button") → Selecciona el primer botón en el documento.
+2.//boton.addEventListener("click", () => {...}) → Escucha el evento de clic en el botón.
+3./*boton.classList.add("activo") → Al hacer clic, agrega la clase "activo" al botón,
+    lo que puede cambiar su estilo según esté definido en CSS.*/
+
+//Ejemplo con múltiples clases:
+
+        boton.classList.add("activo", "destacado");
+
+//Esto agregará tanto la clase "activo" como la clase "destacado" al elemento.
             </code></pre>
             </section>
             <!-- footer -->
