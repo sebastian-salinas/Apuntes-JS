@@ -579,62 +579,188 @@ getElementById sigue siendo una excelente opción.*/</code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Uso de classList.<code class="text-blue-600">add()</code>
+                Eliminar elementos del DOM en JavaScript
               </h3>
               <p class="text-gray-600 leading-relaxed">
-                El método classList.<code class="text-blue-600">add()</code> permite agregar una o varias clases CSS a un elemento. Es una forma sencilla de modificar la apariencia de un elemento de manera dinámica sin tener que manipular directamente la propiedad class.
+                En JavaScript, puedes eliminar elementos del DOM utilizando dos métodos principales. Esto te permite quitar elementos de la página web de manera dinámica y modificar la estructura del documento según sea necesario.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo: Añadir una clase a un botón al hacer clic
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo 1: Eliminar un elemento completo con remove()
 
-        const boton = document.querySelector("button");
-
-        boton.addEventListener("click", () => {
-          boton.classList.add("activo");
-        });
+        const card6 = document.querySelector(".card");
+        card6.remove(); // Elimina el nodo completo del DOM
 
 //Explicación:
 
-1.//document.querySelector("button") → Selecciona el primer botón en el documento.
-2.//boton.addEventListener("click", () => {...}) → Escucha el evento de clic en el botón.
-3./*boton.classList.add("activo") → Al hacer clic, agrega la clase "activo" al botón,
-    lo que puede cambiar su estilo según esté definido en CSS.*/
+1.//document.querySelector(".card"): Selecciona el primer elemento con la clase card.
+2./*.remove(): Elimina completamente el elemento card6 del DOM, quitando tanto el nodo
+    como todos sus elementos secundarios (si los tiene).*/
 
-//Ejemplo con múltiples clases:
+//Ejemplo 2: Eliminar un hijo específico usando removeChild()
 
-        boton.classList.add("activo", "destacado");
+        const navegacion = document.querySelector(".navegacion");
+        navegacion.removeChild(navegacion.children[1]); // Elimina el segundo hijo de 'navegacion'
 
-//Esto agregará tanto la clase "activo" como la clase "destacado" al elemento.
+//Explicación:
+
+1.//document.querySelector(".navegacion"): Selecciona el primer elemento con la clase navegacion.
+2.//navegacion.children[1]: Accede al segundo hijo de este elemento, ya que el índice comienza desde 0.
+3./*navegacion.removeChild(...): Elimina el hijo seleccionado de su elemento padre 
+    (en este caso, el segundo hijo de la barra de navegación).*/
             </code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Uso de classList.<code class="text-blue-600">add()</code>
+                Generar HTML dinámicamente desde JavaScript
+
               </h3>
               <p class="text-gray-600 leading-relaxed">
-                El método classList.<code class="text-blue-600">add()</code> permite agregar una o varias clases CSS a un elemento. Es una forma sencilla de modificar la apariencia de un elemento de manera dinámica sin tener que manipular directamente la propiedad class.
+                En JavaScript, es posible crear y modificar elementos HTML de manera dinámica utilizando el DOM. Esto te permite agregar, modificar o eliminar contenido en la página sin tener que recargarla. A continuación, te explico cómo generar y manipular HTML directamente desde tu código JavaScript.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo: Añadir una clase a un botón al hacer clic
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo: Crear y agregar elementos HTML
 
-        const boton = document.querySelector("button");
+// Crear un nuevo párrafo
+        const parrafo1 = document.createElement("p");
+        parrafo1.textContent = "Cena";  // Asignar contenido de texto al párrafo
+        parrafo1.classList.add("categoria", "concierto");  // Añadir clases CSS
+                  
+        const parrafo2 = document.createElement("p");
+        parrafo2.textContent = "Restaurant Italiano";
+        parrafo2.classList.add("titulo");
+                  
+        const parrafo3 = document.createElement("p");
+        parrafo3.textContent = "30€ por persona";
+        parrafo3.classList.add("precio");
+                  
+// Crear un contenedor div para la información
+        const info = document.createElement("div");
+        info.classList.add("info");
+        info.appendChild(parrafo1);  // Añadir párrafo al contenedor
+        info.appendChild(parrafo2);
+        info.appendChild(parrafo3);
+                  
+// Crear una imagen
+        const imagen = document.createElement("img");
+        imagen.src = "img/hacer3.jpg";  // Asignar la fuente de la imagen
+                  
+// Crear un card para contener la imagen y la info
+        const card9 = document.createElement("div");
+        card9.classList.add("card");  // Añadir la clase 'card' al div
+                  
+// Asignar la imagen y el contenedor de información al card
+        card9.appendChild(imagen);
+        card9.appendChild(info);
+                  
+// Insertar el card en el HTML
+        const contenedor = document.querySelector(".hacer .contenedor-cards");
+        contenedor.insertBefore(card9, contenedor.children[0]);  // Insertar el card en la primera posición
 
-        boton.addEventListener("click", () => {
-          boton.classList.add("activo");
-        });
+//Explicación paso a paso:
 
-//Explicación:
+//Crear elementos:
+        
+  1.//document.createElement(): Este método se utiliza para crear un nuevo elemento del tipo especificado, como p, div, img, etc.
+  2.//Ejemplo: const parrafo1 = document.createElement("p"); crea un nuevo párrafo p.
 
-1.//document.querySelector("button") → Selecciona el primer botón en el documento.
-2.//boton.addEventListener("click", () => {...}) → Escucha el evento de clic en el botón.
-3./*boton.classList.add("activo") → Al hacer clic, agrega la clase "activo" al botón,
-    lo que puede cambiar su estilo según esté definido en CSS.*/
+//Asignar contenido:
+        
+  1.//textContent: Se utiliza para agregar texto al nuevo elemento.
+  2.//Ejemplo: parrafo1.textContent = "Cena"; asigna el texto "Cena" al párrafo.
 
-//Ejemplo con múltiples clases:
+//Agregar clases:
+        
+  1.//classList.add(): Permite añadir una o más clases CSS al elemento creado, lo que es útil para aplicar estilos.
+  2.//Ejemplo: parrafo1.classList.add("categoria", "concierto"); añade las clases categoria y concierto al párrafo.
 
-        boton.classList.add("activo", "destacado");
+//Anidar elementos:
+        
+  1.//appendChild(): Agrega un elemento como hijo del elemento seleccionado.
+  2.//Ejemplo: info.appendChild(parrafo1); inserta el párrafo dentro del div de clase info.
 
-//Esto agregará tanto la clase "activo" como la clase "destacado" al elemento.
+//Insertar en el HTML:
+        
+  1.//insertBefore(): Inserta el nuevo elemento en una posición específica dentro de su contenedor, antes del primer hijo.
+  2./*Ejemplo: contenedor.insertBefore(card9, contenedor.children[0]); 
+    inserta el nuevo "card" antes del primer elemento dentro del contenedor.*/
+
+//Ventajas de crear HTML dinámicamente:
+
+1.//Dinamismo: Puedes crear contenido dinámicamente sin necesidad de escribir el HTML manualmente.
+2.//Interactividad: Puedes añadir contenido basado en las acciones del usuario o en datos provenientes de una API.
+3./*Actualización en tiempo real: Es ideal para actualizar o agregar elementos en una página 
+    sin recargarla (como en las aplicaciones web interactivas).*/
+            </code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2">
+                Ejemplo avanzado de JavaScript
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                En este ejemplo veremos cómo seleccionar elementos del DOM, agregar eventos, y manipular las clases de los elementos para mostrar u ocultar contenido de manera dinámica. El código proporciona una funcionalidad donde al hacer clic en un botón, se muestra u oculta un pie de página (footer) y cambia el texto del botón.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">// Seleccionar el botón y el pie de página
+        const btnFooter = document.querySelector(".btn-flotante");
+        const footer = document.querySelector(".footer");
+                  
+// Añadir evento de clic al botón
+        btnFooter.addEventListener("click", mostrarOcultarFooter);
+                  
+        function mostrarOcultarFooter() {
+// Si el footer tiene la clase 'activo', la quitamos
+          if (footer.classList.contains("activo")) {
+            this.classList.remove("activo"); // Quitar 'activo' del botón
+            footer.classList.remove("activo"); // Quitar 'activo' del pie de página
+            this.textContent = "Idioma y Moneda"; // Cambiar el texto del botón
+          } else {
+                      // Si no tiene la clase 'activo', la agregamos
+            this.classList.add("activo"); // Añadir 'activo' al botón
+            footer.classList.add("activo"); // Añadir 'activo' al pie de página
+            this.textContent = "X Cerrar"; // Cambiar el texto del botón
+          }
+// Alternativa con toggle (comentada)
+// footer.classList.toggle("activo");
+// btnFooter.classList.toggle("activo");
+        }
+
+//Explicación paso a paso:
+
+//Seleccionar elementos del DOM:
+        
+  1.//Usamos document.querySelector() para seleccionar el botón flotante (btn-flotante) y el pie de página (footer).
+  2.//Ejemplo: const btnFooter = document.querySelector(".btn-flotante"); selecciona el botón con la clase btn-flotante.
+
+//Agregar un evento de click:
+        
+  1./*Se utiliza addEventListener() para escuchar el evento click en el botón flotante. 
+  Cuando el usuario hace clic en el botón, se ejecuta la función mostrarOcultarFooter()./*
+  2./*Ejemplo: btnFooter.addEventListener("click", mostrarOcultarFooter); asigna la 
+  función mostrarOcultarFooter al evento de clic./*
+
+//Manipulación de clases CSS:
+        
+  1./*Dentro de la función mostrarOcultarFooter(), se verifica si el footer ya tiene la clase activo
+  mediante classList.contains().*/
+  2./*Si tiene la clase, se elimina la clase activo tanto del footer como del botón utilizando 
+  classList.remove(), y se cambia el texto del botón a "Idioma y Moneda".*/
+  3./*Si no tiene la clase, se añade la clase activo tanto al footer como al botón con 
+  classList.add(), y se cambia el texto del botón a "X Cerrar".*/
+
+//lternativa usando classList.toggle():
+        
+  1./*La función está comentada, pero classList.toggle() es una forma más sencilla de agregar o quitar
+  una clase dependiendo de si ya está presente o no. Al usar toggle, no es necesario comprobar si la 
+  clase existe o no previamente. Solo se pasa la clase y el método se encarga de añadirla o eliminarla según corresponda.*/
+  2.//Ejemplo: footer.classList.toggle("activo"); cambiaría el estado de la clase activo de manera automática.
+
+//Resumen:
+        
+  1.//querySelector(): Se utiliza para seleccionar elementos del DOM.
+  2.//addEventListener(): Permite escuchar y manejar eventos como click.
+  3.//classList.add() y classList.remove(): Se utilizan para añadir o eliminar clases de los elementos.
+  4.//classList.contains(): Verifica si un elemento tiene una clase específica.
+  5.//classList.toggle(): Alterna (añade o elimina) una clase en el elemento de manera automática.
             </code></pre>
             </section>
             <!-- footer -->
