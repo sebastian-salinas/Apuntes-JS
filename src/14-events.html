@@ -270,24 +270,60 @@
           </header>
           <!-- Main body -->
           <section class="px-4 mt-20 sm:h-16 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold mt-4 text-gray-800">Numbers</h1>
+            <h1 class="text-3xl font-bold mt-4 text-gray-800">Eventos</h1>
             <!-- Sección 1 -->
             <section class="space-y-4">
               <h2 class="text-2xl font-semibold mt-4 text-gray-700">
-                Declaración y uso de Strings
+                <code>DOMContentLoaded</code>
               </h2>
               <p class="text-gray-600 leading-relaxed">
-                Strings o Cadenas de Texto son secuencias de caracteres que se
-                pueden asignar a variables
+                Los eventos en JavaScript permiten ejecutar código en respuesta
+                a acciones del usuario o del sistema, como hacer clic, mover el
+                mouse o cargar una página.
+              </p>
+              <p class="text-gray-600 leading-relaxed">
+                Uno de los eventos más importantes es
+                <code class="text-blue-600">DOMContentLoaded</code>, dispara
+                cuando el HTML del documento ha sido completamente cargado y
+                procesado, antes de que se carguen imágenes y hojas de estilo.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-// Creacion de numeros
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo:
+        document.addEventListener("DOMContentLoaded", () => {
+          console.log("Documento cargado");
+        });
 
-          const numero1 = 30;
-                  
-          console.log(numero1);
-            </code></pre>
+//document.addEventListener("DOMContentLoaded", callback)
+
+  1.//document → Se refiere al documento HTML.
+  2.//addEventListener("DOMContentLoaded", ...) → Escucha el evento "DOMContentLoaded".
+  3.//callback → Una función que se ejecutará cuando el evento ocurra.
+
+//¿Qué hace este código?
+        
+  1.//Espera a que el HTML se cargue completamente en el navegador.
+  2.//Luego ejecuta la función flecha (=> { console.log("Documento cargado"); }), que simplemente imprime un mensaje en la consola.
+
+//¿Por qué usar DOMContentLoaded?
+        
+  1.//Asegura que el código JS solo se ejecute cuando el DOM esté listo.
+  2.//Evita errores al intentar acceder a elementos que aún no existen.
+  3.//Es más rápido que window.onload, ya que no espera imágenes, estilos y otros recursos.
+      
+
+//Diferencia entre DOMContentLoaded y window.onload
+
+1.//DOMContentLoaded se ejecuta cuando el HTML está completamente cargado, pero sin esperar imágenes y estilos.
+
+2.//window.onload	se ejecuta cuando toda la página, incluyendo imágenes y CSS, ha sido completamente cargada.
+
+//Ejemplo con window.onload
+
+        window.addEventListener("load", () => {
+          console.log("Todos los recursos de la página han sido cargados");
+        });
+
+//Conclusión: Si solo necesitas manipular el DOM, usa DOMContentLoaded. Si necesitas esperar imágenes y estilos, usa window.onload.</code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
