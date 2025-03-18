@@ -289,6 +289,7 @@
               </p>
               <pre
                 class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo:
+
         document.addEventListener("DOMContentLoaded", () => {
           console.log("Documento cargado");
         });
@@ -326,212 +327,350 @@
 //Conclusión: Si solo necesitas manipular el DOM, usa DOMContentLoaded. Si necesitas esperar imágenes y estilos, usa window.onload.</code></pre>
             </section>
             <section class="space-y-4">
-              <h3 class="text-xl font-semibold mt-8 mb-2">
-                Métodos de Cadenas de Texto
-              </h3>
-              <p class="mb-4">
-                Existen varios métodos útiles para trabajar con cadenas en
-                JavaScript, como obtener la longitud de un string, buscar la
-                posición de un caracter, y más.
+              <h3 class="text-xl font-semibold mt-8 mb-2">Eventos del Mouse</h3>
+              <p class="text-gray-600 leading-relaxed">
+                En JavaScript, podemos detectar interacciones del usuario con el
+                mouse a través de eventos. Estos eventos permiten ejecutar
+                código cuando el usuario hace clic, pasa el cursor o interactúa
+                con un elemento en la página.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-//Operadores aritméticos basicos
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplos:
 
-        const numero1 = 30;
-        const numero2 = 20;
-                  
-        let resultado;
-                  
-//Suma
-                  
-        resultado = numero1 + numero2;
-                  
-//resta
-                  
-        resultado = numero1 - numero2;
-                  
-//multiplicación
+        const nav = document.querySelector(".navegacion");
 
-        resultado = numero1 * numero2;
-                  
-//división
+// Evento al hacer clic en el elemento
 
-        resultado = numero1 / numero2;
+        nav.addEventListener("click", () => {
+          console.log("Navegación click");
+          nav.style.backgroundColor = "blue";
+        });
                   
-//Modulo
+// Evento al pasar el mouse sobre el elemento
 
-        resultado = numero1 % numero2;
+        nav.addEventListener("mouseenter", () => {
+          console.log("Entrando en navegación");
+          nav.style.backgroundColor = "red";
+        });
                   
-        console.log(resultado);
+// Evento al quitar el mouse del elemento
+
+        nav.addEventListener("mouseout", () => {
+          console.log("Saliendo de navegación");
+          nav.style.backgroundColor = "transparent";
+        });
+
+// Evento al hacer clic y soltar el mouse sobre el elemento
+
+        nav.addEventListener("mouseup", () => {
+          console.log("Navegación mouseup");
+          nav.style.backgroundColor = "green";
+        });
                   
-            </code></pre>
+// Evento al hacer doble clic
+
+        nav.addEventListener("dblclick", () => {
+          console.log("Doble clic en navegación");
+          nav.style.backgroundColor = "yellow";
+        });
+
+//Los eventos del mouse permiten interactuar con los elementos de la página en tiempo real, mejorando la experiencia del usuario. </code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Concatenación de Cadenas
+                Eventos de teclado
               </h3>
-              <p class="mb-4">
-                Puedes concatenar cadenas de texto y variables usando plantillas
-                literales, lo que hace que tu código sea más limpio y fácil de
-                leer.
+              <p class="text-gray-600 leading-relaxed">
+                Los eventos de teclado permiten detectar cuándo el usuario
+                interactúa con un campo de entrada, presionando, soltando o
+                manipulando texto dentro de él. Estos eventos son útiles para
+                validaciones en tiempo real o para mejorar la experiencia del
+                usuario.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-//Objeto math, se accede con la palabra reservada Math y luego un punto y el nombre del método
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo:
+        const busqueda = document.querySelector(".busqueda");
 
-        let resultado;
+// Se ejecuta al presionar una tecla
+
+        busqueda.addEventListener("keydown", () => {
+          console.log("Tecla presionada");
+        });
                   
-        resultado = Math.PI;
+// Se ejecuta cuando se suelta una tecla
+
+        busqueda.addEventListener("keyup", () => {
+          console.log("Tecla liberada");
+        });
                   
-//Redondear hacia
+// Se activa al copiar texto dentro del campo
+
+        busqueda.addEventListener("copy", () => {
+          console.log("Texto copiado");
+        });
                   
-        resultado = Math.round(2.8);
+// Se activa al pegar texto en el campo
+
+        busqueda.addEventListener("paste", () => {
+          console.log("Texto pegado");
+        });
                   
-//Redondear hacia arriba
+// Se activa al cortar texto dentro del campo
+
+        busqueda.addEventListener("cut", () => {
+          console.log("Texto cortado");
+        });
                   
-        resultado = Math.ceil(2.78);
+// Se activa cuando el usuario hace clic fuera del input
+
+        busqueda.addEventListener("blur", () => {
+          console.log("Input perdió el foco");
+        });
                   
-//Redondear hacia abajo
+// Se ejecuta cada vez que cambia el valor del input
+
+        busqueda.addEventListener("input", (event) => {
+          if (event.target.value === "") {
+            console.log("Error: campo vacío");
+          }
+        });  
+
+//Diferencia entre input y keydown/keyup
+
+1.//keydown y keyup solo detectan teclas presionadas y soltadas.
+2.//input es más amplio, ya que detecta cualquier cambio en el campo, incluso si el usuario pega o borra texto sin usar el teclado.
+
+//Conclusión:
+
+1./*Estos eventos permiten mejorar la usabilidad de los formularios, detectar acciones del usuario
+en tiempo real y aplicar validaciones dinámicas.*/ </code></pre>
+            </section>
+            <section class="text-gray-600 leading-relaxed">
+              <h3 class="text-xl font-semibold mt-8 mb-2">
+                Eventos de Formularios
+              </h3>
+              <p class="mb-4">
+                Los eventos en formularios permiten capturar y controlar la
+                interacción del usuario al enviar datos. Uno de los eventos más
+                importantes es submit, que se ejecuta cuando el usuario envía un
+                formulario, permitiendo validar o modificar su comportamiento
+                antes de procesarlo.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo:
+
+        const formulario = document.querySelector(".formulario");
+
+// Captura el evento submit del formulario
+        formulario.addEventListener("submit", validarFormulario);
                   
-        resultado = Math.floor(2.78);
+        function validarFormulario(event) {
+          event.preventDefault(); // Previene el envío del formulario
                   
-//Raiz cuadrada
+          console.log("Procesando formulario...");
                   
-        resultado = Math.sqrt(2.78);
+// Obtener la URL de destino del formulario
+        console.log("URL de acción:", event.target.action);
                   
-// Valor absoluto (ignora el negativo)
+// Obtener el valor del input con el atributo 'name="busqueda"'
+        console.log("Valor ingresado:", event.target.busqueda.value);
+        }
+
+//¿Por qué usar preventDefault()?
+
+/*Si no se usa preventDefault(), el formulario se enviará y la página se recargará, 
+perdiendo la oportunidad de validar o modificar los datos antes del envío.*/</code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2">Eventos de Scroll</h3>
+              <p class="text-gray-600 leading-relaxed">
+                El evento <code class="text-blue-600">scroll</code> se ejecuta
+                página hacia arriba o abajo. Es útil para efectos de animación,
+                carga diferida de contenido o fijar elementos en la pantalla al
+                hacer scroll.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo:
+        window.addEventListener("scroll", () => {
+          const premiumSection = document.querySelector(".premium");
+          const posicion = premiumSection.getBoundingClientRect(); // Obtiene la posición del elemento respecto a la ventana
                   
-        resultado = Math.abs(-200);
+          console.log(posicion); // Muestra la posición en la consola
                   
-//Potencia
+          if (posicion.top < 714 && posicion.top > -280) {
+            console.log("El elemento está visible");
+            premiumSection.classList.add("visible"); // Agrega una clase cuando el elemento es visible
+          } else {
+            console.log("El elemento aún no es visible");
+            premiumSection.classList.remove("visible"); // Elimina la clase cuando el elemento no es visible
+          }
+        });
+
+//¿Cómo Funciona?
+
+1.//Cada vez que el usuario haga scroll, la función verifica la posición de la sección .premium.
+2.//Si el elemento está dentro del rango visible de la pantalla, se le agrega la clase "visible".
+3.//Si el elemento está fuera del rango visible, se le quita la clase "visible".
+
+//Aplicaciones Comunes
+
+✅ //Mostrar elementos solo cuando sean visibles.
+✅ //Activar animaciones al hacer scroll.
+✅ //Cargar contenido dinámico a medida que el usuario navega.</code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2">Evento Bubbling</h3>
+              <p class="text-gray-600 leading-relaxed">
+                El evento bubbling ocurre cuando un evento se propaga desde el
+                elemento más específico (hijo) hacia los elementos padres, como
+                si fuera una burbuja ascendiendo en el DOM. Esto puede causar
+                que múltiples eventos se ejecuten al mismo tiempo de manera no
+                deseada.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplos:
+
+        const cardDiv = document.querySelector(".card");
+        const infoDiv = document.querySelector(".info");
+        const tituloDiv = document.querySelector(".titulo");
                   
-        resultado = Math.pow(2, 3);
+        cardDiv.addEventListener("click", (event) => {
+          event.stopPropagation(); // Detiene la propagación del evento
+          console.log("Click en card");
+        });
                   
-//Minimo
+        infoDiv.addEventListener("click", (event) => {
+          event.stopPropagation();
+          console.log("Click en info");
+        });
                   
-        resultado = Math.min(2, 3, 4, 8, 1, 4, 6, 9);
-                  
-//Máximo
-                  
-        resultado = Math.max(2, 3, 4, 8, 1, 4, 6, 9);
-                  
-// Aleatorio
-                  
-        let random = Math.random() * 100;
-                  
-        let redondear = Math.round(random);
-                  
-        console.log(redondeear);
-                  
-//Redondear entre 1 y 50
-                  
-        resultado = Math.round(Math.random() * 50);
-                  
-        console.log(resultado);
-                  
-            </code></pre>
+        tituloDiv.addEventListener("click", (event) => {
+          event.stopPropagation();
+          console.log("Click en titulo");
+        });
+
+//Explicación:
+
+/*Si no usamos event.stopPropagation(), al hacer clic en el elemento más interno .titulo, 
+el evento también se propagaría hacia sus elementos padres .info y luego .card, 
+generando múltiples registros en la consola.*/
+
+//Casos de usamos
+
+1.//Evitar que múltiples eventos se ejecuten cuando solo queremos capturar el clic en un elemento específico.
+2.//Controlar mejor la ejecución de eventos en estructuras anidadas del DOM.</code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Métodos para Eliminar Espacios en Blanco
+                Delegación de Eventos
               </h3>
-              <p class="mb-4">
-                Utilizamos <code class="text-blue-600">trimStart()</code> y
-                <code class="text-blue-600">trimEnd()</code> para eliminar
-                espacios en blanco al principio y al final de una cadena.
+              <p class="text-gray-600 leading-relaxed">
+                La delegación de eventos es una técnica en la que en lugar de
+                asignar eventos a múltiples elementos hijos individualmente,
+                asignamos el evento a un elemento padre común y detectamos en
+                qué hijo se hizo clic usando event.target.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-                  
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplos:
 
-//Orden de ejecución de operadores
+        const cardDiv2 = document.querySelector(".card");
 
-        let resultado;
-                  
-        resultado = 2 + 3 * 4;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - 1;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - 1 / 2;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3 + 5;
-                  
-        console.log(resultado);
-                  
-        resultado = 2 + 3 * 4 - (1 / 2) * 3 + 5 * 6;
-                  
-        console.log(resultado);
-                  
-            </code></pre>
+        cardDiv2.addEventListener("click", (event) => {
+          if (event.target.classList.contains("titulo")) {
+            console.log("Diste click en título");
+          } else if (event.target.classList.contains("info")) {
+            console.log("Diste click en info");
+          } else if (event.target.classList.contains("card")) {
+            console.log("Diste click en card");
+          }
+        });
+
+//Explicación:
+
+1.//Asignamos el evento click al elemento padre (.card).
+2.//Usamos event.target para saber en qué hijo se hizo clic.
+3.//Detectamos la clase del elemento clickeado con .classList.contains().
+
+//¿Por Qué Usar Delegación de Eventos?
+
+🔹 //Optimiza el rendimiento en listas largas o elementos dinámicos.
+🔹 //Evita asignar eventos repetidos a múltiples elementos.
+🔹 //Facilita el mantenimiento del código.</code></pre>
             </section>
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
-                Reemplazar y Extraer Parte de una Cadena
+                Evitar la propagación con contenido creado
               </h3>
-              <p class="mb-4">
-                Usamos <code class="text-blue-600">replace()</code> para
-                reemplazar texto y <code class="text-blue-600">slice()</code> o
-                <code class="text-blue-600">substring()</code> para extraer
-                porciones de una cadena.
+              <p class="text-gray-600 leading-relaxed">
+                Cuando creamos elementos dinámicamente en JavaScript y les
+                asignamos eventos, estos pueden propagarse de manera no deseada
+                si no controlamos el flujo de los eventos.
               </p>
               <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">
-        let puntaje = 5;
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo:
 
-        puntaje++; // ejecuta el comando y luego lo incrementa
-                  
-        ++puntaje; // incrementa el puntaje y luego ejecuta el comando
-                  
-        puntaje += 2; // suma 2 a puntaje y luego ejecuta el comando
-                  
-        console.log(puntaje);
-            </code></pre>
-            </section>
-            <section class="space-y-4">
-              <h3 class="text-xl font-semibold mt-8 mb-2">
-                Otros Métodos de Cadenas
-              </h3>
-              <p class="mb-4">
-                Aquí se encuentran otros métodos útiles como
-                <code class="text-blue-600">charAt()</code>,
-                <code class="text-blue-600">repeat()</code>,
-                <code class="text-blue-600">split()</code>, entre otros.
-              </p>
-              <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejmplos
+// Crear un párrafo con clase "categoria"
 
-        const numero10 = "20";
-        const numero20 = "20.2";
-        const numero30 = "Veinte";
-        const numero40 = 20;
+        const parrafo1 = document.createElement("P");
+        parrafo1.textContent = "Concierto";
+        parrafo1.classList.add("categoria", "concierto");
                   
-//Convertir un número a texto
+// Segundo párrafo con clase "titulo"
 
-        console.log(numero10);
+        const parrafo2 = document.createElement("P");
+        parrafo2.textContent = "Concierto de Rock";
+        parrafo2.classList.add("titulo");
                   
-//Convertir a numero Entero
+// Tercer párrafo con clase "precio" y evento de click
 
-        console.log(Number.parseInt(numero10));
+        const parrafo3 = document.createElement("p");
+        parrafo3.textContent = "$800 por persona";
+        parrafo3.classList.add("precio");
+        parrafo3.onclick = (event) => {
+          event.stopPropagation(); // Evita que el evento se propague al contenedor padre
+          nuevaFuncion(1);
+        };
                   
-//Convertir a numero FLOTANTE
+// Crear el contenedor de información y agregar los párrafos
 
-        console.log(Number.parseFloat(numero20));
+        const info = document.createElement("div");
+        info.classList.add("info");
+        info.append(parrafo1, parrafo2, parrafo3);
                   
-//Revisar si es un número entero o decimal
+// Crear la imagen
+
+        const imagen = document.createElement("img");
+        imagen.src = "img/hacer2.jpg";
                   
-        console.log(Number.isInteger(numero10));
-            </code></pre>
+// Crear el card y agregar la imagen e información
+
+        const contenedorCard = document.createElement("div");
+        contenedorCard.classList.add("contenedorCard");
+        contenedorCard.append(imagen, info);
+                  
+// Insertar el card en el HTML
+
+        const contenedor = document.querySelector(".hacer .contenedor-cards");
+        contenedor.appendChild(contenedorCard);
+                  
+// Función que se ejecuta al hacer clic en el precio
+
+        function nuevaFuncion(id) {
+          console.log("Funcion nueva", id);
+        }
+
+//¿Cómo Funciona?
+
+1.//Creamos elementos dinámicamente, como párrafos (p), una imagen (img) y un contenedor (div).
+2.//Agregamos eventos, como el onclick en el párrafo de precio.
+3.//Usamos event.stopPropagation() dentro de parrafo3.onclick para evitar que el evento se propague al contenedor padre.
+4.//Añadimos los elementos al DOM usando appendChild() y append().
+
+//¿Por Qué Usar stopPropagation()?
+
+🔹 //Evita que el evento se propague a elementos padres.
+🔹 //Permite un control más preciso sobre qué elementos activan eventos.
+🔹 //Mejora la usabilidad y previene comportamientos inesperados.</code></pre>
             </section>
             <!-- footer -->
             <section>
