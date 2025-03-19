@@ -274,7 +274,7 @@
             <!-- Sección 1 -->
             <section class="space-y-4">
               <h2 class="text-2xl font-semibold mt-4 text-gray-700">
-                Declaración y uso de Numbers
+                Declaración y uso
               </h2>
               <p class="text-gray-600 leading-relaxed">
                 Strings o Cadenas de Texto son secuencias de caracteres que se
@@ -296,6 +296,25 @@
           
           const nombreProducto4 = '"Monitor de 75 pulgadas"';
           console.log(nombreProducto4);
+            </code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2">
+                Concatenación de Cadenas
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                Puedes concatenar cadenas de texto y variables usando plantillas
+                literales, lo que hace que tu código sea más limpio y fácil de
+                leer.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Concatenacion de strings o variables
+          
+          const product = "Computadora";
+          const precio = 1000;
+          const marca = "Acer";
+          
+          console.log(`La "${product}" que se encuentra en stock, es de la marca ${marca} y tiene un valor de ${precio}€`);
             </code></pre>
             </section>
             <section class="space-y-4">
@@ -330,27 +349,7 @@
           }
             </code></pre>
             </section>
-            <section class="space-y-4">
-              <h3 class="text-xl font-semibold mt-8 mb-2">
-                Concatenación de Cadenas
-              </h3>
-              <p class="text-gray-600 leading-relaxed">
-                Puedes concatenar cadenas de texto y variables usando plantillas
-                literales, lo que hace que tu código sea más limpio y fácil de
-                leer.
-              </p>
-              <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Concatenacion de strings o variables
-          
-          const product = "Computadora";
-          const precio = 1000;
-          const marca = "Acer";
-          
-          console.log(
-            \`La \${product} que se encuentra en stock, es de la marca \${marca} y tiene un valor de \${precio}€\`
-          );
-            </code></pre>
-            </section>
+
             <section class="space-y-4">
               <h3 class="text-xl font-semibold mt-8 mb-2">
                 Métodos para Eliminar Espacios en Blanco
