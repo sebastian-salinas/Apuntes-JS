@@ -41,7 +41,6 @@
     <!-- Links -->
     <link href="/dist/styles.css" rel="stylesheet" />
     <script type="module" src="/src/script.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css"
@@ -60,20 +59,22 @@
       href="/assets/icons/apple-touch-icon.png" />
     <title>Apuntes JS</title>
   </head>
-  <body class="bg-gray-100">
+  <body class="bg-gray-100 dark:bg-gray-800">
     <div class="min-h-screen flex flex-col">
       <div class="flex flex-1">
         <!-- Sidebar -->
         <div
-          class="flex md:h-screen lg:h-screen xl:h-screen 2xl:h-screen overflow-y-auto w-44 flex-col border-e bg-white"
+          class="flex md:h-screen lg:h-screen xl:h-screen 2xl:h-screen overflow-y-auto w-44 flex-col border-e bg-white dark:bg-gray-800"
           id="sidebar">
           <div class="">
             <!-- Sidebar header -->
             <div
-              class="fixed top-0 z-50 flex h-16 w-44 shrink-0 items-center justify-center border-b border-r border-gray-200 bg-white">
+              class="fixed top-0 z-50 flex h-16 w-44 shrink-0 items-center justify-center border-b border-r border-gray-200 bg-white dark:bg-gray-800 dark:border-gray-700">
               <a href="/src/01-index.html">
                 <div class="inline-flex gap-1.5 text-sm items-center">
-                  <span class="font-medium text-gray-900"> Apuntes</span>
+                  <span class="font-medium text-gray-900 dark:text-gray-100">
+                    Apuntes</span
+                  >
                   <img
                     src="/assets/icons/favicon-96x96.png"
                     alt=""
@@ -1038,14 +1039,14 @@
           </div>
         </div>
         <!-- Main -->
-        <main class="flex-1 bg-gray-50 overflow-auto">
+        <main class="flex-1 bg-gray-50 dark:bg-gray-800 overflow-auto">
           <!-- Main header -->
           <header
-            class="fixed top-0 z-50 h-16 border-b border-gray-200 bg-white px-4 sm:h-16 sm:px-6 lg:px-8 w-full">
+            class="fixed top-0 z-50 h-16 border-b border-gray-200 bg-white dark:bg-gray-800 dark:border-gray-700 px-4 sm:h-16 sm:px-6 lg:px-8 w-full">
             <div class="flex h-16 items-center gap-4">
               <div class="flex items-center gap-2 sm:gap-4">
                 <button
-                  class="rounded-sm border border-gray-200 p-1.5 text-gray-700"
+                  class="rounded-sm border border-gray-200 p-1.5 text-gray-700 dark:border-gray-700 dark:text-gray-300"
                   id="open-sidebar">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1065,7 +1066,7 @@
                 <div class="relative h-12 sm:h-auto sm:flex-1">
                   <input
                     type="text"
-                    class="relative z-100 w-full rounded-t border-gray-200 py-1.5 text-sm focus:ring-inset sm:max-w-sm rounded-b"
+                    class="relative z-100 w-full rounded-t border-gray-200 dark:border-gray-700 py-1.5 text-sm focus:ring-inset sm:max-w-sm rounded-b"
                     placeholder="Search"
                     value=""
                     id="search" />
@@ -1075,10 +1076,16 @@
                 <div class="relative sm:h-auto sm:flex-1">
                   <input
                     type="text"
-                    class="relative z-100 w-full rounded-t border-gray-200 py-1.5 text-sm focus:ring-inset sm:max-w-sm rounded-b"
+                    class="relative z-100 w-full rounded-t border-gray-200 dark:border-gray-700 py-1.5 text-sm focus:ring-inset sm:max-w-sm rounded-b"
                     placeholder="Search"
                     value="" />
                 </div>
+              </div>
+              <div class="fixed right-16 top-5 flex-1 items-center justify-end">
+                <button id="darkModeToggle" class="size-6">
+                  <span class="dark:hidden">🌙</span>
+                  <span class="hidden dark:inline">☀️</span>
+                </button>
               </div>
               <div class="fixed right-6 top-5 flex-1 items-center justify-end">
                 <a
@@ -1102,15 +1109,17 @@
           </header>
           <!-- Main body -->
           <section class="px-4 mt-20 sm:h-16 sm:px-6 lg:px-8 space-y-4">
-            <h1 class="text-3xl font-bold mt-4 text-gray-800">
+            <h1
+              class="text-3xl font-bold mt-4 text-gray-800 dark:text-gray-200">
               Introducción a JavaScript
             </h1>
             <!-- Sección 1 -->
             <section class="space-y-4">
-              <h2 class="text-2xl font-semibold mt-4 text-gray-700">
+              <h2
+                class="text-2xl font-semibold mt-4 text-gray-700 dark:text-gray-300">
                 ¿Qué es JavaScript?
               </h2>
-              <p class="text-gray-600 leading-relaxed">
+              <p class="text-gray-600 leading-relaxed dark:text-gray-300">
                 JavaScript es un lenguaje de programación versátil que se
                 utiliza principalmente para agregar interactividad a sitios web.
                 Es uno de los pilares del desarrollo web, junto con HTML y CSS.
@@ -1119,10 +1128,11 @@
 
             <!-- Sección 2 -->
             <section class="space-y-4">
-              <h2 class="text-2xl mt-4 font-semibold text-gray-700">
+              <h2
+                class="text-2xl mt-4 font-semibold text-gray-700 dark:text-gray-300">
                 Ejemplo básico de JavaScript
               </h2>
-              <p class="text-gray-600 leading-relaxed">
+              <p class="text-gray-600 leading-relaxed dark:text-gray-300">
                 A continuación, se muestra un ejemplo básico que imprime "¡Hola,
                 mundo!" en la consola del navegador:
               </p>
@@ -1135,10 +1145,12 @@
             </section>
             <!-- Sección 3 -->
             <section class="space-y-4">
-              <h2 class="text-2xl font-semibold text-gray-700">
+              <h2
+                class="text-2xl font-semibold text-gray-700 dark:text-gray-300">
                 Características principales
               </h2>
-              <ul class="list-disc list-inside text-gray-600 leading-relaxed">
+              <ul
+                class="list-disc list-inside text-gray-600 leading-relaxed dark:text-gray-300">
                 <li>Es ejecutado por el navegador en el lado del cliente.</li>
                 <li>
                   Soporta programación orientada a objetos, funcional y basada
@@ -1152,8 +1164,10 @@
             </section>
             <!-- Sección 4 -->
             <section>
-              <div class="mt-10 border-t border-gray-200 pt-10">
-                <p class="mb-6 text-sm text-gray-700 lg:mt-0">
+              <div
+                class="mt-10 border-t border-gray-200 dark:border-gray-700 pt-10">
+                <p
+                  class="mb-6 text-sm text-gray-700 lg:mt-0 dark:text-gray-300">
                   Created by<!-- -->
                   <a
                     href="https://github.com/sebastian-salinas"

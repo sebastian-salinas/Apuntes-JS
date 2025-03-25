@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
   sidebarOpen.addEventListener("click", () => {
     sidebar.classList.toggle("hidden");
   });
+
+  document.getElementById("darkModeToggle").addEventListener("click", () => {
+    document.documentElement.classList.toggle("dark");
+  });
 });
 
 const temario = {
