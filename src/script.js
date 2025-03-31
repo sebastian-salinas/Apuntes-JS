@@ -13,6 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("darkModeToggle").addEventListener("click", () => {
     document.documentElement.classList.toggle("dark");
   });
+
+  document.getElementById("menu-toggle").addEventListener("click", function () {
+    document.getElementById("mobile-menu").classList.toggle("hidden");
+  });
 });
 
 const temario = {
