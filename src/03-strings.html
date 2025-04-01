@@ -1093,18 +1093,23 @@
           </header>
           <!-- Main body -->
           <section class="px-4 mt-20 sm:h-16 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold mt-4 text-gray-800">Strings</h1>
-            <!-- Sección 1 -->
-            <section class="space-y-4">
-              <h2 class="text-2xl font-semibold mt-4 text-gray-700">
-                Declaración y uso
-              </h2>
-              <p class="text-gray-600 leading-relaxed">
-                Strings o Cadenas de Texto son secuencias de caracteres que se
-                pueden asignar a variables
-              </p>
-              <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Strings o cadenas de texto
+            <h1
+              class="text-3xl font-bold mt-4 text-gray-800 dark:text-gray-100">
+              Strings
+            </h1>
+            <main class="flex-1 space-y-4">
+              <!-- Sección 1 -->
+              <section class="space-y-4">
+                <h2
+                  class="text-2xl font-semibold mt-4 text-gray-700 dark:text-gray-200">
+                  Declaración y uso
+                </h2>
+                <p class="text-gray-600 leading-relaxed dark:text-gray-200">
+                  Strings o Cadenas de Texto son secuencias de caracteres que se
+                  pueden asignar a variables
+                </p>
+                <pre
+                  class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Strings o cadenas de texto
           
           const nombreProducto = "Monitor de 55 pulgadas";
           console.log(nombreProducto);
@@ -1120,18 +1125,20 @@
           const nombreProducto4 = '"Monitor de 75 pulgadas"';
           console.log(nombreProducto4);
             </code></pre>
-            </section>
-            <section class="space-y-4">
-              <h3 class="text-xl font-semibold mt-8 mb-2" id="concatenacion">
-                Concatenación de Cadenas
-              </h3>
-              <p class="text-gray-600 leading-relaxed">
-                Puedes concatenar cadenas de texto y variables usando plantillas
-                literales, lo que hace que tu código sea más limpio y fácil de
-                leer.
-              </p>
-              <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Concatenacion de strings o variables
+              </section>
+              <section class="space-y-4">
+                <h3
+                  class="text-2xl font-semibold text-gray-700 dark:text-gray-200"
+                  id="concatenacion">
+                  Concatenación de Cadenas
+                </h3>
+                <p class="text-gray-600 leading-relaxed dark:text-gray-200">
+                  Puedes concatenar cadenas de texto y variables usando
+                  plantillas literales, lo que hace que tu código sea más limpio
+                  y fácil de leer.
+                </p>
+                <pre
+                  class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Concatenacion de strings o variables
           
           const product = "Computadora";
           const precio = 1000;
@@ -1139,20 +1146,20 @@
           
           console.log(`La "${product}" que se encuentra en stock, es de la marca ${marca} y tiene un valor de ${precio}€`);
             </code></pre>
-            </section>
-            <section class="space-y-4">
-              <h3
-                class="text-xl font-semibold mt-8 mb-2"
-                id="metodos-de-strings">
-                Métodos de Cadenas de Texto
-              </h3>
-              <p class="text-gray-600 leading-relaxed">
-                Existen varios métodos útiles para trabajar con cadenas en
-                JavaScript, como obtener la longitud de un string, buscar la
-                posición de un caracter, y más.
-              </p>
-              <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Longitud de mi string
+              </section>
+              <section class="space-y-4">
+                <h3
+                  class="text-2xl font-semibold text-gray-700 dark:text-gray-200"
+                  id="metodos-de-strings">
+                  Métodos de Cadenas de Texto
+                </h3>
+                <p class="text-gray-600 leading-relaxed dark:text-gray-200">
+                  Existen varios métodos útiles para trabajar con cadenas en
+                  JavaScript, como obtener la longitud de un string, buscar la
+                  posición de un caracter, y más.
+                </p>
+                <pre
+                  class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Longitud de mi string
           const longitudProducto = "Monitor de 32 pulgadas";
           
           console.log(longitudProducto.length);
@@ -1173,19 +1180,20 @@
             console.log("No se encuentra el movil en el array");
           }
             </code></pre>
-            </section>
+              </section>
 
-            <section class="space-y-4">
-              <h3 class="text-xl font-semibold mt-8 mb-2">
-                Métodos para Eliminar Espacios en Blanco
-              </h3>
-              <p class="text-gray-600 leading-relaxed">
-                Utilizamos <code class="text-blue-600">trimStart()</code> y
-                <code class="text-blue-600">trimEnd()</code> para eliminar
-                espacios en blanco al principio y al final de una cadena.
-              </p>
-              <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">// Metodos para eliminar los espacios en blanco
+              <section class="space-y-4">
+                <h3
+                  class="text-2xl font-semibold text-gray-700 dark:text-gray-200">
+                  Métodos para Eliminar Espacios en Blanco
+                </h3>
+                <p class="text-gray-600 leading-relaxed dark:text-gray-200">
+                  Utilizamos <code class="text-blue-600">trimStart()</code> y
+                  <code class="text-blue-600">trimEnd()</code> para eliminar
+                  espacios en blanco al principio y al final de una cadena.
+                </p>
+                <pre
+                  class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">// Metodos para eliminar los espacios en blanco
           
           const mes = "                         Noviembre       ";
           
@@ -1195,19 +1203,21 @@
           
           console.log(mes.trimStart().trimEnd()); //Eliminar espacios en blanco al inicio
             </code></pre>
-            </section>
-            <section class="space-y-4">
-              <h3 class="text-xl font-semibold mt-8 mb-2">
-                Reemplazar y Extraer Parte de una Cadena
-              </h3>
-              <p class="text-gray-600 leading-relaxed">
-                Usamos <code class="text-blue-600">replace()</code> para
-                reemplazar texto y <code class="text-blue-600">slice()</code> o
-                <code class="text-blue-600">substring()</code> para extraer
-                porciones de una cadena.
-              </p>
-              <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Metodo replace, se utiliza para reemplazar el texto de una cadena
+              </section>
+              <section class="space-y-4">
+                <h3
+                  class="text-2xl font-semibold text-gray-700 dark:text-gray-200">
+                  Reemplazar y Extraer Parte de una Cadena
+                </h3>
+                <p class="text-gray-600 leading-relaxed dark:text-gray-200">
+                  Usamos <code class="text-blue-600">replace()</code> para
+                  reemplazar texto y
+                  <code class="text-blue-600">slice()</code> o
+                  <code class="text-blue-600">substring()</code> para extraer
+                  porciones de una cadena.
+                </p>
+                <pre
+                  class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Metodo replace, se utiliza para reemplazar el texto de una cadena
           
           const diaDeLaSemana = "Lunes";
           
@@ -1222,19 +1232,20 @@
 
           console.log(diaDeLaSemana.substring(3, 0));
             </code></pre>
-            </section>
-            <section class="space-y-4">
-              <h3 class="text-xl font-semibold mt-8 mb-2">
-                Otros Métodos de Cadenas
-              </h3>
-              <p class="text-gray-600 leading-relaxed">
-                Aquí se encuentran otros métodos útiles como
-                <code class="text-blue-600">charAt()</code>,
-                <code class="text-blue-600">repeat()</code>,
-                <code class="text-blue-600">split()</code>, entre otros.
-              </p>
-              <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Metodo charAt, se utiliza para obtener un caracter en especifico de la cadena de texto
+              </section>
+              <section class="space-y-4">
+                <h3
+                  class="text-2xl font-semibold text-gray-700 dark:text-gray-200">
+                  Otros Métodos de Cadenas
+                </h3>
+                <p class="text-gray-600 leading-relaxed dark:text-gray-200">
+                  Aquí se encuentran otros métodos útiles como
+                  <code class="text-blue-600">charAt()</code>,
+                  <code class="text-blue-600">repeat()</code>,
+                  <code class="text-blue-600">split()</code>, entre otros.
+                </p>
+                <pre
+                  class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Metodo charAt, se utiliza para obtener un caracter en especifico de la cadena de texto
 
           console.log(diaDeLaSemana.charAt(0));
           
@@ -1257,20 +1268,21 @@
           
           console.log(twitter.split("#"));
             </code></pre>
-            </section>
-            <section class="space-y-4">
-              <h3 class="text-xl font-semibold mt-8 mb-2">
-                Métodos de Caso y Conversión de Tipos
-              </h3>
-              <p class="text-gray-600 leading-relaxed">
-                Podemos convertir cadenas a mayúsculas o minúsculas usando
-                <code class="text-blue-600">toUpperCase()</code> y
-                <code class="text-blue-600">toLowerCase()</code>, o convertir
-                números a texto con
-                <code class="text-blue-600">toString()</code>.
-              </p>
-              <pre
-                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Metodos toUpperCase y toLowerCase, se utilizan para convertir una cadena de texto a mayúsculas o minúsculas
+              </section>
+              <section class="space-y-4">
+                <h2
+                  class="text-2xl font-semibold text-gray-700 dark:text-gray-200">
+                  Métodos de Caso y Conversión de Tipos
+                </h2>
+                <p class="text-gray-600 leading-relaxed dark:text-gray-200">
+                  Podemos convertir cadenas a mayúsculas o minúsculas usando
+                  <code class="text-blue-600">toUpperCase()</code> y
+                  <code class="text-blue-600">toLowerCase()</code>, o convertir
+                  números a texto con
+                  <code class="text-blue-600">toString()</code>.
+                </p>
+                <pre
+                  class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Metodos toUpperCase y toLowerCase, se utilizan para convertir una cadena de texto a mayúsculas o minúsculas
           
           const producto = "Monitor de 55 pulgadas";
           
@@ -1289,16 +1301,19 @@
           
           console.log(typeof valor.toString());
             </code></pre>
-            </section>
+              </section>
+            </main>
             <section>
-              <div class="mt-10 border-t border-gray-200 pt-10">
-                <p class="mb-6 text-sm text-gray-700 lg:mt-0">
+              <div
+                class="mt-10 border-t border-gray-200 dark:border-gray-700 pt-10">
+                <p
+                  class="mb-6 text-sm text-gray-700 lg:mt-0 dark:text-gray-200">
                   Created by<!-- -->
                   <a
                     href="https://github.com/sebastian-salinas"
                     rel="noreferrer"
                     target="_blank"
-                    class="inline-block font-medium no-underline mb-6 hover:text-gray-900"
+                    class="inline-block font-medium no-underline mb-6 hover:text-gray-900 transition hover:opacity-75 dark:text-gray-200"
                     >Sebastian Salinas</a
                   >
                 </p>
