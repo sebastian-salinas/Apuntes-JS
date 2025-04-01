@@ -1099,15 +1099,16 @@
             </h1>
             <!-- Sección 1 -->
             <section class="space-y-4">
-              <h2 class="text-2xl font-semibold mt-4 text-gray-700">
+              <h2
+                class="text-2xl font-semibold mt-4 text-gray-700 dark:text-gray-200">
                 <code>DOMContentLoaded</code>
               </h2>
-              <p class="text-gray-600 leading-relaxed">
+              <p class="text-gray-600 leading-relaxed dark:text-gray-200">
                 Los eventos en JavaScript permiten ejecutar código en respuesta
-                a acciones del usuario o del sistema, como hacer clic, mover el
-                mouse o cargar una página.
+                dark:text-gray-200 a acciones del usuario o del sistema, como
+                hacer clic, mover el mouse o cargar una página.
               </p>
-              <p class="text-gray-600 leading-relaxed">
+              <p class="text-gray-600 leading-relaxed dark:text-gray-200">
                 Uno de los eventos más importantes es
                 <code class="text-blue-600">DOMContentLoaded</code>, se dispara
                 cuando el HTML del documento ha sido completamente cargado y
@@ -1154,11 +1155,11 @@
             </section>
             <section class="space-y-4">
               <h3
-                class="text-xl font-semibold mt-8 mb-2"
+                class="text-xl font-semibold mt-8 mb-2 dark:text-gray-200"
                 id="eventos-del-mouse">
                 Eventos del Mouse
               </h3>
-              <p class="text-gray-600 leading-relaxed">
+              <p class="text-gray-600 leading-relaxed dark:text-gray-200">
                 En JavaScript, podemos detectar interacciones del usuario con el
                 mouse a través de eventos. Estos eventos permiten ejecutar
                 código cuando el usuario hace clic, pasa el cursor o interactúa
@@ -1208,11 +1209,11 @@
             </section>
             <section class="space-y-4">
               <h3
-                class="text-xl font-semibold mt-8 mb-2"
+                class="text-xl font-semibold mt-8 mb-2 dark:text-gray-200"
                 id="eventos-del-teclado">
                 Eventos de teclado
               </h3>
-              <p class="text-gray-600 leading-relaxed">
+              <p class="text-gray-600 leading-relaxed dark:text-gray-200">
                 Los eventos de teclado permiten detectar cuándo el usuario
                 interactúa con un campo de entrada, presionando, soltando o
                 manipulando texto dentro de él. Estos eventos son útiles para
@@ -1278,12 +1279,12 @@
 en tiempo real y aplicar validaciones dinámicas.*/ </code></pre>
             </section>
             <section
-              class="text-gray-600 leading-relaxed"
+              class="text-gray-600 leading-relaxed dark:text-gray-200"
               id="eventos-de-formularios">
-              <h3 class="text-xl font-semibold mt-8 mb-2">
+              <h3 class="text-xl font-semibold mt-8 mb-2 dark:text-gray-200">
                 Eventos de Formularios
               </h3>
-              <p class="mb-4">
+              <p class="mb-4 text-gray-600 leading-relaxed dark:text-gray-200">
                 Los eventos en formularios permiten capturar y controlar la
                 interacción del usuario al enviar datos. Uno de los eventos más
                 importantes es submit, que se ejecuta cuando el usuario envía un
@@ -1317,11 +1318,11 @@ perdiendo la oportunidad de validar o modificar los datos antes del envío.*/</c
             </section>
             <section class="space-y-4">
               <h3
-                class="text-xl font-semibold mt-8 mb-2"
+                class="text-xl font-semibold mt-8 mb-2 dark:text-gray-200"
                 id="eventos-de-scroll">
                 Eventos de Scroll
               </h3>
-              <p class="text-gray-600 leading-relaxed">
+              <p class="text-gray-600 leading-relaxed dark:text-gray-200">
                 El evento <code class="text-blue-600">scroll</code> se ejecuta
                 página hacia arriba o abajo. Es útil para efectos de animación,
                 carga diferida de contenido o fijar elementos en la pantalla al
@@ -1357,10 +1358,12 @@ perdiendo la oportunidad de validar o modificar los datos antes del envío.*/</c
 ✅ //Cargar contenido dinámico a medida que el usuario navega.</code></pre>
             </section>
             <section class="space-y-4">
-              <h3 class="text-xl font-semibold mt-8 mb-2" id="bubbling">
+              <h3
+                class="text-xl font-semibold mt-8 mb-2 dark:text-gray-200"
+                id="bubbling">
                 Evento Bubbling
               </h3>
-              <p class="text-gray-600 leading-relaxed">
+              <p class="text-gray-600 leading-relaxed dark:text-gray-200">
                 El evento bubbling ocurre cuando un evento se propaga desde el
                 elemento más específico (hijo) hacia los elementos padres, como
                 si fuera una burbuja ascendiendo en el DOM. Esto puede causar
@@ -1402,11 +1405,11 @@ generando múltiples registros en la consola.*/
             </section>
             <section class="space-y-4">
               <h3
-                class="text-xl font-semibold mt-8 mb-2"
+                class="text-xl font-semibold mt-8 mb-2 dark:text-gray-200"
                 id="delegacion-de-eventos">
                 Delegación de Eventos
               </h3>
-              <p class="text-gray-600 leading-relaxed">
+              <p class="text-gray-600 leading-relaxed dark:text-gray-200">
                 La delegación de eventos es una técnica en la que en lugar de
                 asignar eventos a múltiples elementos hijos individualmente,
                 asignamos el evento a un elemento padre común y detectamos en
@@ -1441,11 +1444,11 @@ generando múltiples registros en la consola.*/
             </section>
             <section class="space-y-4">
               <h3
-                class="text-xl font-semibold mt-8 mb-2"
+                class="text-xl font-semibold mt-8 mb-2 dark:text-gray-200"
                 id="evitar-propagacion-de-eventos">
                 Evitar la propagación con contenido creado
               </h3>
-              <p class="text-gray-600 leading-relaxed">
+              <p class="text-gray-600 leading-relaxed dark:text-gray-200">
                 Cuando creamos elementos dinámicamente en JavaScript y les
                 asignamos eventos, estos pueden propagarse de manera no deseada
                 si no controlamos el flujo de los eventos.
