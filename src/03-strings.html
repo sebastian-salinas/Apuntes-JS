@@ -64,15 +64,17 @@
       <div class="flex flex-1">
         <!-- Sidebar -->
         <div
-          class="flex md:h-screen lg:h-screen xl:h-screen 2xl:h-screen overflow-y-auto w-44 flex-col border-e bg-white"
+          class="flex md:h-screen lg:h-screen xl:h-screen 2xl:h-screen overflow-y-auto w-44 flex-col border-e bg-white dark:bg-gray-900 dark:border-gray-700"
           id="sidebar">
           <div class="">
             <!-- Sidebar header -->
             <div
-              class="fixed top-0 z-50 flex h-16 w-44 shrink-0 items-center justify-center border-b border-r border-gray-200 bg-white">
+              class="fixed top-0 z-50 flex h-16 w-44 shrink-0 items-center justify-center border-b border-r border-gray-200 bg-white dark:bg-gray-900 dark:border-gray-700">
               <a href="/src/01-index.html">
                 <div class="inline-flex gap-1.5 text-sm items-center">
-                  <span class="font-medium text-gray-900"> Apuntes</span>
+                  <span class="font-medium text-gray-900 dark:text-gray-100">
+                    Apuntes</span
+                  >
                   <img
                     src="/assets/icons/favicon-96x96.png"
                     alt=""
@@ -89,7 +91,7 @@
                     <a
                       href="/src/01-index.html"
                       s
-                      class="group relative flex rounded px-2 py-1.5 text-gray-500 hover:bg-gray-50 hover:text-gray-700">
+                      class="group relative flex rounded px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-700">
                       <!-- Titulo del menu -->
                       <h3>Introducción</h3>
                     </a>
@@ -98,7 +100,7 @@
                     <details
                       class="group [&_summary::-webkit-details-marker]:hidden">
                       <summary
-                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-700">
                         <span class="">Variables</span>
 
                         <span
@@ -120,7 +122,7 @@
                         <li>
                           <a
                             href="/src/02-variables.html"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Inicialización
                           </a>
                         </li>
@@ -128,14 +130,14 @@
                         <li>
                           <a
                             href="/src/02-variables.html#scope-let"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Scope y Let
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/02-variables.html#const"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Const
                           </a>
                         </li>
@@ -147,7 +149,7 @@
                     <details
                       class="group [&_summary::-webkit-details-marker]:hidden">
                       <summary
-                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-700">
                         <span class="">Strings</span>
 
                         <span
@@ -169,7 +171,7 @@
                         <li>
                           <a
                             href="/src/03-strings.html"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Declaración y uso
                           </a>
                         </li>
@@ -177,14 +179,14 @@
                         <li>
                           <a
                             href="/src/03-strings.html#concatenacion"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Concatenación
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/03-strings.html#metodos-de-strings"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Metrodos de strings
                           </a>
                         </li>
@@ -196,7 +198,7 @@
                     <details
                       class="group [&_summary::-webkit-details-marker]:hidden">
                       <summary
-                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-700">
                         <span class="">Numbers</span>
 
                         <span
@@ -218,7 +220,7 @@
                         <li>
                           <a
                             href="/src/04-numbers.html"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Declaración y uso
                           </a>
                         </li>
@@ -226,35 +228,35 @@
                         <li>
                           <a
                             href="/src/04-numbers.html#operadores-aritmeticos-basicos"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Operadores aritméticos basicos
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/04-numbers.html#orden-de-ejecucion"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Orden de ejecución
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/04-numbers.html#incrementos-y-decrementos"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Incrementos y decrementos
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/04-numbers.html#convertir-strings-a-numbers"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Convertir strings a numbers
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/04-numbers.html#objeto-math"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Objeto Math
                           </a>
                         </li>
@@ -266,7 +268,7 @@
                     <details
                       class="group [&_summary::-webkit-details-marker]:hidden">
                       <summary
-                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-700">
                         <span class="">Operadores</span>
 
                         <span
@@ -288,7 +290,7 @@
                         <li>
                           <a
                             href="/src/05-operators.html"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Declaración y uso
                           </a>
                         </li>
@@ -296,14 +298,14 @@
                         <li>
                           <a
                             href="/src/05-operators.html#igualdad-y-diferencia"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Igualdad y diferencia
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/05-operators.html#operadores-logicos"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Operadores lógicos
                           </a>
                         </li>
@@ -315,7 +317,7 @@
                     <details
                       class="group [&_summary::-webkit-details-marker]:hidden">
                       <summary
-                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-700">
                         <span class="">Booleans</span>
 
                         <span
@@ -337,7 +339,7 @@
                         <li>
                           <a
                             href="/src/06-booleans.html"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Declaración y uso
                           </a>
                         </li>
@@ -345,7 +347,7 @@
                         <li>
                           <a
                             href="/src/06-booleans.html#buenas-practicas"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Buenas practicas
                           </a>
                         </li>
@@ -357,7 +359,7 @@
                     <details
                       class="group [&_summary::-webkit-details-marker]:hidden">
                       <summary
-                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-700">
                         <span class="">Objects</span>
 
                         <span
@@ -379,7 +381,7 @@
                         <li>
                           <a
                             href="/src/07-objects.html"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Declaración y uso
                           </a>
                         </li>
@@ -387,49 +389,49 @@
                         <li>
                           <a
                             href="/src/07-objects.html#acceso-de-propiedades"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Acceso de propiedades
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/07-objects.html#asignacion-de-variables"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Asignación de variables
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/07-objects.html#objetos-anidados"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Obejos anidados
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/07-objects.html#destructuring-de-objetos"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Destructuring de objetos
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/07-objects.html#reasignacion-de-valores"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Reasignación de valores
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/07-objects.html#metodos-de-objetos"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Metodos de objetos
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/07-objects.html#spread-y-rest-operator"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Spread y Rest operator
                           </a>
                         </li>
@@ -441,7 +443,7 @@
                     <details
                       class="group [&_summary::-webkit-details-marker]:hidden">
                       <summary
-                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-700">
                         <span class="">Arrays</span>
 
                         <span
@@ -463,7 +465,7 @@
                         <li>
                           <a
                             href="/src/08-arrays.html"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Declaración y uso
                           </a>
                         </li>
@@ -471,49 +473,49 @@
                         <li>
                           <a
                             href="/src/08-arrays.html#acceso-de-valores"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Acceso de valores
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/08-arrays.html#acceso-de-todos-los-valores"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Acceso de todos los valores
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/08-arrays.html#añadir-nuevos-valores"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Añadir nuevos valores
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/08-arrays.html#eliminar-valores"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Eliminar valores
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/08-arrays.html#destructuring-de-arrays"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Destructuring de arrays
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/08-arrays.html#iterar-sobre-arrays"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Iterar sobre arrays
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/08-arrays.html#metodo-map"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Metodo .map()
                           </a>
                         </li>
@@ -525,7 +527,7 @@
                     <details
                       class="group [&_summary::-webkit-details-marker]:hidden">
                       <summary
-                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-700">
                         <span class="">Arrays Methods</span>
 
                         <span
@@ -547,7 +549,7 @@
                         <li>
                           <a
                             href="/src/09-arrays-methods.html"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Declaración y uso
                           </a>
                         </li>
@@ -555,49 +557,51 @@
                         <li>
                           <a
                             href="/src/09-arrays-methods.html#findIndex"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             .findIndex()
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/09-arrays-methods.html#reduce"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+                            dark:text-gray-200
+                            dark:hover:text-gray-700>
                             .reduce()
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/09-arrays-methods.html#filter"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             .filter()
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/09-arrays-methods.html#find"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             .find()
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/09-arrays-methods.html#every"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             .every()
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/09-arrays-methods.html#concat"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             .concat()
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/09-arrays-methods.html#reverse"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             .reverse()
                           </a>
                         </li>
@@ -609,7 +613,7 @@
                     <details
                       class="group [&_summary::-webkit-details-marker]:hidden">
                       <summary
-                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-700">
                         <span class="">Estructuras</span>
 
                         <span
@@ -631,7 +635,7 @@
                         <li>
                           <a
                             href="/src/10-structures.html"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             if
                           </a>
                         </li>
@@ -639,28 +643,28 @@
                         <li>
                           <a
                             href="/src/10-structures.html#else-if"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             else if
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/10-structures.html#switch"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             switch
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/10-structures.html#operador-ternario"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Operador ternario
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/10-structures.html#buenas-practicas"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Buenas practicas
                           </a>
                         </li>
@@ -672,7 +676,7 @@
                     <details
                       class="group [&_summary::-webkit-details-marker]:hidden">
                       <summary
-                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-700">
                         <span class="">Iteradores</span>
 
                         <span
@@ -694,7 +698,7 @@
                         <li>
                           <a
                             href="/src/11-iterators.html"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Declaración y uso
                           </a>
                         </li>
@@ -702,49 +706,49 @@
                         <li>
                           <a
                             href="/src/11-iterators.html#continue-y-break"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             continue y break
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/11-iterators.html#ejercicio-fizzbuzz"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Ejercicio FizzBuzz
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/11-iterators.html#while"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             while()
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/11-iterators.html#do-while"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             do...while()
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/11-iterators.html#for-each"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             .forEach()
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/11-iterators.html#for-of"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             for...of
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/11-iterators.html#for-in"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             for...in
                           </a>
                         </li>
@@ -756,7 +760,7 @@
                     <details
                       class="group [&_summary::-webkit-details-marker]:hidden">
                       <summary
-                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-700">
                         <span class="">Funciones</span>
 
                         <span
@@ -778,7 +782,7 @@
                         <li>
                           <a
                             href="/src/12-functions.html"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Declaración y uso
                           </a>
                         </li>
@@ -786,56 +790,56 @@
                         <li>
                           <a
                             href="/src/12-functions.html#llamar-una-funcion"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Llamar una función
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/12-functions.html#diferencia-entre-metodo-y-funcion"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Diferencia entre metodo y función
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/12-functions.html#parametros-y-argumentos"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Parametros y argumentos
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/12-functions.html#comunicacion-entre-funciones"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Comunicación entre funciones
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/12-functions.html#funciones-que-retornan-valores"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Funciones que retornan valores
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/12-functions.html#funciones-en-objetos"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Funciones en objetos
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/12-functions.html#arrow-functions"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Arrow functions
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/12-functions.html#funciones-y-metodos-avanzados"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Funciones y metodos avanzados
                           </a>
                         </li>
@@ -847,7 +851,7 @@
                     <details
                       class="group [&_summary::-webkit-details-marker]:hidden">
                       <summary
-                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-700">
                         <span class="">DOM</span>
 
                         <span
@@ -869,7 +873,7 @@
                         <li>
                           <a
                             href="/src/13-dom.html"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Acceso al DOM
                           </a>
                         </li>
@@ -877,70 +881,70 @@
                         <li>
                           <a
                             href="/src/13-dom.html#className"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             ClassName()
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/13-dom.html#getElementById"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             getElementById()
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/13-dom.html#querySelector"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             querySelector()
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/13-dom.html#querySelectorAll"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             querySelectorAll()
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/13-dom.html#innerHTML"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             innerHTML
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/13-dom.html#classList-add"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             classList.add()
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/13-dom.html#traversing"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Traversing
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/13-dom.html#eliminar-elementos-del-dom"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Eliminar elementos del DOM
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/13-dom.html#generarl-html-dinamico"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Generarl HTML dinámico
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/13-dom.html#ejemplo"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Ejemplo
                           </a>
                         </li>
@@ -952,7 +956,7 @@
                     <details
                       class="group [&_summary::-webkit-details-marker]:hidden">
                       <summary
-                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-700">
                         <span class="">Events</span>
 
                         <span
@@ -974,7 +978,7 @@
                         <li>
                           <a
                             href="/src/14-events.html"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Content Loaded
                           </a>
                         </li>
@@ -982,49 +986,49 @@
                         <li>
                           <a
                             href="/src/14-events.html#eventos-del-mouse"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Eventos del mouse
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/14-events.html#eventos-del-teclado"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Eventos del teclado
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/14-events.html#eventos-de-formularios"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Eventos de formularios
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/14-events.html#eventos-de-scroll"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Eventos de scroll
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/14-events.html#bubbling"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Bubbling
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/14-events.html#delegacion-de-eventos"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Delegación de eventos
                           </a>
                         </li>
                         <li>
                           <a
                             href="/src/14-events.html#evitar-propagacion-de-eventos"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
                             Evitar propagación de eventos
                           </a>
                         </li>
