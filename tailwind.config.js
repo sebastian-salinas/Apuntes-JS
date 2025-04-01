@@ -1,21 +1,24 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{html,js}",
-    "./dist/**/*.html",
-    "./*.html", // Añade esta línea si tienes HTML en raíz
-  ],
+  content: ["./src/**/*.{html,js}", "./dist/**/*.html", "./*.html"],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      // ↓↓↓ Extiende las variantes para group-hover ↓↓↓
+      variants: {
+        extend: {
+          translate: ["group-hover"],
+          opacity: ["group-hover"],
+        },
+      },
+    },
   },
-  // ↓↓↓ Añade este bloque crítico ↓↓↓
   safelist: [
     {
-      pattern: /(bg|text|border)-gray-(700|800|900)/,
-      variants: ["dark", "dark:hover"],
+      pattern: /(bg|text|border)-(indigo|gray)-(600|700|800|900)/,
+      variants: ["dark", "hover", "group-hover"],
     },
-    "dark",
+    "group",
     "dark:hover",
   ],
   plugins: [],
