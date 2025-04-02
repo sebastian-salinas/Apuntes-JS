@@ -2,6 +2,7 @@
 module.exports = {
   content: ["./src/**/*.{html,js}", "./dist/**/*.html", "./*.html"],
   darkMode: "class",
+  content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
   theme: {
     extend: {
       // ↓↓↓ Extiende las variantes para group-hover ↓↓↓
