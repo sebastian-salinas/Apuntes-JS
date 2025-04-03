@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="content-language" content="es" />
+    <meta name="robots" content="index, follow" />
+    <!-- Descripción breve (importante para SEO y resultados de búsqueda) -->
+    <meta
+      name="description"
+      content="Aprende JavaScript con apuntes claros y prácticos. Desde conceptos básicos hasta avanzados, ideal para principiantes y desarrolladores." />
+    <!-- Autor del contenido -->
+    <meta name="author" content="Sebastian Salinas" />
+    <!-- Palabras clave relevantes -->
+    <meta
+      name="keywords"
+      content="JavaScript, tutorial, programación, apuntes, aprender JavaScript, desarrollo web, frontend, backend" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Apuntes JavaScript" />
+    <meta
+      property="og:description"
+      content="Apuntes claros y prácticos de JavaScript para todos los niveles." />
+    <meta property="og:url" content="https://tu-sitio.com" />
+    <meta
+      property="og:image"
+      content="https://tu-sitio.com/assets/js-cover.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Apuntes JavaScript" />
+    <meta
+      name="twitter:description"
+      content="Aprende JavaScript con apuntes prácticos y claros." />
+    <meta
+      name="twitter:image"
+      content="https://tu-sitio.com/assets/js-cover.png" />
+    <meta name="twitter:site" content="@tu_usuario_twitter" />
+    <!-- Canonical: evita contenido duplicado -->
+    <link rel="canonical" href="https://tu-sitio.com" />
+    <!-- Links -->
+    <link href="/dist/styles.css" rel="stylesheet" />
+    <script type="module" src="/src/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css"
+      rel="stylesheet" />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/icons/favicon-96x96.png"
+      sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/icons/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/icons/apple-touch-icon.png" />
+    <title>Apuntes JavaScript</title>
+  </head>
+  <body class="bg-gray-100">
+    <div class="min-h-screen flex flex-col">
+      <div class="flex flex-1">
+        <!-- Sidebar -->
+        <div
+          class="flex md:h-screen lg:h-screen xl:h-screen 2xl:h-screen overflow-y-auto w-44 flex-col border-e bg-white dark:bg-gray-900 dark:border-gray-700"
+          id="sidebar">
+          <div class="">
+            <!-- Sidebar header -->
+            <div
+              class="fixed top-0 z-50 flex h-16 w-44 shrink-0 items-center justify-center border-b border-r border-gray-200 bg-white dark:bg-gray-900 dark:border-gray-700">
+              <a href="/src/01-index.html">
+                <div class="inline-flex gap-1.5 text-sm items-center">
+                  <span class="font-medium text-gray-900 dark:text-gray-100">
+                    Apuntes</span
+                  >
+                  <img
+                    src="/assets/icons/favicon-96x96.png"
+                    alt=""
+                    class="w-6 h-6" />
+                </div>
+              </a>
+            </div>
+
+            <!-- Sidebar body -->
+            <section class="mt-16">
+              <div class="px-2">
+                <ul class="space-y-1 pt-4">
+                  <li>
+                    <a
+                      href="/src/01-index.html"
+                      s
+                      class="group relative flex rounded px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-700">
+                      <!-- Titulo del menu -->
+                      <h3>Introducción</h3>
+                    </a>
+                  </li>
+                  <li>
+                    <details
+                      class="group [&_summary::-webkit-details-marker]:hidden">
+                      <summary
+                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-700">
+                        <span class="">Variables</span>
+
+                        <span
+                          class="shrink-0 transition duration-300 group-open:-rotate-180">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="size-5"
+                            viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path
+                              fill-rule="evenodd"
+                              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                              clip-rule="evenodd" />
+                          </svg>
+                        </span>
+                      </summary>
+
+                      <ul class="mt-2 space-y-1 px-4">
+                        <li>
+                          <a
+                            href="/src/02-variables.html"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Inicialización
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            href="/src/02-variables.html#scope-let"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Scope y Let
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/02-variables.html#const"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Const
+                          </a>
+                        </li>
+                      </ul>
+                    </details>
+                  </li>
+
+                  <li>
+                    <details
+                      class="group [&_summary::-webkit-details-marker]:hidden">
+                      <summary
+                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-700">
+                        <span class="">Strings</span>
+
+                        <span
+                          class="shrink-0 transition duration-300 group-open:-rotate-180">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="size-5"
+                            viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path
+                              fill-rule="evenodd"
+                              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                              clip-rule="evenodd" />
+                          </svg>
+                        </span>
+                      </summary>
+
+                      <ul class="mt-2 space-y-1 px-4">
+                        <li>
+                          <a
+                            href="/src/03-strings.html"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Declaración y uso
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            href="/src/03-strings.html#concatenacion"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Concatenación
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/03-strings.html#metodos-de-strings"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Metrodos de strings
+                          </a>
+                        </li>
+                      </ul>
+                    </details>
+                  </li>
+
+                  <li>
+                    <details
+                      class="group [&_summary::-webkit-details-marker]:hidden">
+                      <summary
+                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-700">
+                        <span class="">Numbers</span>
+
+                        <span
+                          class="shrink-0 transition duration-300 group-open:-rotate-180">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="size-5"
+                            viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path
+                              fill-rule="evenodd"
+                              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                              clip-rule="evenodd" />
+                          </svg>
+                        </span>
+                      </summary>
+
+                      <ul class="mt-2 space-y-1 px-4">
+                        <li>
+                          <a
+                            href="/src/04-numbers.html"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Declaración y uso
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            href="/src/04-numbers.html#operadores-aritmeticos-basicos"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Operadores aritméticos basicos
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/04-numbers.html#orden-de-ejecucion"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Orden de ejecución
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/04-numbers.html#incrementos-y-decrementos"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Incrementos y decrementos
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/04-numbers.html#convertir-strings-a-numbers"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Convertir strings a numbers
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/04-numbers.html#objeto-math"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Objeto Math
+                          </a>
+                        </li>
+                      </ul>
+                    </details>
+                  </li>
+
+                  <li>
+                    <details
+                      class="group [&_summary::-webkit-details-marker]:hidden">
+                      <summary
+                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-700">
+                        <span class="">Operadores</span>
+
+                        <span
+                          class="shrink-0 transition duration-300 group-open:-rotate-180">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="size-5"
+                            viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path
+                              fill-rule="evenodd"
+                              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                              clip-rule="evenodd" />
+                          </svg>
+                        </span>
+                      </summary>
+
+                      <ul class="mt-2 space-y-1 px-4">
+                        <li>
+                          <a
+                            href="/src/05-operators.html"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Declaración y uso
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            href="/src/05-operators.html#igualdad-y-diferencia"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Igualdad y diferencia
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/05-operators.html#operadores-logicos"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Operadores lógicos
+                          </a>
+                        </li>
+                      </ul>
+                    </details>
+                  </li>
+
+                  <li>
+                    <details
+                      class="group [&_summary::-webkit-details-marker]:hidden">
+                      <summary
+                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-700">
+                        <span class="">Booleans</span>
+
+                        <span
+                          class="shrink-0 transition duration-300 group-open:-rotate-180">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="size-5"
+                            viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path
+                              fill-rule="evenodd"
+                              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                              clip-rule="evenodd" />
+                          </svg>
+                        </span>
+                      </summary>
+
+                      <ul class="mt-2 space-y-1 px-4">
+                        <li>
+                          <a
+                            href="/src/06-booleans.html"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Declaración y uso
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            href="/src/06-booleans.html#buenas-practicas"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Buenas practicas
+                          </a>
+                        </li>
+                      </ul>
+                    </details>
+                  </li>
+
+                  <li>
+                    <details
+                      class="group [&_summary::-webkit-details-marker]:hidden">
+                      <summary
+                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-700">
+                        <span class="">Objects</span>
+
+                        <span
+                          class="shrink-0 transition duration-300 group-open:-rotate-180">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="size-5"
+                            viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path
+                              fill-rule="evenodd"
+                              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                              clip-rule="evenodd" />
+                          </svg>
+                        </span>
+                      </summary>
+
+                      <ul class="mt-2 space-y-1 px-4">
+                        <li>
+                          <a
+                            href="/src/07-objects.html"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Declaración y uso
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            href="/src/07-objects.html#acceso-de-propiedades"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Acceso de propiedades
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/07-objects.html#asignacion-de-variables"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Asignación de variables
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/07-objects.html#objetos-anidados"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Obejos anidados
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/07-objects.html#destructuring-de-objetos"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Destructuring de objetos
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/07-objects.html#reasignacion-de-valores"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Reasignación de valores
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/07-objects.html#metodos-de-objetos"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Metodos de objetos
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/07-objects.html#spread-y-rest-operator"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Spread y Rest operator
+                          </a>
+                        </li>
+                      </ul>
+                    </details>
+                  </li>
+
+                  <li>
+                    <details
+                      class="group [&_summary::-webkit-details-marker]:hidden">
+                      <summary
+                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-700">
+                        <span class="">Arrays</span>
+
+                        <span
+                          class="shrink-0 transition duration-300 group-open:-rotate-180">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="size-5"
+                            viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path
+                              fill-rule="evenodd"
+                              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                              clip-rule="evenodd" />
+                          </svg>
+                        </span>
+                      </summary>
+
+                      <ul class="mt-2 space-y-1 px-4">
+                        <li>
+                          <a
+                            href="/src/08-arrays.html"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Declaración y uso
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            href="/src/08-arrays.html#acceso-de-valores"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Acceso de valores
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/08-arrays.html#acceso-de-todos-los-valores"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Acceso de todos los valores
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/08-arrays.html#añadir-nuevos-valores"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Añadir nuevos valores
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/08-arrays.html#eliminar-valores"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Eliminar valores
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/08-arrays.html#destructuring-de-arrays"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Destructuring de arrays
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/08-arrays.html#iterar-sobre-arrays"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Iterar sobre arrays
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/08-arrays.html#metodo-map"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Metodo .map()
+                          </a>
+                        </li>
+                      </ul>
+                    </details>
+                  </li>
+
+                  <li>
+                    <details
+                      class="group [&_summary::-webkit-details-marker]:hidden">
+                      <summary
+                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-700">
+                        <span class="">Arrays Methods</span>
+
+                        <span
+                          class="shrink-0 transition duration-300 group-open:-rotate-180">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="size-5"
+                            viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path
+                              fill-rule="evenodd"
+                              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                              clip-rule="evenodd" />
+                          </svg>
+                        </span>
+                      </summary>
+
+                      <ul class="mt-2 space-y-1 px-4">
+                        <li>
+                          <a
+                            href="/src/09-arrays-methods.html"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Declaración y uso
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            href="/src/09-arrays-methods.html#findIndex"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            .findIndex()
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/09-arrays-methods.html#reduce"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200
+                            dark:hover:text-gray-700"
+                            >
+                            .reduce()
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/09-arrays-methods.html#filter"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            .filter()
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/09-arrays-methods.html#find"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            .find()
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/09-arrays-methods.html#every"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            .every()
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/09-arrays-methods.html#concat"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            .concat()
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/09-arrays-methods.html#reverse"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            .reverse()
+                          </a>
+                        </li>
+                      </ul>
+                    </details>
+                  </li>
+
+                  <li>
+                    <details
+                      class="group [&_summary::-webkit-details-marker]:hidden">
+                      <summary
+                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-700">
+                        <span class="">Estructuras</span>
+
+                        <span
+                          class="shrink-0 transition duration-300 group-open:-rotate-180">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="size-5"
+                            viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path
+                              fill-rule="evenodd"
+                              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                              clip-rule="evenodd" />
+                          </svg>
+                        </span>
+                      </summary>
+
+                      <ul class="mt-2 space-y-1 px-4">
+                        <li>
+                          <a
+                            href="/src/10-structures.html"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            if
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            href="/src/10-structures.html#else-if"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            else if
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/10-structures.html#switch"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            switch
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/10-structures.html#operador-ternario"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Operador ternario
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/10-structures.html#buenas-practicas"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Buenas practicas
+                          </a>
+                        </li>
+                      </ul>
+                    </details>
+                  </li>
+
+                  <li>
+                    <details
+                      class="group [&_summary::-webkit-details-marker]:hidden">
+                      <summary
+                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-700">
+                        <span class="">Iteradores</span>
+
+                        <span
+                          class="shrink-0 transition duration-300 group-open:-rotate-180">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="size-5"
+                            viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path
+                              fill-rule="evenodd"
+                              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                              clip-rule="evenodd" />
+                          </svg>
+                        </span>
+                      </summary>
+
+                      <ul class="mt-2 space-y-1 px-4">
+                        <li>
+                          <a
+                            href="/src/11-iterators.html"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Declaración y uso
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            href="/src/11-iterators.html#continue-y-break"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            continue y break
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/11-iterators.html#ejercicio-fizzbuzz"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Ejercicio FizzBuzz
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/11-iterators.html#while"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            while()
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/11-iterators.html#do-while"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            do...while()
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/11-iterators.html#for-each"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            .forEach()
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/11-iterators.html#for-of"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            for...of
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/11-iterators.html#for-in"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            for...in
+                          </a>
+                        </li>
+                      </ul>
+                    </details>
+                  </li>
+
+                  <li>
+                    <details
+                      class="group [&_summary::-webkit-details-marker]:hidden">
+                      <summary
+                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-700">
+                        <span class="">Funciones</span>
+
+                        <span
+                          class="shrink-0 transition duration-300 group-open:-rotate-180">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="size-5"
+                            viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path
+                              fill-rule="evenodd"
+                              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                              clip-rule="evenodd" />
+                          </svg>
+                        </span>
+                      </summary>
+
+                      <ul class="mt-2 space-y-1 px-4">
+                        <li>
+                          <a
+                            href="/src/12-functions.html"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Declaración y uso
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            href="/src/12-functions.html#llamar-una-funcion"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Llamar una función
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/12-functions.html#diferencia-entre-metodo-y-funcion"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Diferencia entre metodo y función
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/12-functions.html#parametros-y-argumentos"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Parametros y argumentos
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/12-functions.html#comunicacion-entre-funciones"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Comunicación entre funciones
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/12-functions.html#funciones-que-retornan-valores"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Funciones que retornan valores
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/12-functions.html#funciones-en-objetos"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Funciones en objetos
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/12-functions.html#arrow-functions"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Arrow functions
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/12-functions.html#funciones-y-metodos-avanzados"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Funciones y metodos avanzados
+                          </a>
+                        </li>
+                      </ul>
+                    </details>
+                  </li>
+
+                  <li>
+                    <details
+                      class="group [&_summary::-webkit-details-marker]:hidden">
+                      <summary
+                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-700">
+                        <span class="">DOM</span>
+
+                        <span
+                          class="shrink-0 transition duration-300 group-open:-rotate-180">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="size-5"
+                            viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path
+                              fill-rule="evenodd"
+                              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                              clip-rule="evenodd" />
+                          </svg>
+                        </span>
+                      </summary>
+
+                      <ul class="mt-2 space-y-1 px-4">
+                        <li>
+                          <a
+                            href="/src/13-dom.html"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Acceso al DOM
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            href="/src/13-dom.html#className"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            ClassName()
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/13-dom.html#getElementById"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            getElementById()
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/13-dom.html#querySelector"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            querySelector()
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/13-dom.html#querySelectorAll"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            querySelectorAll()
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/13-dom.html#innerHTML"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            innerHTML
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/13-dom.html#classList-add"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            classList.add()
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/13-dom.html#traversing"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Traversing
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/13-dom.html#eliminar-elementos-del-dom"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Eliminar elementos del DOM
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/13-dom.html#generarl-html-dinamico"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Generarl HTML dinámico
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/13-dom.html#ejemplo"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Ejemplo
+                          </a>
+                        </li>
+                      </ul>
+                    </details>
+                  </li>
+
+                  <li>
+                    <details
+                      class="group [&_summary::-webkit-details-marker]:hidden">
+                      <summary
+                        class="flex cursor-pointer items-center justify-between rounded-lg px-2 py-1.5 text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-100 dark:hover:text-gray-700">
+                        <span class="">Events</span>
+
+                        <span
+                          class="shrink-0 transition duration-300 group-open:-rotate-180">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="size-5"
+                            viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path
+                              fill-rule="evenodd"
+                              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                              clip-rule="evenodd" />
+                          </svg>
+                        </span>
+                      </summary>
+
+                      <ul class="mt-2 space-y-1 px-4">
+                        <li>
+                          <a
+                            href="/src/14-events.html"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Content Loaded
+                          </a>
+                        </li>
+
+                        <li>
+                          <a
+                            href="/src/14-events.html#eventos-del-mouse"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Eventos del mouse
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/14-events.html#eventos-del-teclado"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Eventos del teclado
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/14-events.html#eventos-de-formularios"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Eventos de formularios
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/14-events.html#eventos-de-scroll"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Eventos de scroll
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/14-events.html#bubbling"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Bubbling
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/14-events.html#delegacion-de-eventos"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Delegación de eventos
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="/src/14-events.html#evitar-propagacion-de-eventos"
+                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-700">
+                            Evitar propagación de eventos
+                          </a>
+                        </li>
+                      </ul>
+                    </details>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </div>
+        <!-- Main -->
+        <main class="flex-1 bg-gray-50 dark:bg-gray-900 overflow-auto">
+          <!-- Main header -->
+          <header
+            class="fixed top-0 z-50 h-16 border-b border-gray-200 bg-white dark:bg-gray-900 dark:border-gray-700 px-4 sm:h-16 sm:px-6 lg:px-8 w-full">
+            <div class="flex h-16 items-center gap-4">
+              <div class="flex items-center gap-2 sm:gap-4">
+                <button
+                  class="rounded-sm border border-gray-200 p-1.5 text-gray-700 dark:border-gray-700 dark:text-gray-300"
+                  id="open-sidebar">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    data-slot="icon"
+                    class="size-5">
+                    <path
+                      fill-rule="evenodd"
+                      d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </button>
+              </div>
+              <div class="fixed right-16 top-5 flex-1 items-center justify-end">
+                <button class="darkModeToggle size-6">
+                  <span class="dark:hidden">🌙</span>
+                  <span class="hidden dark:inline">☀️</span>
+                </button>
+              </div>
+              <div class="fixed right-6 top-5 flex-1 items-center justify-end">
+                <a
+                  href="https://github.com/sebastian-salinas/Apuntes-JS"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-gray-900 dark:text-gray-100 hover:opacity-75 transition-opacity">
+                  <span class="sr-only">GitHub</span>
+                  <svg
+                    aria-hidden="true"
+                    class="size-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24">
+                    <path
+                      clip-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                      fill-rule="evenodd"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </header>
+          <!-- Main body -->
+          <section class="px-4 mt-20 sm:h-16 sm:px-6 lg:px-8">
+            <h1 class="text-3xl font-bold mt-4 text-gray-800 dark:text-gray-100">DOM</h1>
+            <!-- Sección 1 -->
+            <section class="space-y-4">
+              <h2 class="text-2xl font-semibold mt-4 text-gray-700 dark:text-gray-200" id="acceso-a-elementos">
+                Acceso a Elementos del DOM
+              </h2>
+              <p class="text-gray-600 leading-relaxed dark:text-gray-200">
+                El DOM (Document Object Model) es una representación
+                estructurada de un documento HTML que permite a los lenguajes de
+                programación, acceder y manipular el contenido, estructura y
+                estilo de una página web. Es como un puente entre el código HTML
+                y el navegador, donde cada elemento del documento (etiquetas,
+                atributos, texto) se convierte en un objeto que puede ser
+                modificado dinámicamente.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">/*En este código, se muestran formas de acceder a distintas partes del DOM (Document Object Model)
+mediante propiedades del objeto global document:*/
+
+1. /*document: 
+      Devuelve todo el contenido del documento HTML, es decir, el DOM completo. Esto incluye las etiquetas,
+      elementos, y nodos del documento cargado.*/
+
+        elemento = document;
+        console.log(elemento); // Muestra el DOM completo en la consola
+
+2. /*document.head: 
+      Devuelve el contenido del head del documento HTML. El head suele contener metadatos como el título 
+      del documento, enlaces a estilos CSS y scripts.*/
+
+        elemento = document.head;
+        console.log(elemento); // Muestra el contenido del head
+      
+3. /*document.body: 
+      Devuelve el contenido del body del documento HTML. Aquí se encuentra la mayor parte del 
+      contenido visible de la página web.*/
+
+        elemento = document.body;
+        console.log(elemento); // Muestra el contenido del body
+
+4. /*document.classList: 
+      Accede a las clases asociadas a un elemento del DOM, generalmente usadas para manipular
+      estilos y comportamientos dinámicos.
+
+      Nota: document.classList no es válido directamente en document ya que document no tiene clases, pero 
+      sí lo es para elementos individuales. Podría usarse en un elemento específico como:
+      document.querySelector("div").classList.*/
+
+        elemento = document.querySelector("div").classList;
+        console.log(elemento); // Lista de clases del primer div
+
+/*Conclusión
+
+Estas propiedades son fundamentales para interactuar y manipular el DOM de una página web.
+Permiten acceder a elementos clave del documento HTML para modificar su estructura, contenido, o estilos dinámicamente.*/</code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2 dark:text-gray-200" id="className">
+                Uso de
+                <code class="text-blue-600">getElementsByClassName()</code>
+              </h3>
+              <p class="text-gray-600 leading-relaxed dark:text-gray-200">
+                El método
+                <code class="text-blue-600">getElementsByClassName()</code>
+                permite seleccionar elementos del DOM que tienen una clase
+                específica. Este método devuelve una colección en vivo de todos
+                los elementos que coinciden con la clase proporcionada.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo:
+        const header = document.getElementsByClassName("header");
+        console.log(header);
+        
+/*Se selecciona y muestra en la consola todos los elementos con la clase header. Si existe solo un 
+elemento con esta clase, estará como único en la colección.*/
+
+//Seleccionar múltiples elementos:
+
+        const hero = document.getElementsByClassName("hero");
+        console.log(hero);
+
+/*Explicación: Si hay varios elementos con la clase hero, todos se incluirán en una colección. 
+Puedes acceder a ellos por su índice como si fuera un array.*/
+
+//Puntos importantes:
+
+1. /*El resultado no es un array, sino una colección HTML. Aunque se parece a un array, no tiene 
+métodos como .map o .filter.*/
+
+2. /*Es una colección en vivo, lo que significa que si se agrega o elimina un elemento con la clase
+seleccionada después de ejecutar el código, la colección se actualiza automáticamente.*/
+
+3. /*Este método solo funciona para clases. Si necesitas seleccionar por ID, usa getElementById,
+y si necesitas más flexibilidad, usa querySelector o querySelectorAll.*/</code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2 dark:text-gray-200" id="getElementById">
+                Uso de
+                <code class="text-blue-600">getElementsById()</code>
+              </h3>
+              <p class="text-gray-600 leading-relaxed dark:text-gray-200">
+                El método
+                <code class="text-blue-600">getElementsById()</code> permite
+                seleccionar un elemento único del DOM utilizando su atributo
+                <code class="text-blue-600">id</code>. Es una de las formas más
+                comunes y rápidas para acceder a elementos específicos, ya que
+                el atributo <code class="text-blue-600">id</code> debe ser único
+                en el documento.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo:
+        const formulario = document.getElementById("formulario");
+        console.log(formulario);
+
+/*Aquí seleccionamos el elemento que tiene el atributo id="formulario".
+
+El método devuelve el elemento completo, incluyendo todos sus atributos, contenido y nodos hijos.
+
+Si el elemento existe, se muestra en la consola. Si no, devuelve null.*/
+
+//Características principales de getElementById:
+
+1. //Acceso directo y rápido: Este método es uno de los más eficientes para acceder a elementos en el DOM.
+
+2. //Unicidad del ID: Dado que los id deben ser únicos en el documento, siempre devuelve un único elemento (o null si no lo encuentra).
+
+3. //Compatibilidad: Funciona en todos los navegadores modernos y es ampliamente utilizado.
+
+/*Consejo práctico:
+
+Si necesitas seleccionar elementos con más flexibilidad (por clase, atributo, o combinaciones),
+considera usar querySelector o querySelectorAll. Sin embargo, para elementos con ID únicos, 
+getElementById sigue siendo una excelente opción.*/</code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2 dark:text-gray-200" id="querySelector">
+                Uso de
+                <code class="text-blue-600">querySelector()</code>
+              </h3>
+              <p class="text-gray-600 leading-relaxed dark:text-gray-200">
+                El método
+                <code class="text-blue-600">querySelector()</code> selecciona el
+                primer elemento del DOM que coincide con un selector CSS
+                especificado. Es una herramienta versátil y poderosa para
+                trabajar con el DOM, ya que permite aplicar los mismos
+                selectores que en CSS.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo:
+        const card = document.querySelector(".card");
+        console.log(card);
+        
+// Cambiar el estilo del primer elemento con la clase "card"
+        card.style.backgroundColor = "red";
+                  
+//Selectores específicos como en CSS:
+
+        const info = document.querySelector(".premium .info");  
+        console.log(info);
+
+/*Este código selecciona el primer elemento con la clase info que está dentro de un contenedor con la clase premium.*/
+
+//Seleccionar elementos específicos:
+
+        const segundoCard = document.querySelector("section.hospedaje .card:nth-child(2)");
+        console.log(segundoCard);
+
+/*Se selecciona el segundo hijo (nth-child(2)) con la clase card, dentro de un section con la clase hospedaje.*/
+
+//Ventajas de querySelector:
+
+1. //Flexibilidad: Permite usar cualquier selector CSS (clases, ID, pseudo-clases, combinadores, etc.).
+
+2. //Versatilidad: Funciona para cualquier tipo de elemento y selector válido en CSS.
+
+3. //Conveniencia: Ideal para seleccionar elementos específicos o realizar selecciones complejas.</code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2 dark:text-gray-200" id="querySelectorAll">
+                Uso de
+                <code class="text-blue-600">querySelectorAll()</code>
+              </h3>
+              <p class="text-gray-600 leading-relaxed dark:text-gray-200">
+                El método
+                <code class="text-blue-600">querySelectorAll()</code> permite
+                seleccionar todos los elementos que coincidan con un selector
+                CSS y devuelve una lista de nodos. Esto es útil para aplicar
+                cambios a varios elementos a la vez.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo:
+// Agrega un evento de clic a todo el documento
+        document.addEventListener("click", cambiarColor);
+
+        function cambiarColor() {
+// Selecciona todos los elementos con la clase "card"
+        const cardsTotales = document.querySelectorAll(".card");
+
+// Recorre cada tarjeta y cambia su color de fondo
+        cardsTotales.forEach((card) => {
+          if (card.style.backgroundColor === "blue") {
+            card.style.backgroundColor = "white"; // Vuelve al color original
+          } else {
+            card.style.backgroundColor = "blue"; // Cambia a azul
+          }
+        });
+      }</code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2 dark:text-gray-200" id="innerHTML">
+                Uso de <code class="text-blue-600">innerHTML</code>
+              </h3>
+              <p class="text-gray-600 leading-relaxed dark:text-gray-200">
+                El método <code class="text-blue-600">innerHTML</code> permite
+                acceder o modificar el contenido HTML de un elemento en el DOM.
+                Es útil cuando queremos cambiar dinámicamente textos o agregar
+                elementos dentro de un contenedor sin recargar la página.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo:
+        const mensajeDiv = document.querySelector("#mensaje");
+
+// Cambiar el contenido del div con HTML dinámico
+        mensajeDiv.innerHTML = "<h2>¡Bienvenido!</h2><p>Gracias por visitar nuestro sitio.</p>";
+                  
+//Conclusión:
+
+1.// innerHTML es util para insertar contenido con formato
+2.//Si el contenido proviene de un usuario, debería ser validado para evitar ataques de inyección de código.
+3.//Si solo se necesita cambiar texto sin etiquetas HTML, es mejor usar .textContent para evitar interpretaciones inesperadas.</code></pre>
+            </code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2 dark:text-gray-200" id="classList-add">
+                Uso de classList.<code class="text-blue-600">add()</code>
+              </h3>
+              <p class="text-gray-600 leading-relaxed dark:text-gray-200">
+                El método classList.<code class="text-blue-600">add()</code> permite agregar una o varias clases CSS a un elemento. Es una forma sencilla de modificar la apariencia de un elemento de manera dinámica sin tener que manipular directamente la propiedad class.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo: Añadir una clase a un botón al hacer clic
+
+        const boton = document.querySelector("button");
+
+        boton.addEventListener("click", () => {
+          boton.classList.add("activo");
+        });
+
+//Explicación:
+
+1.//document.querySelector("button") → Selecciona el primer botón en el documento.
+2.//boton.addEventListener("click", () => {...}) → Escucha el evento de clic en el botón.
+3./*boton.classList.add("activo") → Al hacer clic, agrega la clase "activo" al botón,
+    lo que puede cambiar su estilo según esté definido en CSS.*/
+
+//Ejemplo con múltiples clases:
+
+        boton.classList.add("activo", "destacado");
+
+//Esto agregará tanto la clase "activo" como la clase "destacado" al elemento.
+            </code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2 dark:text-gray-200" id="traversing">
+                Traversing de DOM en JavaScript
+              </h3>
+              <p class="text-gray-600 leading-relaxed dark:text-gray-200">
+                El traversing de DOM (recorrido del DOM) hace referencia a la forma en que puedes acceder a los elementos y nodos dentro del árbol del DOM. En JavaScript, todos los elementos HTML están conectados al objeto global document, y a través de diferentes métodos y propiedades, puedes navegar y manipular estos elementos.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo: Accediendo y modificando elementos en el DOM
+
+// Seleccionar la primera tarjeta con la clase 'card'
+        const card3 = document.querySelector(".card");
+                  
+// Cambiar el texto de un hijo específico dentro de la tarjeta
+        console.log(
+          (card3.children[1].children[1].textContent = "Nuevo heading desde traversing")
+        );
+
+//Explicación:
+
+1.//document.querySelector(".card") → Selecciona el primer elemento con la clase card.
+2.//card3.children[1] → Accede al segundo hijo de la tarjeta (porque el índice comienza en 0).
+3.//card3.children[1].children[1] → Dentro de ese segundo hijo, selecciona el segundo elemento.
+4.//.textContent → Cambia el texto de este segundo elemento a "Nuevo heading desde traversing".
+
+// Cambiar la fuente de la imagen dentro de la tarjeta
+        card3.children[0].src = "img/hacer4.jpg";
+
+//Explicación:
+
+1.//card3.children[0] → Accede al primer hijo de la tarjeta (probablemente una imagen).
+2.//.src → Modifica la fuente de la imagen, cambiándola a "img/hacer4.jpg".
+
+/*Puntos clave del traversing de DOM:
+
+  children: Accede a los hijos directos de un elemento, devolviendo una colección de nodos (como un arreglo).
+  textContent: Cambia o obtiene el texto dentro de un nodo.
+  src: Modifica la fuente de una imagen o un recurso dentro del DOM.
+
+¿Por qué es útil el traversing de DOM?
+
+  El traversing te permite navegar por la estructura jerárquica de un documento HTML, 
+  accediendo y manipulando los elementos según su posición o relación con otros elementos en el árbol del DOM.*/
+            </code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2 dark:text-gray-200" id="eliminar-elementos-del-dom">
+                Eliminar elementos del DOM en JavaScript
+              </h3>
+              <p class="text-gray-600 leading-relaxed dark:text-gray-200">
+                En JavaScript, puedes eliminar elementos del DOM utilizando dos métodos principales. Esto te permite quitar elementos de la página web de manera dinámica y modificar la estructura del documento según sea necesario.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo 1: Eliminar un elemento completo con remove()
+
+        const card6 = document.querySelector(".card");
+        card6.remove(); // Elimina el nodo completo del DOM
+
+//Explicación:
+
+1.//document.querySelector(".card"): Selecciona el primer elemento con la clase card.
+2./*.remove(): Elimina completamente el elemento card6 del DOM, quitando tanto el nodo
+    como todos sus elementos secundarios (si los tiene).*/
+
+//Ejemplo 2: Eliminar un hijo específico usando removeChild()
+
+        const navegacion = document.querySelector(".navegacion");
+        navegacion.removeChild(navegacion.children[1]); // Elimina el segundo hijo de 'navegacion'
+
+//Explicación:
+
+1.//document.querySelector(".navegacion"): Selecciona el primer elemento con la clase navegacion.
+2.//navegacion.children[1]: Accede al segundo hijo de este elemento, ya que el índice comienza desde 0.
+3./*navegacion.removeChild(...): Elimina el hijo seleccionado de su elemento padre 
+    (en este caso, el segundo hijo de la barra de navegación).*/
+            </code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2 dark:text-gray-200" id="generarl-html-dinamico">
+                Generar HTML dinámicamente desde JavaScript
+
+              </h3>
+              <p class="text-gray-600 leading-relaxed dark:text-gray-200">
+                En JavaScript, es posible crear y modificar elementos HTML de manera dinámica utilizando el DOM. Esto te permite agregar, modificar o eliminar contenido en la página sin tener que recargarla. A continuación, te explico cómo generar y manipular HTML directamente desde tu código JavaScript.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">//Ejemplo: Crear y agregar elementos HTML
+
+// Crear un nuevo párrafo
+        const parrafo1 = document.createElement("p");
+        parrafo1.textContent = "Cena";  // Asignar contenido de texto al párrafo
+        parrafo1.classList.add("categoria", "concierto");  // Añadir clases CSS
+                  
+        const parrafo2 = document.createElement("p");
+        parrafo2.textContent = "Restaurant Italiano";
+        parrafo2.classList.add("titulo");
+                  
+        const parrafo3 = document.createElement("p");
+        parrafo3.textContent = "30€ por persona";
+        parrafo3.classList.add("precio");
+                  
+// Crear un contenedor div para la información
+        const info = document.createElement("div");
+        info.classList.add("info");
+        info.appendChild(parrafo1);  // Añadir párrafo al contenedor
+        info.appendChild(parrafo2);
+        info.appendChild(parrafo3);
+                  
+// Crear una imagen
+        const imagen = document.createElement("img");
+        imagen.src = "img/hacer3.jpg";  // Asignar la fuente de la imagen
+                  
+// Crear un card para contener la imagen y la info
+        const card9 = document.createElement("div");
+        card9.classList.add("card");  // Añadir la clase 'card' al div
+                  
+// Asignar la imagen y el contenedor de información al card
+        card9.appendChild(imagen);
+        card9.appendChild(info);
+                  
+// Insertar el card en el HTML
+        const contenedor = document.querySelector(".hacer .contenedor-cards");
+        contenedor.insertBefore(card9, contenedor.children[0]);  // Insertar el card en la primera posición
+
+//Explicación paso a paso:
+
+//Crear elementos:
+        
+  1.//document.createElement(): Este método se utiliza para crear un nuevo elemento del tipo especificado, como p, div, img, etc.
+  2.//Ejemplo: const parrafo1 = document.createElement("p"); crea un nuevo párrafo p.
+
+//Asignar contenido:
+        
+  1.//textContent: Se utiliza para agregar texto al nuevo elemento.
+  2.//Ejemplo: parrafo1.textContent = "Cena"; asigna el texto "Cena" al párrafo.
+
+//Agregar clases:
+        
+  1.//classList.add(): Permite añadir una o más clases CSS al elemento creado, lo que es útil para aplicar estilos.
+  2.//Ejemplo: parrafo1.classList.add("categoria", "concierto"); añade las clases categoria y concierto al párrafo.
+
+//Anidar elementos:
+        
+  1.//appendChild(): Agrega un elemento como hijo del elemento seleccionado.
+  2.//Ejemplo: info.appendChild(parrafo1); inserta el párrafo dentro del div de clase info.
+
+//Insertar en el HTML:
+        
+  1.//insertBefore(): Inserta el nuevo elemento en una posición específica dentro de su contenedor, antes del primer hijo.
+  2./*Ejemplo: contenedor.insertBefore(card9, contenedor.children[0]); 
+    inserta el nuevo "card" antes del primer elemento dentro del contenedor.*/
+
+//Ventajas de crear HTML dinámicamente:
+
+1.//Dinamismo: Puedes crear contenido dinámicamente sin necesidad de escribir el HTML manualmente.
+2.//Interactividad: Puedes añadir contenido basado en las acciones del usuario o en datos provenientes de una API.
+3./*Actualización en tiempo real: Es ideal para actualizar o agregar elementos en una página 
+    sin recargarla (como en las aplicaciones web interactivas).*/
+            </code></pre>
+            </section>
+            <section class="space-y-4">
+              <h3 class="text-xl font-semibold mt-8 mb-2 dark:text-gray-200" id="ejemplo">
+                Ejemplo avanzado de JavaScript
+              </h3>
+              <p class="text-gray-600 leading-relaxed dark:text-gray-200">
+                En este ejemplo veremos cómo seleccionar elementos del DOM, agregar eventos, y manipular las clases de los elementos para mostrar u ocultar contenido de manera dinámica. El código proporciona una funcionalidad donde al hacer clic en un botón, se muestra u oculta un pie de página (footer) y cambia el texto del botón.
+              </p>
+              <pre
+                class="bg-gray-800 text-white p-1 rounded-lg"><code class="javascript">// Seleccionar el botón y el pie de página
+        const btnFooter = document.querySelector(".btn-flotante");
+        const footer = document.querySelector(".footer");
+                  
+// Añadir evento de clic al botón
+        btnFooter.addEventListener("click", mostrarOcultarFooter);
+                  
+        function mostrarOcultarFooter() {
+// Si el footer tiene la clase 'activo', la quitamos
+          if (footer.classList.contains("activo")) {
+            this.classList.remove("activo"); // Quitar 'activo' del botón
+            footer.classList.remove("activo"); // Quitar 'activo' del pie de página
+            this.textContent = "Idioma y Moneda"; // Cambiar el texto del botón
+          } else {
+                      // Si no tiene la clase 'activo', la agregamos
+            this.classList.add("activo"); // Añadir 'activo' al botón
+            footer.classList.add("activo"); // Añadir 'activo' al pie de página
+            this.textContent = "X Cerrar"; // Cambiar el texto del botón
+          }
+// Alternativa con toggle (comentada)
+// footer.classList.toggle("activo");
+// btnFooter.classList.toggle("activo");
+        }
+
+//Explicación paso a paso:
+
+//Seleccionar elementos del DOM:
+        
+  1.//Usamos document.querySelector() para seleccionar el botón flotante (btn-flotante) y el pie de página (footer).
+  2.//Ejemplo: const btnFooter = document.querySelector(".btn-flotante"); selecciona el botón con la clase btn-flotante.
+
+//Agregar un evento de click:
+        
+  1./*Se utiliza addEventListener() para escuchar el evento click en el botón flotante. 
+  Cuando el usuario hace clic en el botón, se ejecuta la función mostrarOcultarFooter()./*
+  2./*Ejemplo: btnFooter.addEventListener("click", mostrarOcultarFooter); asigna la 
+  función mostrarOcultarFooter al evento de clic./*
+
+//Manipulación de clases CSS:
+        
+  1./*Dentro de la función mostrarOcultarFooter(), se verifica si el footer ya tiene la clase activo
+  mediante classList.contains().*/
+  2./*Si tiene la clase, se elimina la clase activo tanto del footer como del botón utilizando 
+  classList.remove(), y se cambia el texto del botón a "Idioma y Moneda".*/
+  3./*Si no tiene la clase, se añade la clase activo tanto al footer como al botón con 
+  classList.add(), y se cambia el texto del botón a "X Cerrar".*/
+
+//lternativa usando classList.toggle():
+        
+  1./*La función está comentada, pero classList.toggle() es una forma más sencilla de agregar o quitar
+  una clase dependiendo de si ya está presente o no. Al usar toggle, no es necesario comprobar si la 
+  clase existe o no previamente. Solo se pasa la clase y el método se encarga de añadirla o eliminarla según corresponda.*/
+  2.//Ejemplo: footer.classList.toggle("activo"); cambiaría el estado de la clase activo de manera automática.
+
+//Resumen:
+        
+  1.//querySelector(): Se utiliza para seleccionar elementos del DOM.
+  2.//addEventListener(): Permite escuchar y manejar eventos como click.
+  3.//classList.add() y classList.remove(): Se utilizan para añadir o eliminar clases de los elementos.
+  4.//classList.contains(): Verifica si un elemento tiene una clase específica.
+  5.//classList.toggle(): Alterna (añade o elimina) una clase en el elemento de manera automática.
+            </code></pre>
+            </section>
+            <!-- footer -->
+            <section>
+              <div
+                class="mt-10 border-t border-gray-200 dark:border-gray-700 pt-10">
+                <p
+                  class="mb-6 text-sm text-gray-700 lg:mt-0 dark:text-gray-200">
+                  Created by<!-- -->
+                  <a
+                    href="https://github.com/sebastian-salinas"
+                    rel="noreferrer"
+                    target="_blank"
+                    class="inline-block font-medium no-underline mb-6 hover:text-gray-900 transition hover:opacity-75 dark:text-gray-200"
+                    >Sebastian Salinas</a
+                  >
+                </p>
+              </div>
+            </section>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
